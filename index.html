@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Detour — A native macOS browser</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Detour is a native macOS browser for people who got attached to the tab/space/window way of working. Free. Made by one person." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="page">
+
+  <!-- NAV -->
+  <header class="nav">
+    <a class="brand" href="#top">
+      <span class="app-icon" aria-hidden="true">
+        <span class="app-icon-inner">
+          <svg viewBox="0 0 2363 2363" aria-hidden="true">
+            <g transform="matrix(0,1.439585,-1.496557,0,2995.604885,-1068.968408)">
+              <path d="M1696.241,1101.961L1696.241,1626.903L1429.759,1626.903L1429.759,1101.961C1429.759,1101.961 1342.115,1111.73 1286.27,1117.954C1279.374,1118.723 1272.717,1115.254 1269.621,1109.277C1266.524,1103.301 1267.652,1096.1 1272.441,1091.266C1353.45,1009.502 1563,798 1563,798C1563,798 1773.197,1010.155 1853.933,1091.643C1858.665,1096.42 1859.779,1103.536 1856.719,1109.441C1853.66,1115.346 1847.082,1118.774 1840.268,1118.014C1784.45,1111.793 1696.241,1101.961 1696.241,1101.961Z" />
+            </g>
+          </svg>
+        </span>
+      </span>
+      <span class="brand-name">Detour</span>
+      <span class="version-pill">v0.7 · beta</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#shortcuts">Shortcuts</a>
+      <a href="https://github.com/detour-app">GitHub</a>
+    </nav>
+    <a class="nav-download" href="https://github.com/tienshiao/detour/releases/download/v0.1.0/Detour-0.1.0.dmg">Download .dmg</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- ambient arrow — peeks below the hero into the marquee -->
+    <svg class="bg-arrow bg-arrow-1" viewBox="0 0 2363 2363" aria-hidden="true">
+      <g transform="matrix(0,1.439585,-1.496557,0,2995.604885,-1068.968408)">
+        <path d="M1696.241,1101.961L1696.241,1626.903L1429.759,1626.903L1429.759,1101.961C1429.759,1101.961 1342.115,1111.73 1286.27,1117.954C1279.374,1118.723 1272.717,1115.254 1269.621,1109.277C1266.524,1103.301 1267.652,1096.1 1272.441,1091.266C1353.45,1009.502 1563,798 1563,798C1563,798 1773.197,1010.155 1853.933,1091.643C1858.665,1096.42 1859.779,1103.536 1856.719,1109.441C1853.66,1115.346 1847.082,1118.774 1840.268,1118.014C1784.45,1111.793 1696.241,1101.961 1696.241,1101.961Z" />
+      </g>
+    </svg>
+    <div class="eyebrow eyebrow-orange">FOR ARC REFUGEES</div>
+    <div class="hero-grid">
+      <h1 class="hero-headline">Take a <span class="orange">Detour</span>.</h1>
+      <div class="hero-side">
+        <p class="hero-sub">The browser for curious people. Explore the web without losing your place.</p>
+        <div class="hero-cta-row">
+          <a class="btn-primary" href="https://github.com/tienshiao/detour/releases/download/v0.1.0/Detour-0.1.0.dmg">
+            <span class="btn-arrow">⬇</span>
+            Download for macOS
+          </a>
+          <span class="hero-meta">Detour-0.1.0.dmg · 6.98 MB · macOS 15.4+</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <img id="hero-screenshot" src="assets/detour-screenshot.png" alt="Detour browser window" width="1100" />
+      <div class="mode-toggle" role="radiogroup" aria-label="Hero appearance">
+        <button type="button" class="mode-btn is-active" data-mode="light" aria-pressed="true">☀ LIGHT</button>
+        <button type="button" class="mode-btn" data-mode="dark" aria-pressed="false">☾ DARK</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE BLURB -->
+  <section class="marquee">
+    <div class="marquee-eyebrow">¶ A NOTE FROM THE MAKER</div>
+    <div class="marquee-quote">
+      &ldquo;All of <em>MY</em> favorite features from Arc. And maybe some of yours too.&rdquo;
+      <div class="marquee-byline">— Swift · WebKit · macOS only</div>
+    </div>
+  </section>
+
+  <!-- HEADLINE FEATURES -->
+  <section class="features" id="features">
+    <!-- ambient arrow — right edge, mid-features, pointing down-and-inward -->
+    <svg class="bg-arrow bg-arrow-2" viewBox="0 0 2363 2363" aria-hidden="true">
+      <g transform="matrix(0,1.439585,-1.496557,0,2995.604885,-1068.968408)">
+        <path d="M1696.241,1101.961L1696.241,1626.903L1429.759,1626.903L1429.759,1101.961C1429.759,1101.961 1342.115,1111.73 1286.27,1117.954C1279.374,1118.723 1272.717,1115.254 1269.621,1109.277C1266.524,1103.301 1267.652,1096.1 1272.441,1091.266C1353.45,1009.502 1563,798 1563,798C1563,798 1773.197,1010.155 1853.933,1091.643C1858.665,1096.42 1859.779,1103.536 1856.719,1109.441C1853.66,1115.346 1847.082,1118.774 1840.268,1118.014C1784.45,1111.793 1696.241,1101.961 1696.241,1101.961Z" />
+      </g>
+    </svg>
+
+    <!-- Spaces -->
+    <div class="feature-row">
+      <div class="feature-copy">
+        <span class="feature-label" style="--accent:#FF7600">SPACES</span>
+        <h3 class="feature-title">Workspaces, the way you actually work.</h3>
+        <p class="feature-sub">Group tabs into Spaces — each with its own emoji, color, and pinned set. Switch with a swipe. One window, one Space at a time, exactly the way your brain already sorts the day.</p>
+      </div>
+      <div class="feature-visual">
+        <div class="visual-card">
+          <ul class="space-list">
+            <li class="space-row is-active" style="--accent:#FF7600">
+              <span class="space-emoji" style="--space-color:#FF7600">🍊</span>
+              <div class="space-meta">
+                <div class="space-name">Work</div>
+                <div class="space-detail">8 tabs · work profile</div>
+              </div>
+              <span class="kbd">1</span>
+            </li>
+            <li class="space-row">
+              <span class="space-emoji" style="--space-color:#7C5CFF">🌿</span>
+              <div class="space-meta">
+                <div class="space-name">Personal</div>
+                <div class="space-detail">3 tabs · personal profile</div>
+              </div>
+              <span class="kbd">2</span>
+            </li>
+            <li class="space-row">
+              <span class="space-emoji" style="--space-color:#1FB6A8">📚</span>
+              <div class="space-meta">
+                <div class="space-name">Reading</div>
+                <div class="space-detail">5 tabs · personal profile</div>
+              </div>
+              <span class="kbd">3</span>
+            </li>
+            <li class="space-row">
+              <span class="space-emoji" style="--space-color:#E94F8C">🎨</span>
+              <div class="space-meta">
+                <div class="space-name">Side</div>
+                <div class="space-detail">2 tabs · work profile</div>
+              </div>
+              <span class="kbd">4</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pinned tabs (reversed order) -->
+    <div class="feature-row reversed">
+      <div class="feature-copy">
+        <span class="feature-label" style="--accent:#7C5CFF">PINNED TABS &amp; FOLDERS</span>
+        <h3 class="feature-title">Stuff you always have open.</h3>
+        <p class="feature-sub">Pin the tabs you live in. Group them in folders. They reset to home when you close them — never gone, never cluttered.</p>
+      </div>
+      <div class="feature-visual">
+        <div class="visual-card">
+          <div class="visual-eyebrow">▾ ALWAYS ON</div>
+          <div class="pin-grid">
+            <div class="pin" style="--pin-bg:#0A66C2">L</div>
+            <div class="pin" style="--pin-bg:#36C5F0">S</div>
+            <div class="pin" style="--pin-bg:#000">G</div>
+            <div class="pin" style="--pin-bg:#1B7CE8">N</div>
+            <div class="pin" style="--pin-bg:#FF6B00">F</div>
+            <div class="pin" style="--pin-bg:#1A73E8">C</div>
+            <div class="pin" style="--pin-bg:#EA4335">M</div>
+            <div class="pin" style="--pin-bg:#1DA1F2">X</div>
+          </div>
+          <div class="visual-eyebrow">▾ DESIGN REVIEWS · 4</div>
+          <ul class="folder-list">
+            <li class="is-active">◆ Figma — Sidebar v3</li>
+            <li>◆ Figma — Onboarding flow</li>
+            <li>◆ Notion — Crit notes</li>
+            <li>◆ Linear — DET-128</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profiles -->
+    <div class="feature-row">
+      <div class="feature-copy">
+        <span class="feature-label" style="--accent:#1FB6A8">PROFILES</span>
+        <h3 class="feature-title">Work you, personal you, side-project you.</h3>
+        <p class="feature-sub">Profiles own the cookies, the history, the extensions. Sign into the same site three times — three Profiles, three sessions, no logging out. Spaces live inside Profiles; share one across many Spaces, or keep each Space sealed off.</p>
+      </div>
+      <div class="feature-visual">
+        <div class="visual-card">
+          <ul class="profile-list">
+            <li class="profile-row">
+              <span class="profile-avatar" style="--avatar:#1FB6A8">P</span>
+              <div class="profile-meta">
+                <div class="profile-name">Personal</div>
+                <div class="profile-detail">2 spaces · 🌿 Personal · 📚 Reading</div>
+              </div>
+            </li>
+            <li class="profile-row is-active">
+              <span class="profile-avatar" style="--avatar:#FF7600">W</span>
+              <div class="profile-meta">
+                <div class="profile-name">Work</div>
+                <div class="profile-detail">2 spaces · 🍊 Work · 🎨 Design</div>
+              </div>
+              <span class="profile-active">ACTIVE</span>
+            </li>
+            <li class="profile-row">
+              <span class="profile-avatar" style="--avatar:#7C5CFF">X</span>
+              <div class="profile-meta">
+                <div class="profile-name">Client X</div>
+                <div class="profile-detail">1 space · 💼 Client</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SMALL FEATURES GRID -->
+  <section class="small-features" id="shortcuts">
+    <!-- ambient arrow — peeks at the top of the grid, leading into it -->
+    <svg class="bg-arrow bg-arrow-3" viewBox="0 0 2363 2363" aria-hidden="true">
+      <g transform="matrix(0,1.439585,-1.496557,0,2995.604885,-1068.968408)">
+        <path d="M1696.241,1101.961L1696.241,1626.903L1429.759,1626.903L1429.759,1101.961C1429.759,1101.961 1342.115,1111.73 1286.27,1117.954C1279.374,1118.723 1272.717,1115.254 1269.621,1109.277C1266.524,1103.301 1267.652,1096.1 1272.441,1091.266C1353.45,1009.502 1563,798 1563,798C1563,798 1773.197,1010.155 1853.933,1091.643C1858.665,1096.42 1859.779,1103.536 1856.719,1109.441C1853.66,1115.346 1847.082,1118.774 1840.268,1118.014C1784.45,1111.793 1696.241,1101.961 1696.241,1101.961Z" />
+      </g>
+    </svg>
+    <div class="small-features-head">
+      <h3 class="small-features-title">And also, in no particular order</h3>
+      <span class="small-features-count">(16 more)</span>
+    </div>
+    <div class="small-features-grid">
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">01</span><span class="small-feature-name">Liquid Glass Native</span></div>
+        <div class="small-feature-desc">Real macOS chrome — translucent surfaces, real materials, real vibrancy. Not a web app pretending.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">02</span><span class="small-feature-name">Real Dark Mode</span></div>
+        <div class="small-feature-desc">Sidebar, and chrome all respect your system appearance. Switch at sundown like the rest of your apps. (Yes, all of it. The whole sidebar.)</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">03</span><span class="small-feature-name">Command Palette</span></div>
+        <div class="small-feature-desc">⌘T to open, ⌘L to navigate. Searches open tabs, history, and the web in one input.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">04</span><span class="small-feature-name">Peek Preview</span></div>
+        <div class="small-feature-desc">Shift-click any link to peek it in an overlay. Expand to a real tab if it's worth it.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">05</span><span class="small-feature-name">Tab Archiving</span></div>
+        <div class="small-feature-desc">Inactive tabs quietly archive themselves. Your sidebar stays a sidebar, not a graveyard.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">06</span><span class="small-feature-name">Content Blocker</span></div>
+        <div class="small-feature-desc">Built-in. EasyList rules. Per-site allowlist. No third-party extension required.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">07</span><span class="small-feature-name">Multi-Window</span></div>
+        <div class="small-feature-desc">Each window remembers its own active space. WebView ownership transfers on focus.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">08</span><span class="small-feature-name">Private Browsing</span></div>
+        <div class="small-feature-desc">A throwaway Space pinned to a non-persistent Profile. Closes, forgets, gone.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">09</span><span class="small-feature-name">Session Restore</span></div>
+        <div class="small-feature-desc">Tabs come back with scroll position and form state via WebKit interaction state.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">10</span><span class="small-feature-name">Find in Page</span></div>
+        <div class="small-feature-desc">⌘F with match counts and prev/next. Like it should be.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">11</span><span class="small-feature-name">Downloads</span></div>
+        <div class="small-feature-desc">Built-in manager. Progress, cancel, reveal in Finder. Survives a relaunch.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">12</span><span class="small-feature-name">Audio Controls</span></div>
+        <div class="small-feature-desc">Tabs that make noise get a mute button. The noisy ones get found.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">13</span><span class="small-feature-name">Sidebar Auto-Hide</span></div>
+        <div class="small-feature-desc">⌘S to toggle. Auto-hide pops back on edge hover.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">14</span><span class="small-feature-name">Auto-Updates</span></div>
+        <div class="small-feature-desc">Sparkle does the boring part. New version, no new website visit.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">15</span><span class="small-feature-name">Web Inspector</span></div>
+        <div class="small-feature-desc">⌘⌥I. The full WebKit one. It's just there.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">16</span><span class="small-feature-name">Web Extensions (WIP)</span></div>
+        <div class="small-feature-desc">CRX install, popups, native messaging. Some work, some don't.</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" id="download">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <h3 class="footer-headline">One download.<br />No account.<br />No cloud.</h3>
+      <div class="footer-cta">
+        <a class="btn-footer" href="https://github.com/tienshiao/detour/releases/download/v0.1.0/Detour-0.1.0.dmg">
+          <svg class="btn-footer-arrow" viewBox="0 0 2363 2363" aria-hidden="true">
+            <g transform="matrix(0,1.439585,-1.496557,0,2995.604885,-1068.968408)">
+              <path d="M1696.241,1101.961L1696.241,1626.903L1429.759,1626.903L1429.759,1101.961C1429.759,1101.961 1342.115,1111.73 1286.27,1117.954C1279.374,1118.723 1272.717,1115.254 1269.621,1109.277C1266.524,1103.301 1267.652,1096.1 1272.441,1091.266C1353.45,1009.502 1563,798 1563,798C1563,798 1773.197,1010.155 1853.933,1091.643C1858.665,1096.42 1859.779,1103.536 1856.719,1109.441C1853.66,1115.346 1847.082,1118.774 1840.268,1118.014C1784.45,1111.793 1696.241,1101.961 1696.241,1101.961Z" />
+            </g>
+          </svg>
+          Download Detour-0.1.0.dmg
+        </a>
+        <div class="footer-meta">6.98 MB · macOS 15.4+ · Apple Silicon &amp; Intel · auto-updates via Sparkle</div>
+      </div>
+    </div>
+    <div class="footer-foot">
+      <span class="app-icon footer-app-icon" aria-hidden="true">
+        <span class="app-icon-inner">
+          <svg viewBox="0 0 2363 2363" aria-hidden="true">
+            <g transform="matrix(0,1.439585,-1.496557,0,2995.604885,-1068.968408)">
+              <path d="M1696.241,1101.961L1696.241,1626.903L1429.759,1626.903L1429.759,1101.961C1429.759,1101.961 1342.115,1111.73 1286.27,1117.954C1279.374,1118.723 1272.717,1115.254 1269.621,1109.277C1266.524,1103.301 1267.652,1096.1 1272.441,1091.266C1353.45,1009.502 1563,798 1563,798C1563,798 1773.197,1010.155 1853.933,1091.643C1858.665,1096.42 1859.779,1103.536 1856.719,1109.441C1853.66,1115.346 1847.082,1118.774 1840.268,1118.014C1784.45,1111.793 1696.241,1101.961 1696.241,1101.961Z" />
+            </g>
+          </svg>
+        </span>
+      </span>
+      <span class="footer-name">Detour</span>
+      <!-- <span class="footer-dot">·</span>
+      <span class="footer-by">Made by one person, in Brooklyn</span> -->
+      <div class="footer-links">
+        <a href="https://github.com/tienshiao/detour-app">github.com/tienshiao/detour</a>
+        <span id="footer-year"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
