@@ -369,9 +369,15 @@ button { font-family: inherit; cursor: pointer; }
   max-width: 480px;
 }
 
-.feature-visual { min-height: 380px; display: flex; }
+.feature-visual {
+  min-height: 380px;
+  display: flex;
+  justify-content: flex-start;
+}
+.feature-row.reversed .feature-visual { justify-content: flex-end; }
 .visual-card {
   flex: 1;
+  max-width: 460px;
   height: 380px;
   border-radius: 18px;
   background: #fff;
@@ -382,6 +388,13 @@ button { font-family: inherit; cursor: pointer; }
   overflow: hidden;
   padding: 24px;
 }
+.visual-card.is-pinned {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.visual-card.is-pinned .bookmark-list { width: fit-content; }
 
 /* spaces visual */
 .space-list {
@@ -422,60 +435,64 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--ink-50);
   font-family: var(--mono);
 }
-.kbd {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--ink-50);
-  border: 0.5px solid var(--ink-18);
-  border-radius: 5px;
-  padding: 2px 6px;
-}
-
 /* pinned visual */
-.visual-eyebrow {
-  font-family: var(--mono);
-  font-size: 10.5px;
-  letter-spacing: 1px;
-  color: var(--ink-45);
-  margin-bottom: 12px;
-}
-.visual-card .visual-eyebrow + .visual-eyebrow,
-.visual-card .pin-grid + .visual-eyebrow { margin-top: 18px; margin-bottom: 8px; }
 .pin-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
+  max-width: 280px;
 }
 .pin {
   aspect-ratio: 1 / 1;
   border-radius: 10px;
-  background: var(--pin-bg);
-  color: #fff;
+  background: rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 18px;
+  padding: 22%;
 }
-.folder-list {
+.pin img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+.bookmark-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 2px;
 }
-.folder-list li {
-  padding: 8px 10px;
-  font-size: 13px;
+.bookmark-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
   border-radius: 7px;
+  font-size: 14px;
   color: var(--ink-72);
 }
-.folder-list li.is-active {
-  background: rgba(124, 92, 255, 0.08);
-  color: #1a1a1a;
-  font-weight: 500;
+.bookmark-row.is-child { padding-left: 28px; }
+.bookmark-emoji {
+  width: 20px;
+  font-size: 15px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.bookmark-favicon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.bookmark-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* profiles visual */
@@ -676,6 +693,7 @@ button { font-family: inherit; cursor: pointer; }
     grid-template-columns: 1fr;
     gap: 16px;
     padding: 72px 32px 56px;
+    text-align: center;
   }
   .marquee-quote { font-size: 24px; letter-spacing: -0.4px; }
 
@@ -689,6 +707,14 @@ button { font-family: inherit; cursor: pointer; }
   .feature-row.reversed .feature-visual {
     order: unset;
   }
+  .feature-copy {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .feature-copy .feature-sub { margin-left: auto; margin-right: auto; }
+  .feature-visual,
+  .feature-row.reversed .feature-visual { justify-content: center; }
   .feature-title { font-size: 44px; letter-spacing: -1.2px; }
   .visual-card { height: auto; min-height: 320px; }
 
