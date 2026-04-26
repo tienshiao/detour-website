@@ -108,24 +108,24 @@ button { font-family: inherit; cursor: pointer; }
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  background: linear-gradient(155deg, #1a1614 0%, #000 70%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 8px 22px -8px rgba(0, 0, 0, 0.5);
+  background: #000;
+  box-shadow: 0 8px 22px -8px rgba(0, 0, 0, 0.5);
   flex-shrink: 0;
 }
 .app-icon-inner {
-  width: 70%;
-  height: 70%;
-  border-radius: 22%;
-  background: linear-gradient(160deg, #FF9A2F 0%, #FF7600 55%, #D85500 100%);
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.45), inset 0 -3px 6px rgba(0, 0, 0, 0.18);
+  width: 80%;
+  height: 80%;
+  border-radius: 5px;
+  background: #FF7600;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .app-icon-inner svg {
-  width: 62%;
-  height: 62%;
+  width: 100%;
+  height: 100%;
   fill: #000;
+  transform: scale(1.15);
 }
 
 /* ─── NAV ─── */

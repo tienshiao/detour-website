@@ -2,13 +2,61 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Detour — A native macOS browser</title>
+<title>Detour — Native macOS Browser with Spaces, Profiles &amp; Pinned Tabs</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Detour is a native macOS browser for people who got attached to the tab/space/window way of working. Free. Made by one person." />
+<meta name="description" content="Detour is a free, native macOS browser built on WebKit. Spaces, Profiles, pinned tabs, command palette, and a real Liquid Glass sidebar — for people who loved the Arc way of working." />
+<meta name="theme-color" content="#FF7600" />
+<link rel="canonical" href="http://detourbrowser.com/" />
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Detour" />
+<meta property="og:title" content="Detour — Native macOS Browser with Spaces, Profiles &amp; Pinned Tabs" />
+<meta property="og:description" content="A free, native macOS browser built on WebKit. Spaces, Profiles, pinned tabs, and a real Liquid Glass sidebar — for people who loved the Arc way of working." />
+<meta property="og:url" content="http://detourbrowser.com/" />
+<meta property="og:image" content="http://detourbrowser.com/assets/detour-screenshot.png" />
+<meta property="og:image:width" content="1342" />
+<meta property="og:image:height" content="959" />
+<meta property="og:image:alt" content="Detour browser window showing Spaces sidebar with Work, Personal, Reading, and Side workspaces" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Detour — Native macOS Browser with Spaces, Profiles &amp; Pinned Tabs" />
+<meta name="twitter:description" content="A free, native macOS browser built on WebKit. Spaces, Profiles, pinned tabs, and a real Liquid Glass sidebar." />
+<meta name="twitter:image" content="http://detourbrowser.com/assets/detour-screenshot.png" />
+<meta name="twitter:image:alt" content="Detour browser window showing the Spaces sidebar" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="assets/detour-screenshot.png" fetchpriority="high" />
 <link rel="stylesheet" href="styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Detour",
+  "description": "A free, native macOS browser built on WebKit. Spaces, Profiles, pinned tabs, command palette, and a real Liquid Glass sidebar.",
+  "url": "http://detourbrowser.com/",
+  "applicationCategory": "WebBrowser",
+  "operatingSystem": "macOS 15.4+",
+  "softwareVersion": "0.1.0",
+  "downloadUrl": "https://github.com/tienshiao/detour/releases/download/v0.1.0/Detour-0.1.0.dmg",
+  "fileSize": "6.98 MB",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Tienshiao Ma",
+    "url": "https://github.com/tienshiao"
+  }
+}
+</script>
 </head>
 <body>
 <main class="page">
@@ -26,12 +74,12 @@
         </span>
       </span>
       <span class="brand-name">Detour</span>
-      <span class="version-pill">v0.7 · beta</span>
+      <span class="version-pill">v0.1.0 · beta</span>
     </a>
     <nav class="nav-links">
       <a href="#features">Features</a>
       <a href="#shortcuts">Shortcuts</a>
-      <a href="https://github.com/detour-app">GitHub</a>
+      <a href="https://github.com/tienshiao/detour">GitHub</a>
     </nav>
     <a class="nav-download" href="https://github.com/tienshiao/detour/releases/download/v0.1.0/Detour-0.1.0.dmg">Download .dmg</a>
   </header>
@@ -60,7 +108,7 @@
     </div>
 
     <div class="hero-visual">
-      <img id="hero-screenshot" src="assets/detour-screenshot.png" alt="Detour browser window" width="1100" />
+      <img id="hero-screenshot" src="assets/detour-screenshot.png" alt="Detour browser on macOS showing the Spaces sidebar with Work, Personal, Reading, and Side workspaces" width="1342" height="959" />
       <div class="mode-toggle" role="radiogroup" aria-label="Hero appearance">
         <button type="button" class="mode-btn is-active" data-mode="light" aria-pressed="true">☀ LIGHT</button>
         <button type="button" class="mode-btn" data-mode="dark" aria-pressed="false">☾ DARK</button>
@@ -90,7 +138,7 @@
     <div class="feature-row">
       <div class="feature-copy">
         <span class="feature-label" style="--accent:#FF7600">SPACES</span>
-        <h3 class="feature-title">Workspaces, the way you actually work.</h3>
+        <h2 class="feature-title">Workspaces, the way you actually work.</h2>
         <p class="feature-sub">Group tabs into Spaces — each with its own emoji, color, and pinned set. Switch with a swipe. One window, one Space at a time, exactly the way your brain already sorts the day.</p>
       </div>
       <div class="feature-visual">
@@ -137,7 +185,7 @@
     <div class="feature-row reversed">
       <div class="feature-copy">
         <span class="feature-label" style="--accent:#7C5CFF">PINNED TABS &amp; FOLDERS</span>
-        <h3 class="feature-title">Stuff you always have open.</h3>
+        <h2 class="feature-title">Stuff you always have open.</h2>
         <p class="feature-sub">Pin the tabs you live in. Group them in folders. They reset to home when you close them — never gone, never cluttered.</p>
       </div>
       <div class="feature-visual">
@@ -168,7 +216,7 @@
     <div class="feature-row">
       <div class="feature-copy">
         <span class="feature-label" style="--accent:#1FB6A8">PROFILES</span>
-        <h3 class="feature-title">Work you, personal you, side-project you.</h3>
+        <h2 class="feature-title">Work you, personal you, side-project you.</h2>
         <p class="feature-sub">Profiles own the cookies, the history, the extensions. Sign into the same site three times — three Profiles, three sessions, no logging out. Spaces live inside Profiles; share one across many Spaces, or keep each Space sealed off.</p>
       </div>
       <div class="feature-visual">
@@ -212,7 +260,7 @@
       </g>
     </svg>
     <div class="small-features-head">
-      <h3 class="small-features-title">And also, in no particular order</h3>
+      <h2 class="small-features-title">And also, in no particular order</h2>
       <span class="small-features-count">(16 more)</span>
     </div>
     <div class="small-features-grid">
@@ -289,7 +337,7 @@
 <footer class="footer" id="download">
   <div class="footer-inner">
     <div class="footer-grid">
-      <h3 class="footer-headline">One download.<br />No account.<br />No cloud.</h3>
+      <h2 class="footer-headline">One download.<br />No account.<br />No cloud.</h2>
       <div class="footer-cta">
         <a class="btn-footer" href="https://github.com/tienshiao/detour/releases/download/v0.1.0/Detour-0.1.0.dmg">
           <svg class="btn-footer-arrow" viewBox="0 0 2363 2363" aria-hidden="true">
@@ -316,7 +364,7 @@
       <!-- <span class="footer-dot">·</span>
       <span class="footer-by">Made by one person, in Brooklyn</span> -->
       <div class="footer-links">
-        <a href="https://github.com/tienshiao/detour-app">github.com/tienshiao/detour</a>
+        <a href="https://github.com/tienshiao/detour">Detour on GitHub</a>
         <span id="footer-year"></span>
       </div>
     </div>
