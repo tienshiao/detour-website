@@ -396,6 +396,43 @@ button { font-family: inherit; cursor: pointer; }
 }
 .visual-card.is-pinned .bookmark-list { width: fit-content; }
 
+/* real captures (TASK-110). Each capture carries the real window: its own
+   corners and shadow on a background matching --bg (loops) or transparent
+   (stills), so the page adds no rounding, frame or shadow of its own. */
+.feature-media {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  background: var(--bg);
+}
+img.feature-media { background: none; }
+.feature-media.is-wide { max-width: 640px; }
+/* Keep the media at its own aspect ratio inside the row's min-height. */
+.feature-visual > .feature-media { align-self: center; }
+.visual-card.is-shots {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-content: center;
+}
+.shot { margin: 0; min-width: 0; }
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.1);
+}
+.shot-caption {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  color: var(--ink-50);
+  margin-bottom: 8px;
+}
+
 /* spaces visual */
 .space-list {
   list-style: none;

@@ -23,6 +23,24 @@
     });
   });
 
+  // Feature loops play only while on screen, and never with reduced motion
+  // (the poster frame stands in).
+  const loops = document.querySelectorAll("video.feature-media");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (loops.length && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (entry.isIntersecting && !reduceMotion.matches) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.35 });
+    loops.forEach((video) => observer.observe(video));
+  }
+
   const yearEl = document.getElementById("footer-year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
