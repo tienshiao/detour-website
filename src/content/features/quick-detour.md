@@ -21,14 +21,13 @@ arc:
     - Holding [[⌥⌘]] while clicking a sidebar tab opens it in the small window.
     - A link's right-click menu opens it in the small window too (**Open Link in Quick Detour**).
     - Windows you leave alone close into the archive after 6 hours by default, and you can change that in Settings.
+    - The Dock icon's menu hides or shows all the small windows at once.
   different:
     - Links from other apps open in your Space in front unless a [Link Route](/features/link-routes/) or the Default sends them to Quick Detour. In Arc, Little Arc was the default for them.
     - The arrow next to **Open in** lists every Space. Arc used [[⌥⌘O]] for another Space.
     - "[[⌥⌘]]-click on a link in a page opens it in a Quick Detour too."
     - An [[⌥⌘]]-clicked sidebar tab opens as a copy; the tab stays in the sidebar.
     - The profile name at the top left switches the window to another Profile.
-  notInDetour:
-    - Showing or hiding all Little Arc windows from the Dock icon's menu.
 faq:
   - q: How do I open a quick browser window without switching to my browser?
     a: Press [[⌥⌘N]] in any app. A search field opens over the app you're in, like Spotlight. Type an address or a search and press Return, and the page opens in a small Quick Detour window. Press Escape to close the field without opening anything.
@@ -86,6 +85,12 @@ The usual browser keys work: <kbd>⌘F</kbd> to find, <kbd>⌘[</kbd> and <kbd>�
 ### Which Profile it uses
 
 A Quick Detour uses the Profile of the Detour window you used last, so a lookup from your work Space signs in as you do at work. Opened while a Private window is in front, it is Private: nothing goes into History, the window is dark, and **Open in Private Window** moves the page into a Private window. A link from another app never opens in a Private Quick Detour.
+
+### Hide them all at once
+
+Right-click (or Control-click) Detour's icon in the Dock and choose **Hide All Quick Detour Windows**. Every open Quick Detour, Private ones included, leaves the screen but stays open with its page. The item then reads **Show All Quick Detour Windows** and brings them all back. It's in the menu only while a Quick Detour is open.
+
+A Quick Detour you open while the others are hidden shows on its own; the rest stay hidden until you choose **Show All Quick Detour Windows**. Hidden windows still close after the time set in **Settings › Quick Detour**, just as they would behind other windows. Quarantine windows aren't hidden.
 
 ### Change the settings
 
