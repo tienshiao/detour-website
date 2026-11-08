@@ -38,6 +38,7 @@ related:
   - profiles
   - content-blocker
   - web-extensions
+  - privacy
 ---
 
 ## What it does
@@ -77,7 +78,7 @@ What an extension stores in Private windows, such as its storage, caches and coo
 
 ### Change how Private windows behave
 
-Private windows use the **Private** Profile, which has settings of its own. Choose **Detour › Settings…** (<kbd>⌘,</kbd>), click **Profiles** and select **Private** ("This profile is used for Private Windows."). There you choose its search engine and whether it shows search suggestions, when its tabs sleep, its content blocking lists and the user agent it sends.
+Private windows use the **Private** Profile, which has settings of its own. Choose **Detour › Settings…** (<kbd>⌘,</kbd>), click **Profiles** and select **Private** ("This profile is used for Private Windows."). There you choose its search engine and whether it shows search suggestions, when its tabs sleep, its content blocking lists and the user agent it sends. [Privacy Setup](/features/privacy/) walks through these settings for every Profile.
 
 ### What's not available
 

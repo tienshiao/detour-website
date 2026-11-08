@@ -41,6 +41,7 @@ related:
   - private-browsing
   - content-blocker
   - web-extensions
+  - privacy
 ---
 
 ## What it does
@@ -49,7 +50,7 @@ A Profile is a separate set of everything websites know about you: cookies and l
 
 It's for anyone who uses the same sites as two people: a company account and a personal one, several client accounts, a test account next to your own. Switching Spaces switches accounts. Spaces that don't need separate logins can share a Profile, so Personal and Reading can both use your personal one.
 
-Detour starts with one Profile, called Default. Make more in Settings whenever you need them.
+Detour starts with one Profile, called Default. Make more in Settings whenever you need them. To set up Profiles for privacy, with a Banking Profile that runs no extensions, see [Privacy Setup](/features/privacy/).
 
 ## How to use it
 

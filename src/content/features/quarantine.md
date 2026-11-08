@@ -29,6 +29,7 @@ related:
   - link-routes
   - quick-detour
   - content-blocker
+  - privacy
 ---
 
 ## What it does
@@ -37,7 +38,7 @@ A link in an email or a chat message tells the site who you are the moment you c
 
 Use it to triage links you didn't ask for: a newsletter, a shortened link from someone you don't know, a "your parcel is waiting" mail. Look at the page first. If it's worth keeping, **Open in** moves it into one of your Spaces, where it loads fresh with that Space's logins. If not, close the window and nothing of it stays behind.
 
-Quarantine isn't a button you press for each link. You decide in **Settings › Links** which links go there: every link from Mail, say, or every link from another app except the sites you trust.
+Quarantine isn't a button you press for each link. You decide in **Settings › Links** which links go there: every link from Mail, say, or every link from another app except the sites you trust. [Privacy Setup](/features/privacy/) shows how it fits with Profiles, Link Routes and the other privacy settings.
 
 ### What a quarantined page gets
 
