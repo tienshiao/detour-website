@@ -27,7 +27,7 @@ arc:
     - A Space that a route points to can't be deleted until you change the route. Arc removed such routes with the Space.
 faq:
   - q: How do I make links from Slack always open in my work Space?
-    a: In **Settings › Links**, click **New Route**, set the URL condition to **Any URL**, choose Slack in **From app** and set **Open in** to your work Space. Detour also has to be your default browser, so set it in **Settings › General**.
+    a: In **Settings › Links**, click **New Route**, choose Slack in **From app**, leave the URL field empty and set **Open in** to your work Space. Detour also has to be your default browser, so set it in **Settings › General**.
   - q: How do I open certain websites in a specific Space automatically?
     a: Add a route with **Domain is** and the site's domain, such as `github.com`, and choose the Space in **Open in**. It covers the site's subdomains too, and it applies to links from other apps, addresses you type in a new tab and links you click to that site from another one.
   - q: Why didn't my link open in the Space I routed it to?
@@ -65,13 +65,13 @@ The link opens in a new tab in its Space. If a window already shows that Space, 
    - **Domain is**: a site and all its subdomains. `example.com` also covers `www.example.com` and `mail.example.com`, but not `badexample.com`. Port numbers are ignored.
    - **Contains**: any text in the address, such as `docs.google.com/spreadsheets`.
    - **Is equal to**: one exact address, written out in full, such as `https://example.com/report`. The part after a `#` doesn't count.
-   - **Any URL**: no address condition, for a route that goes by the app alone.
+   - **Any URL**: no address condition. Choosing an app and leaving the field empty does the same.
 4. Optionally choose an app in **From app**. The list shows the apps that are running now; **Choose…** opens your Applications folder to pick any other app. With both conditions set, a link has to match both.
 5. Choose where the links go in **Open in**.
 
 The route is saved as soon as it is complete. Until then, the row shows an orange warning saying what's missing.
 
-To route every link from one app, choose the app in **From app** and set the URL condition to **Any URL**. Choosing the app alone isn't enough yet: the row keeps its "Enter a domain" warning until you switch to **Any URL**.
+To route every link from one app, choose the app in **From app** and leave the URL field empty. The field then reads "Any URL from this app, or a domain such as example.com". Type a domain as well to route only that site's links from the app. A route with neither a URL nor an app isn't saved, and its warning says so: "Enter a domain, such as example.com, or choose an app."
 
 ### Where links can go
 

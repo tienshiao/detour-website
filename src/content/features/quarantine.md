@@ -61,7 +61,7 @@ Pop-ups and new windows the page opens, such as a sign-in window or a link that 
 1. Choose **Detour › Settings…** (<kbd>⌘,</kbd>) and click **Links**.
 2. Pick the links:
    - **Everything from other apps:** under **Default**, set **Open other links in** to **Quarantine**. Then add routes for the apps and sites you trust, for example Slack to your Work Space. Routes are tried from the top and the first that matches wins, so trusted links skip Quarantine.
-   - **One app:** click **New Route**, set the URL condition to **Any URL**, choose the app in **From app** (Mail, say) and set **Open in** to **Quarantine**.
+   - **One app:** click **New Route**, choose the app in **From app** (Mail, say), leave the URL field empty and set **Open in** to **Quarantine**.
    - **One site or kind of address:** click **New Route**, choose **Domain is**, **Contains** or **Is equal to**, type the pattern and set **Open in** to **Quarantine**.
 3. Make Detour your default browser in **Settings › General** with **Set as Default Browser**, so links from other apps come to Detour.
 

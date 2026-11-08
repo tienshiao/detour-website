@@ -38,7 +38,7 @@ faq:
   - q: Where did my Quick Detour window go?
     a: Windows you haven't used for 6 hours close by themselves, and so does every open one when you quit Detour. They go to the sidebar's Archived Tabs page, labelled "Quick Detour", and clicking one there opens it again. You can change the time in **Settings › Quick Detour**, or choose **Never**.
   - q: Can links from Slack or Mail open in a Quick Detour?
-    a: Yes, with a [Link Route](/features/link-routes/). In **Settings › Links**, add a route with the URL condition **Any URL**, choose the app in **From app** and set **Open in** to **Quick Detour**. To send every link from other apps there, set the Default to **Quick Detour** instead.
+    a: Yes, with a [Link Route](/features/link-routes/). In **Settings › Links**, click **New Route**, choose the app in **From app**, leave the URL field empty and set **Open in** to **Quick Detour**. To send every link from other apps there, set the Default to **Quick Detour** instead.
 related:
   - link-routes
   - spaces
