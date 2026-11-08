@@ -58,7 +58,7 @@ Two or three short paragraphs: what the feature is, then why you'd want it, star
 
 ## Coming from Arc
 
-Include `arc` only when Arc had the feature in comparable form (Spaces, Split View, Little Arc, Air Traffic Control, the Command Bar, Peek, auto-archive, pinned tabs, favorites, profiles). Features Arc never had (Quarantine, Dev Mode, Site Search) leave it out and don't mention Arc at all: Detour is not pitched as an Arc clone.
+Include `arc` only when Arc had the feature in comparable form (Spaces, Split View, Little Arc, Air Traffic Control, the Command Bar, Site Search, Peek, the Tab Switcher, auto-archive, history, pinned tabs, favorites, profiles). Features Arc never had (Quarantine, Dev Mode) leave it out and don't mention Arc at all: Detour is not pitched as an Arc clone.
 
 - `arcName` is Arc's name for the feature.
 - `same`, `different`, `notInDetour`: short, factual items, sourced from Arc's own help center where it covers the point, else from more than one reputable source; leave out details sources disagree on.
