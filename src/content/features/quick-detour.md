@@ -72,7 +72,7 @@ The bar at the top of the window has, from left to right:
 
 - **The Profile** whose logins the page uses. Click it to reload the page in another Profile.
 - **The site's name.** Click it to go somewhere else; the same field opens over the page.
-- **Site Settings** (the sliders), for the content blocker and your extensions on this site, and **Copy Link**.
+- **Your pinned extensions**, then **Copy Link**, then **Site Settings** (the sliders), for the content blocker and your extensions on this site. Copy Link and Site Settings stay in the same place however many extensions you pin, in this bar and in the address at the top of the sidebar.
 - **Open in** followed by a Space's name, with an arrow for the other Spaces.
 
 The usual browser keys work: <kbd>⌘F</kbd> to find, <kbd>⌘[</kbd> and <kbd>⌘]</kbd> for Back and Forward, <kbd>⌘W</kbd> to close.
