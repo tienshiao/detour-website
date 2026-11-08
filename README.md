@@ -28,4 +28,6 @@ npx wrangler dev  # serves dist/ the way Cloudflare does (run build first)
 
 ## Deploy
 
-Releases deploy through `scripts/publish-release.sh` in the app repo: it updates `release.json`, commits and pushes, then builds a clean export of the commit and runs `wrangler deploy`. To deploy a site-only change by hand, build from a clean checkout and run `npx wrangler deploy`.
+Every push to `main` deploys: Cloudflare's Git integration (Workers Builds) clones the repo, runs `npm ci`, then `npx wrangler deploy`, which builds the site first (`build.command` in `wrangler.jsonc`).
+
+Releases go through `scripts/publish-release.sh` in the app repo: it updates `release.json`, commits, builds a clean export of the commit, pushes, and runs `wrangler deploy` from the export (the same commit the Git build deploys). To deploy by hand, run `npx wrangler deploy` from a clean checkout.

@@ -5,6 +5,11 @@
   "observability": {
     "enabled": true
   },
+  // `wrangler deploy` builds first, so a fresh clone deploys without a
+  // separate build step (Cloudflare's Git build runs only npm ci + deploy).
+  "build": {
+    "command": "npm run build"
+  },
   "assets": {
     "directory": "./dist"
   },
