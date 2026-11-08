@@ -76,7 +76,7 @@ When you switch tabs with <kbd>⌃Tab</kbd> or walk the sidebar with <kbd>⌥⌘
 
 - Drag the split's row to move both tabs together.
 - Drag it into the pinned section, or onto a pinned folder, to pin the pair. Drag it back into your tabs to unpin it; it stays a split.
-- Pinning the focused pane with **File › Pin/Unpin Tab** (<kbd>⌘D</kbd>) takes that tab out of the split and pins it on its own.
+- Pinning the focused pane with **File › Pin Tab** (<kbd>⌘D</kbd>) takes that tab out of the split and pins it on its own.
 
 ### Separate the tabs
 

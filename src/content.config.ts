@@ -23,6 +23,8 @@ const image = z.object({
   height: z.number(),
   alt: z.string(),
   caption: z.string().optional(),
+  /** Caps the displayed width (CSS px) of a small crop that would otherwise scale up. */
+  displayWidth: z.number().optional(),
 });
 
 const features = defineCollection({
