@@ -30,7 +30,7 @@ The page is a user manual first. Someone who just installed Detour should be abl
 | `description` | Meta description and share text | About 150–160 characters. Names the feature and says what you can do with it. |
 | `accent` | Color for the pill, steps and the Arc headings | The color of the feature's home page section. |
 | `label` | Pill text | Defaults to the name in capitals. |
-| `media` | The page's main loop or still (optional only while the capture is still to be made; never a placeholder) | `type: video` with `src`, `poster`, `width`, `height`, `label` (what the loop shows, for screen readers), optional `caption`; or `type: image` with `src`, `width`, `height`, `alt`, optional `caption`. |
+| `media` | The page's main loop or still (optional only while the capture is still to be made; never a placeholder) | `type: video` with `src`, `poster`, `width`, `height`, `label` (what the loop shows, for screen readers), optional `caption`; or `type: image` with `src`, `width`, `height`, `alt`, optional `caption`, and optional `displayWidth` (a CSS-pixel cap for small crops, which would otherwise be scaled up to the column width). |
 | `shareImage` | Social share image | Optional. A landscape image works best; omit it to use the site screenshot. |
 | `arc` | Coming from Arc box | Only for features Arc had in comparable form (see below). |
 | `faq` | Questions | 3 to 6 entries of `q` and `a`. |
@@ -51,7 +51,7 @@ Two or three short paragraphs: what the feature is, then why you'd want it, star
 - **Numbered lists** for steps that happen in order. **Bulleted lists** for alternatives ("Any of these makes a split").
 - Name controls exactly as the app shows them, in bold: **Separate Tabs**, **Spaces › Manage Spaces…**. Use `›` between menu levels.
 - Keys as `<kbd>⌥⌘→</kbd>` in the body and `[[⌥⌘→]]` in frontmatter, with the Mac symbols in Apple's order: ⌃ ⌥ ⇧ ⌘, then the key (⇧⌘N, ⌥⌘→). The app's menus show the same order.
-- Menu items by the name the menu shows: the File menu's item is **Pin/Unpin Tab**, a tab's own menu says **Pin Tab**.
+- Menu items by the name the menu shows when it opens, which can differ from the item's title in code: the File menu's pin item reads **Pin Tab** or **Unpin Tab** for the current tab (its static title, Pin/Unpin Tab, is never on screen while a tab is selected). Dump menus after validating them.
 - Every step, menu title and shortcut is checked against the current release before the page ships: in the code at the release tag and in the running app (TASK-292.2's harness dumped the menus and drove the entry points).
 - Extra screenshots go in a `<figure>` with `width` and `height` set to the file's pixel size, `loading="lazy"` and an `alt` describing what is on screen; cap the display size with `style="max-width:…"` for small crops.
 - Don't link to feature pages that don't exist yet; the related cards fill in on their own.
