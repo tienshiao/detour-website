@@ -5,6 +5,14 @@ title: Block ads and trackers on Mac · Content Blocker | Detour
 description: Detour's built-in Content Blocker stops ads, trackers, cookie notices and malicious URLs using EasyList. Switch it off for one site, or pick lists per Profile.
 accent: "#30A46C"
 label: CONTENT BLOCKER
+media:
+  type: image
+  src: /assets/features/content-blocker.webp
+  width: 440
+  height: 440
+  displayWidth: 400
+  alt: "Detour's Site Settings popover for www.theverge.com showing Content Blocking with 13 resources blocked on this page and the Block content on this site switch on"
+  caption: "The Site Settings popover counts what was blocked and turns blocking off for one site."
 faq:
   - q: Does Detour have a built-in ad blocker?
     a: Yes. The Content Blocker is on from the first launch for every Profile, using EasyList for ads, EasyPrivacy for trackers, a list of cookie notices and a list of malicious URLs. You don't need to install an extension.

@@ -5,6 +5,14 @@ title: Search open tabs and history on Mac · Command Palette | Detour
 description: Detour's Command Palette is its address bar. Press ⌘T to open a page or search in a new tab, or ⌘L to change this one. Open tabs and history appear as you type.
 accent: "#3E63DD"
 label: COMMAND PALETTE
+media:
+  type: video
+  src: /assets/features/command-palette.mp4
+  poster: /assets/features/command-palette-poster.webp
+  width: 1140
+  height: 820
+  label: "Pressing Command-T in Detour opens the Command Palette over the page; typing \"app\" lists an open Apple tab, history and search suggestions, and Return opens Apple's Mac page in a new tab"
+  caption: "⌘T, a few letters, Return. Open tabs and history come first."
 arc:
   arcName: Command Bar
   same:

@@ -5,6 +5,13 @@ title: Browser for localhost web development on Mac · Dev Mode | Detour
 description: "Detour's Dev Mode turns on by itself for localhost and .test sites: a toolbar with the full URL, Console, Network, an element picker and full-page screenshots."
 accent: "#FF7600"
 label: DEV MODE
+media:
+  type: image
+  src: /assets/features/dev-mode.webp
+  width: 1140
+  height: 820
+  alt: "A local site on http://localhost:5173 in Detour with the striped Dev Mode toolbar above the page showing the full URL and buttons for screenshots, the console, network and the element picker; its sidebar row has a dashed hazard border"
+  caption: "A localhost tab gets the striped Dev Mode toolbar by itself."
 arc:
   arcName: Developer Mode
   same:

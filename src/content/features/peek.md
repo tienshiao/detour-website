@@ -5,6 +5,14 @@ title: Preview a link without leaving the page on Mac · Peek | Detour
 description: Detour's Peek opens a link in a panel over the page. Shift-click any link, or click a link to another site in a pinned tab, then close it or keep it as a tab.
 accent: "#AB4ABA"
 label: PEEK
+media:
+  type: video
+  src: /assets/features/peek.mp4
+  poster: /assets/features/peek-poster.webp
+  width: 1140
+  height: 820
+  label: "A Wikipedia article in Detour. Shift-clicking the Safari link slides the Safari article up in a Peek over the page, with Close, Open in New Tab and Open in Split View buttons beside it; clicking Open in New Tab turns the Peek into a selected tab in the sidebar"
+  caption: "Shift-click a link to Peek at it, then keep it as a tab with Open in New Tab."
 arc:
   arcName: Peek
   same:

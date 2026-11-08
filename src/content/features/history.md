@@ -5,6 +5,13 @@ title: Search and clear browsing history on Mac · History | Detour
 description: Detour's History page lists the pages you visited on a Profile, by day. Search by title or address, pick a time range, and delete entries or clear history.
 accent: "#8D6E4C"
 label: HISTORY
+media:
+  type: image
+  src: /assets/features/history.webp
+  width: 1140
+  height: 820
+  alt: "Detour's History page with a Search History field, an All time menu and a Clear History button, listing visits to Wikipedia, Apple, Hacker News and other public sites grouped under Yesterday, Friday and Thursday"
+  caption: "History lists your visits by day. Search by title or address."
 arc:
   arcName: History
   same:

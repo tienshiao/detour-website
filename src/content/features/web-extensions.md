@@ -5,6 +5,13 @@ title: Use Chrome extensions in a Mac browser · Web Extensions | Detour
 description: Detour installs Chrome Web Store extensions on WebKit, Safari's engine. See how to add, pin, update and remove them, and which ones work and which don't yet.
 accent: "#3E63DD"
 label: WEB EXTENSIONS
+media:
+  type: image
+  src: /assets/features/web-extensions.webp
+  width: 1140
+  height: 820
+  alt: "Dark Reader, installed from the Chrome Web Store, pinned in Detour's address bar with its popup open over a Wikipedia article it has turned dark"
+  caption: "Dark Reader from the Chrome Web Store, pinned to the address bar."
 arc:
   arcName: Extensions
   same:

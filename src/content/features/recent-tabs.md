@@ -5,6 +5,14 @@ title: Switch to the last used tab with Ctrl-Tab · Recent Tabs | Detour
 description: Detour's Recent Tabs flips between tabs in the order you used them. Press ⌃Tab for the last tab, or hold ⌃ to pick from previews. ⌥⌘↑/↓ follow the sidebar.
 accent: "#D6409F"
 label: RECENT TABS
+media:
+  type: video
+  src: /assets/features/recent-tabs.mp4
+  poster: /assets/features/recent-tabs-poster.webp
+  width: 1140
+  height: 820
+  label: "Holding Control and pressing Tab twice in Detour shows a row of tab previews over the page with the highlight moving to the second card; releasing Control switches to that tab"
+  caption: "Hold ⌃ and press Tab to step back through the tabs you used last."
 arc:
   arcName: Tab Switcher
   same:
