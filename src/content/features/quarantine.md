@@ -81,7 +81,7 @@ When a link starts Detour and Detour can't tell which app it came from, it opens
 
 Both keep no history. They differ in what they share:
 
-- A [Private window](/features/private-browsing/) is for browsing you start yourself. All Private windows share one set of cookies until you quit Detour, so you can sign in once and stay signed in across them.
+- A [Private window](/features/private-browsing/) is for browsing you start yourself. Private windows open at the same time share one set of cookies, so you can sign in once and stay signed in across them until the last one closes.
 - Quarantine is for links that arrive from somewhere else. Every window has its own empty store and wipes it when it closes, tracking tags are removed, and you decide link by link whether a page moves into a Space.
 
 ### Shortcuts

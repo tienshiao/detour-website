@@ -89,7 +89,7 @@ A website can also offer an extension as a `.crx` file. Clicking its link shows 
 
 - **Turn one off everywhere:** in **Settings › Extensions**, select it and turn off **Enabled**.
 - **Per Profile:** in **Settings › Profiles**, select a Profile and use the switches under **Extensions**. A work password manager can run in your Work Profile only.
-- **In Private windows:** select the extension in **Settings › Extensions** and turn on **Allow in Private**. What it stores there is kept in memory only and discarded when you quit Detour.
+- **In Private windows:** select the extension in **Settings › Extensions** and turn on **Allow in Private**. What it stores there is kept in memory only and cleared when the last Private window closes.
 
 **Settings › Extensions** also lists each extension's permissions, with a switch for each one you can take back.
 
