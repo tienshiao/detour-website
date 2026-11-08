@@ -66,7 +66,7 @@ Each card's preview is taken as you leave the tab, so it shows the page as you l
 
 - Press <kbd>⌥⌘↓</kbd> (**Navigate › Next Tab**) to go to the next tab down the sidebar, and <kbd>⌥⌘↑</kbd> (**Navigate › Previous Tab**) to go up.
 - The order is your pinned tabs, then your other tabs, top to bottom. After the last tab it starts again at the top.
-- A split counts as one tab. Favorites are skipped. A pinned tab that isn't open opens when you reach it.
+- A split counts as one tab. Favorites, and pinned tabs inside a collapsed folder, are skipped. A pinned tab that isn't open opens when you reach it.
 
 ### Shortcuts
 

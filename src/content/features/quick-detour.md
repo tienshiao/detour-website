@@ -10,13 +10,13 @@ arc:
   same:
     - "[[⌥⌘N]] from any app opens a small window for a quick search or address."
     - The **Open in** button at the top moves the page into a Space, and [[⌘O]] does the same.
-    - Holding ⌥⌘ while clicking a sidebar tab opens it in the small window.
+    - Holding [[⌥⌘]] while clicking a sidebar tab opens it in the small window.
     - Windows you leave alone close into the archive after 6 hours by default, and you can change that in Settings.
   different:
     - Links from other apps open in your Space in front unless a [Link Route](/features/link-routes/) or the Default sends them to Quick Detour. In Arc, Little Arc was the default for them.
     - The arrow next to **Open in** lists every Space. Arc used [[⌥⌘O]] for another Space.
-    - ⌥⌘-click on a link in a page opens it in a Quick Detour too.
-    - A ⌥⌘-clicked sidebar tab opens as a copy; the tab stays in the sidebar.
+    - [[⌥⌘]]-click on a link in a page opens it in a Quick Detour too.
+    - An [[⌥⌘]]-clicked sidebar tab opens as a copy; the tab stays in the sidebar.
     - The profile name at the top left switches the window to another Profile.
   notInDetour:
     - Showing or hiding all Little Arc windows from the Dock icon's menu.
@@ -24,7 +24,7 @@ faq:
   - q: How do I open a quick browser window without switching to my browser?
     a: Press [[⌥⌘N]] in any app. A search field opens over the app you're in, like Spotlight. Type an address or a search and press Return, and the page opens in a small Quick Detour window. Press Escape to close the field without opening anything.
   - q: The ⌥⌘N shortcut doesn't work from other apps. How do I turn it on?
-    a: In Detour, choose **Detour › Settings…**, click **Quick Detour** and turn on **Open Quick Detour from any app with**. Click the shortcut field next to it to record another key combination if another app already uses ⌥⌘N.
+    a: In Detour, choose **Detour › Settings…**, click **Quick Detour** and turn on **Open Quick Detour from any app with**. Click the shortcut field next to it to record another key combination if another app already uses [[⌥⌘N]].
   - q: How do I keep a page I opened in a Quick Detour?
     a: Click **Open in** at the top right, or press [[⌘O]], to move it into the Space the button names. The arrow next to it lists your other Spaces. The window closes and the page carries on as a tab in the sidebar.
   - q: Where did my Quick Detour window go?
@@ -56,7 +56,7 @@ Quick Detours you forget about close by themselves after a few hours and wait in
 - **From the sidebar:** hold <kbd>⌥⌘</kbd> and click a tab. The Quick Detour gets a copy of its address; the tab itself stays where it is.
 - **From other apps' links:** with a [Link Route](/features/link-routes/) whose **Open in** is **Quick Detour**, or that as the Default. Without one, links from other apps open in a Space.
 
-You can have several open at once. A link you ⌘-click inside one opens in another.
+You can have several open at once. A link you <kbd>⌘</kbd>-click inside one opens in another.
 
 ### Use the window
 

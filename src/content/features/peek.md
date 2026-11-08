@@ -56,7 +56,7 @@ Links you click inside a Peek open in the same Peek.
 
 Three buttons sit to the right of the Peek, from the top:
 
-- **Close** closes it. So do Escape, <kbd>⌘W</kbd> and a click anywhere outside the panel.
+- **Close** closes it. So do Escape, <kbd>⌘W</kbd> and a click on the dimmed page around it.
 - **Open in New Tab** moves the page into a new tab, with its back and forward history.
 - **Open in Split View** puts the page next to the one you were on, in a [split](/features/split-tabs/). The button doesn't show when the tab is already in a split.
 

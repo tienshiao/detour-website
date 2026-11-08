@@ -48,7 +48,7 @@ From <kbd>⌘T</kbd> the results open in a new tab; from <kbd>⌘L</kbd>, in the
 
 Don't remember the keyword? Type the start of the site's name or address, such as `wiki`, and press Tab. A **Search Wikipedia** row with a Tab key in the list shows which site Tab will search.
 
-To leave a site search, press Backspace before typing anything, or Escape, which also clears the field.
+To leave a site search, press Backspace before typing anything. From <kbd>⌘T</kbd>, Escape also leaves it and clears the field; from <kbd>⌘L</kbd>, Escape closes the palette.
 
 ### Starter sites
 

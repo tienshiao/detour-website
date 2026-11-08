@@ -25,7 +25,7 @@ faq:
   - q: Why doesn't an extension work in Detour?
     a: It may use a part of Chrome's extension system that WebKit doesn't have yet, such as side panels, tab groups or watching network requests. Check that it's turned on in **Settings › Extensions** and for your Profile in **Settings › Profiles**, then try reloading the page.
   - q: Do extensions update automatically?
-    a: Yes. Detour checks every few hours for updates to extensions from the Chrome Web Store. To check now, choose **Extensions › Check for Extension Updates**. An update that asks for new permissions waits, turned off, until you accept them.
+    a: Yes. Detour checks extensions from the Chrome Web Store for updates about every five hours. To check now, choose **Extensions › Check for Extension Updates**. An update that asks for new permissions waits, turned off, until you accept them.
   - q: How do I remove an extension?
     a: Choose **Extensions › Manage Extensions…**, select the extension and click **Uninstall Extension**. It's removed from every Profile, along with its data.
 related:
@@ -96,7 +96,7 @@ The extension then unlocks when the app does and fills logins on web pages. Deto
 
 ### Updates
 
-Detour checks extensions from the Chrome Web Store for updates shortly after it starts and then every few hours. To check now, choose **Extensions › Check for Extension Updates**, or click **Check for Updates** for one extension in **Settings › Extensions**.
+Detour checks extensions from the Chrome Web Store for updates about every five hours while it runs, and shortly after it starts when the last check is older than that. To check now, choose **Extensions › Check for Extension Updates**, or click **Check for Updates** for one extension in **Settings › Extensions**.
 
 - An update that asks for **new permissions** is installed turned off. **Settings › Extensions** shows what it wants; click **Accept and Enable** to turn it back on.
 - An update for an extension that's busy, for example with its popup open, waits until it's idle. Click **Install Now** in **Settings › Extensions** to install it right away.

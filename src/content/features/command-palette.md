@@ -82,4 +82,4 @@ Open tabs come from every Space on the window's Profile, pinned tabs included. C
 | Move through the list | <kbd>↑</kbd> <kbd>↓</kbd> |
 | Open the selected row | Return |
 | Accept the completion, or search a site | Tab |
-| Clear the field, then close the palette | Escape |
+| Clear the field, then close the palette (opened with <kbd>⌘L</kbd>, it closes at once) | Escape |

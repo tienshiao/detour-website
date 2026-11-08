@@ -23,7 +23,7 @@ faq:
   - q: How do I open certain websites in a specific Space automatically?
     a: Add a route with **Domain is** and the site's domain, such as `github.com`, and choose the Space in **Open in**. It covers the site's subdomains too, and it applies to links from other apps, addresses you type in a new tab and links you click to that site from another one.
   - q: Why didn't my link open in the Space I routed it to?
-    a: Routes are tried from the top and the first that matches wins, so a route above it may have caught the link. A link to the same site you're on stays in its tab, and so do Shift-, Option- and ⌥⌘-clicks. Links from other apps reach Detour only when it is your default browser.
+    a: Routes are tried from the top and the first that matches wins, so a route above it may have caught the link. A link to the same site you're on stays in its tab, and so do Shift-, Option- and [[⌥⌘]]-clicks. Links from other apps reach Detour only when it is your default browser.
   - q: Do routes work in Private windows?
     a: "A route to **Private Window** works from anywhere. Nothing routes out of a Private window, though: a link clicked or typed there stays in it."
   - q: Can I route links to a Space on another Profile?
@@ -58,7 +58,7 @@ The link opens in a new tab in its Space. If a window already shows that Space, 
    - **Contains**: any text in the address, such as `docs.google.com/spreadsheets`.
    - **Is equal to**: one exact address, written out in full, such as `https://example.com/report`. The part after a `#` doesn't count.
    - **Any URL**: no address condition, for a route that goes by the app alone.
-4. Optionally choose an app in **From app**. The list shows the apps that are running now; **Choose…** picks any app in your Applications folder. With both conditions set, a link has to match both.
+4. Optionally choose an app in **From app**. The list shows the apps that are running now; **Choose…** opens your Applications folder to pick any other app. With both conditions set, a link has to match both.
 5. Choose where the links go in **Open in**.
 
 The route is saved as soon as it is complete. Until then, the row shows an orange warning saying what's missing.
@@ -94,7 +94,7 @@ Links from other apps go to your default browser. In **Settings › General**, c
 Some links always stay where you are, because you chose where they open:
 
 - a link to the same site as the page you're on
-- Shift-click (opens a Peek), Option-click (opens a split) and ⌥⌘-click (opens a Quick Detour)
+- Shift-click (opens a Peek), Option-click (opens a split) and <kbd>⌥⌘</kbd>-click (opens a Quick Detour)
 - **Open Link in New Tab** and the other items in a link's right-click menu
 - links inside a Peek, and pages that send you somewhere else on their own
 - searches, and addresses you type with <kbd>⌘L</kbd> to change the current tab
