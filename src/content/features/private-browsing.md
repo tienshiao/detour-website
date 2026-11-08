@@ -35,7 +35,7 @@ related:
 
 ## What it does
 
-A Private window is for browsing you don't want remembered: a present you're shopping for, or a search you don't want suggested later. Nothing you visit goes into History, nothing is written to disk, and when you close the window its tabs are gone for good. It doesn't come back when you reopen Detour.
+A Private window is for browsing you don't want remembered: a present you're shopping for, or a search you don't want suggested later. Nothing you visit goes into History, no cookies or site data are written to disk, and when you close the window its tabs are gone for good. It doesn't come back when you reopen Detour.
 
 Each Private window gets a Space of its own, **🔒 Private**, on the built-in Private Profile. That Profile keeps cookies, logins and site data in memory only, never on disk. While Detour is running, every Private window shares them: sign in to a site in one and you're still signed in in the next, even after closing the first. Quitting Detour clears them.
 
@@ -57,7 +57,7 @@ The window is dark and titled "Private Browsing", and it opens ready for an addr
 | History | Nothing is recorded. The command palette suggests only this window's tabs, never your history or another window's tabs. |
 | Tabs | Not saved. Closed tabs don't go to Archived Tabs, and the window isn't restored when you reopen Detour. |
 | Cookies, logins and site data | In memory only, shared by every Private window, cleared when you quit Detour. |
-| Site settings | A site you switch content blocking off for is remembered until the last Private window closes. |
+| Site settings | A site you switch content blocking off for is remembered until the last Private window (and any Quarantine window) closes. |
 | Downloads | Listed only in that window's downloads. Closing the window cancels any still running, after asking. Finished files stay in your Downloads folder. |
 | Extensions | Off, unless you allow an extension in Private. |
 

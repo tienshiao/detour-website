@@ -2,7 +2,7 @@
 name: Profiles
 lede: Separate logins, history and extensions for work, personal and client browsing, side by side in one browser.
 title: Use multiple accounts on the same site · Profiles | Detour
-description: Detour's Profiles keep logins, cookies, history and extensions apart, so you can be signed in to work and personal accounts on one site at once.
+description: Detour's Profiles keep logins, cookies, history and extensions apart, so you can be signed in to work and personal accounts on the same site at the same time.
 accent: "#1FB6A8"
 label: PROFILES
 media:
@@ -82,7 +82,7 @@ Select a Profile in **Settings › Profiles**. Its settings apply to every Space
 | **Search engine** | Where searches from the command palette (<kbd>⌘T</kbd>, <kbd>⌘L</kbd>) go: Google, DuckDuckGo, Bing, Yahoo, Ecosia or Kagi. **Search suggestions** shows the engine's suggestions as you type. |
 | **Archive tabs after** | How long a tab can go unused before it's archived: 12 hours (the default), 24 hours, 7 days, 30 days or Never. Pinned tabs and favorites are never archived. |
 | **Sleep tabs after** | How long a tab can sit unseen before Detour unloads it to save memory: 15 minutes, 30 minutes, 1 hour (the default), 2 hours or Never. A sleeping tab reloads when you open it. |
-| **Per-tab isolation** | Gives every tab its own temporary cookies and storage, so tabs don't share logins and nothing is kept. A tab that goes to sleep loses its logins. |
+| **Per-tab isolation** | Gives every tab its own temporary cookies and storage, so tabs don't share logins and none of it is kept once the tab closes. A window a page opens itself shares that tab's. History is still recorded. A tab that goes to sleep loses its logins. |
 | **Block content** | Turns content blocking on, with the filter lists you choose: EasyList (ads), EasyPrivacy (trackers), Cookie notices and Malicious URLs. |
 | **Extensions** | A switch for each installed extension, so an extension can run in one Profile and not another. |
 | **Identify as** | The user agent websites see: Detour, Safari, or a Custom string. |
@@ -93,7 +93,7 @@ Select a Profile in **Settings › Profiles**. Its settings apply to every Space
 1. In **Settings › Spaces**, move every Space that uses the Profile to another one. The Profiles list shows how many Spaces use each.
 2. In **Settings › Profiles**, select the Profile and click **−**.
 
-If a Space still uses the Profile, Detour says **Cannot Delete Profile** and how many Spaces use it. Deleting a Profile also deletes its logins, website data and favorites.
+If a Space still uses the Profile, Detour says **Cannot Delete Profile** and how many Spaces use it. Otherwise the Profile is deleted right away, without asking, along with its logins, website data and favorites. You can't delete your only Profile.
 
 ### The Private profile
 

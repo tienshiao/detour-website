@@ -13,7 +13,7 @@ faq:
   - q: Why do I still see some ads?
     a: Filter lists don't catch everything, and some sites change their ads faster than the lists follow. A few kinds of advanced filter rules also can't be expressed in WebKit's content rules, so Detour skips them. The lists update every 24 hours, or right away with **Update All Now** in **Settings › Content Blocking**.
   - q: Does the Content Blocker work in Private windows?
-    a: Yes. Private windows and Quarantine use the **Private** Profile's content blocking settings. A site you switch blocking off for there is remembered only until the last Private window closes.
+    a: Yes. Private windows and Quarantine use the **Private** Profile's content blocking settings. A site you switch blocking off for there is remembered only until the last Private and Quarantine windows close.
   - q: Can I add my own filter lists or rules?
     a: Not yet. Detour uses the four lists shown in **Settings › Content Blocking**, and you can turn each one off per Profile. You can also install a content-blocking extension from the Chrome Web Store; Detour runs on WebKit, so some Chrome extensions work and some don't yet.
 related:

@@ -102,7 +102,7 @@ Right-click a folder for more:
 
 ### Pin a split
 
-Drag a split's row above the line to pin both tabs as a pair. Each half keeps working like a pinned tab: closing one side puts only that side to sleep, and the pair stays together. To make them two separate pinned tabs, right-click the pinned split and choose **Separate Tabs**.
+Drag a split's row above the line to pin both tabs as a pair. Each half keeps working like a pinned tab: closing one side closes only that side's page, and the pair stays together. To make them two separate pinned tabs, right-click the pinned split and choose **Separate Tabs**.
 
 ### Shortcuts
 

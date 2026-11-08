@@ -39,12 +39,12 @@ Quarantine isn't a button you press for each link. You decide in **Settings › 
 | What the site stores | Kept in memory for that window only, and removed when it closes. **Open in** doesn't carry it along. |
 | History | Nothing is recorded, and the window isn't restored when you reopen Detour. |
 | Tracking tags in the link | `utm_` tags and click IDs such as `gclid`, `fbclid` and `msclkid` are removed before the page loads, and from links you follow inside it. Other parts of the address stay. |
-| Your browser's fingerprint | The page sees Safari's standard user agent, and WebKit's fingerprinting protections are on: canvas and audio readouts are randomized, and the screen size it reads is the window's. |
+| Your browser's fingerprint | The page sees Safari's standard user agent. Where your Mac's WebKit offers them, its fingerprinting protections are on too: on recent macOS, canvas and audio readouts are randomized and the screen size the page reads is the window's. |
 | Extensions | Only the ones you allowed in Private windows. |
 | Downloads | Detour asks before each one. A file you accept goes to your Downloads folder and stays there. |
 | Your IP address | Unchanged. Quarantine keeps a visit from being tied to your accounts and browsing. It doesn't make you anonymous. |
 
-Pop-ups and new windows the page opens itself, such as a sign-in window, share its store. A link you Command-click inside it opens in another Quarantine window with a store of its own.
+Pop-ups and new windows the page opens, such as a sign-in window or a link that opens in a new window, share its store. A link you Command-click inside it opens in another Quarantine window with a store of its own.
 
 ## How to use it
 
