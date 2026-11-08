@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://detourbrowser.com/sitemap.xml
+Sitemap: https://detourbrowser.com/sitemap.xml

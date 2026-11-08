@@ -1,0 +1,268 @@
+---
+import Arrow from "../components/Arrow.astro";
+import Base from "../layouts/Base.astro";
+import { dmgName, dmgSize, dmgUrl, version } from "../lib/release";
+
+const title = "Detour — Native macOS Browser with Spaces, Profiles & Pinned Tabs";
+
+const softwareApplication = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Detour",
+  description: "A free, native macOS browser built on WebKit. Spaces, Profiles, pinned tabs, command palette, and a real Liquid Glass sidebar.",
+  url: new URL("/", Astro.site).href,
+  applicationCategory: "WebBrowser",
+  operatingSystem: "macOS 15.4+",
+  softwareVersion: version,
+  downloadUrl: dmgUrl,
+  fileSize: dmgSize,
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  author: {
+    "@type": "Person",
+    name: "Tienshiao Ma",
+    url: "https://github.com/tienshiao",
+  },
+};
+---
+<Base
+  title={title}
+  description="Detour is a free, native macOS browser built on WebKit. Spaces, Profiles, pinned tabs, command palette, and a real Liquid Glass sidebar — for people who loved the Arc way of working."
+  ogDescription="A free, native macOS browser built on WebKit. Spaces, Profiles, pinned tabs, and a real Liquid Glass sidebar — for people who loved the Arc way of working."
+  twitterDescription="A free, native macOS browser built on WebKit. Spaces, Profiles, pinned tabs, and a real Liquid Glass sidebar."
+  imageAlt="Detour browser window showing Spaces sidebar with Work, Personal, Reading, and Side workspaces"
+  twitterImageAlt="Detour browser window showing the Spaces sidebar"
+>
+<Fragment slot="head">
+<link rel="preload" as="image" href="/assets/detour-screenshot.png" fetchpriority="high" />
+<script type="application/ld+json" set:html={JSON.stringify(softwareApplication, null, 2)} />
+</Fragment>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- ambient arrow — peeks below the hero into the marquee -->
+    <Arrow class="bg-arrow bg-arrow-1" />
+    <div class="eyebrow eyebrow-orange">FOR ARC REFUGEES</div>
+    <div class="hero-grid">
+      <h1 class="hero-headline">Take a <span class="orange">Detour</span>.</h1>
+      <div class="hero-side">
+        <p class="hero-sub">The browser for curious people. Explore the web without losing your place.</p>
+        <div class="hero-cta-row">
+          <a class="btn-primary" href={dmgUrl}>
+            <span class="btn-arrow">⬇</span>
+            Download for macOS
+          </a>
+          <span class="hero-meta">{dmgName} · {dmgSize} · macOS 15.4+</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <img id="hero-screenshot" src="/assets/detour-screenshot.png" alt="Detour browser on macOS showing the Spaces sidebar with Work, Personal, Reading, and Side workspaces" width="1342" height="959" />
+      <div class="mode-toggle" role="radiogroup" aria-label="Hero appearance">
+        <button type="button" class="mode-btn is-active" data-mode="light" aria-pressed="true">☀ LIGHT</button>
+        <button type="button" class="mode-btn" data-mode="dark" aria-pressed="false">☾ DARK</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE BLURB -->
+  <section class="marquee">
+    <div class="marquee-eyebrow">¶ A NOTE FROM THE MAKER</div>
+    <div class="marquee-quote">
+      &ldquo;All of <em>MY</em> favorite features from Arc. And maybe some of yours too.&rdquo;
+      <div class="marquee-byline">— Swift · WebKit · macOS only</div>
+    </div>
+  </section>
+
+  <!-- HEADLINE FEATURES -->
+  <section class="features" id="features">
+    <!-- ambient arrow — right edge, mid-features, pointing down-and-inward -->
+    <Arrow class="bg-arrow bg-arrow-2" />
+
+    <!-- Spaces -->
+    <div class="feature-row">
+      <div class="feature-copy">
+        <span class="feature-label" style="--accent:#FF7600">SPACES</span>
+        <h2 class="feature-title">Workspaces, the way you actually work.</h2>
+        <p class="feature-sub">Group tabs into Spaces — each with its own emoji, color, and pinned set. Switch with a swipe. One window, one Space at a time, exactly the way your brain already sorts the day.</p>
+      </div>
+      <div class="feature-visual">
+        <video class="feature-media" src="/assets/features/spaces.mp4" poster="/assets/features/spaces-poster.webp" width="700" height="880" muted loop playsinline preload="none" aria-label="Detour's sidebar switching between the Work, Personal, Reading and Side spaces, each with its own color, pinned tabs and favorites"></video>
+      </div>
+    </div>
+
+    <!-- Pinned tabs (reversed order) -->
+    <div class="feature-row reversed">
+      <div class="feature-copy">
+        <span class="feature-label" style="--accent:#7C5CFF">PINNED TABS &amp; FOLDERS</span>
+        <h2 class="feature-title">Stuff you always have open.</h2>
+        <p class="feature-sub">Pin the tabs you live in. Group them in folders. They reset to home when you close them — never gone, never cluttered.</p>
+      </div>
+      <div class="feature-visual">
+        <video class="feature-media" src="/assets/features/pinned.mp4" poster="/assets/features/pinned-poster.webp" width="700" height="880" muted loop playsinline preload="none" aria-label="Pinned tabs grouped into Design and Research folders that collapse and expand in the sidebar"></video>
+      </div>
+    </div>
+
+    <!-- Profiles -->
+    <div class="feature-row">
+      <div class="feature-copy">
+        <span class="feature-label" style="--accent:#1FB6A8">PROFILES</span>
+        <h2 class="feature-title">Work you, personal you, side-project you.</h2>
+        <p class="feature-sub">Profiles own the cookies, the history, the extensions. Sign into the same site three times — three Profiles, three sessions, no logging out. Spaces live inside Profiles; share one across many Spaces, or keep each Space sealed off.</p>
+      </div>
+      <div class="feature-visual">
+        <div class="visual-card is-shots">
+          <figure class="shot">
+            <figcaption class="shot-caption">SPACES → PROFILE</figcaption>
+            <img src="/assets/features/profiles-spaces.webp" width="224" height="115" loading="lazy" alt="Detour's Spaces settings: Work uses the Work profile, Personal and Reading share the Personal profile, Side uses Client X" />
+          </figure>
+          <figure class="shot">
+            <figcaption class="shot-caption">PROFILES</figcaption>
+            <img src="/assets/features/profiles-list.webp" width="224" height="115" loading="lazy" alt="Detour's Profiles settings listing Private, Work with 1 space, Personal with 2 spaces and Client X with 1 space" />
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- Split tabs (reversed order) -->
+    <div class="feature-row reversed">
+      <div class="feature-copy">
+        <span class="feature-label" style="--accent:#2F7BF6">SPLIT TABS</span>
+        <h2 class="feature-title">Two tabs, one row.</h2>
+        <p class="feature-sub">Drag a tab onto the edge of another — or Option-click a link — and the two sit side by side as a single sidebar row. Resize the panes, pin the pair, pull them apart when you're done.</p>
+      </div>
+      <div class="feature-visual">
+        <img class="feature-media is-wide" src="/assets/features/split.webp" width="1392" height="792" loading="lazy" alt="A Detour window showing a Wikipedia article and Apple's Mac page side by side, shown in the sidebar as one split row" />
+      </div>
+    </div>
+
+    <!-- Favorites -->
+    <div class="feature-row">
+      <div class="feature-copy">
+        <span class="feature-label" style="--accent:#E0A100">FAVORITES</span>
+        <h2 class="feature-title">One click to the apps you live in.</h2>
+        <p class="feature-sub">Favorites sit at the top of the sidebar as icon tiles, shared by every Space on the same Profile. Each one keeps its own tab, so clicking back lands you exactly where you left off.</p>
+      </div>
+      <div class="feature-visual">
+        <video class="feature-media" src="/assets/features/favorites.mp4" poster="/assets/features/favorites-poster.webp" width="900" height="660" muted loop playsinline preload="none" aria-label="Clicking through GitHub, Linear, Notion and Apple favorites at the top of Detour's sidebar"></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- SMALL FEATURES GRID -->
+  <section class="small-features" id="morefeatures">
+    <!-- ambient arrow — peeks at the top of the grid, leading into it -->
+    <Arrow class="bg-arrow bg-arrow-3" />
+    <div class="small-features-head">
+      <h2 class="small-features-title">And also, in no particular order</h2>
+      <span class="small-features-count">(25 more)</span>
+    </div>
+    <div class="small-features-grid">
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">01</span><span class="small-feature-name">Liquid Glass Native</span></div>
+        <div class="small-feature-desc">Real macOS chrome — translucent surfaces, real materials, real vibrancy. Not a web app pretending.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">02</span><span class="small-feature-name">Real Dark Mode</span></div>
+        <div class="small-feature-desc">Sidebar, and chrome all respect your system appearance. Switch at sundown like the rest of your apps. (Yes, all of it. The whole sidebar.)</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">03</span><span class="small-feature-name">Command Palette</span></div>
+        <div class="small-feature-desc">⌘T to open, ⌘L to navigate. Searches open tabs, history, and the web in one input.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">04</span><span class="small-feature-name">Peek Preview</span></div>
+        <div class="small-feature-desc">Shift-click any link to peek it in an overlay. Expand to a real tab if it's worth it.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">05</span><span class="small-feature-name">Tab Archiving</span></div>
+        <div class="small-feature-desc">Inactive tabs quietly archive themselves. Your sidebar stays a sidebar, not a graveyard. Every closed or archived tab, from every space, waits on the Archived Tabs page.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">06</span><span class="small-feature-name">Content Blocker</span></div>
+        <div class="small-feature-desc">Built-in. EasyList rules. Switch it off for any site that misbehaves. No third-party extension required.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">07</span><span class="small-feature-name">Multi-Window</span></div>
+        <div class="small-feature-desc">Each window remembers its own active space. WebView ownership transfers on focus.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">08</span><span class="small-feature-name">Private Browsing</span></div>
+        <div class="small-feature-desc">A throwaway Space pinned to a non-persistent Profile. Closes, forgets, gone.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">09</span><span class="small-feature-name">Session Restore</span></div>
+        <div class="small-feature-desc">Tabs come back with scroll position and form state via WebKit interaction state.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">10</span><span class="small-feature-name">Find in Page</span></div>
+        <div class="small-feature-desc">⌘F with match counts and prev/next. Like it should be.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">11</span><span class="small-feature-name">Downloads</span></div>
+        <div class="small-feature-desc">Built-in manager. Progress, cancel, reveal in Finder. Survives a relaunch.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">12</span><span class="small-feature-name">Audio Controls</span></div>
+        <div class="small-feature-desc">Tabs that make noise get a mute button. The noisy ones get found.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">13</span><span class="small-feature-name">Sidebar Auto-Hide</span></div>
+        <div class="small-feature-desc">⌘S to toggle. Auto-hide pops back on edge hover.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">14</span><span class="small-feature-name">Auto-Updates</span></div>
+        <div class="small-feature-desc">Sparkle does the boring part. New version, no new website visit.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">15</span><span class="small-feature-name">Web Inspector</span></div>
+        <div class="small-feature-desc">⌘⌥I. The full WebKit one. It's just there.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">16</span><span class="small-feature-name">Web Extensions (WIP)</span></div>
+        <div class="small-feature-desc">CRX install, popups, native messaging, automatic updates. Off in Private unless you allow them. Some work, some don't.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">17</span><span class="small-feature-name">Drag Handles</span></div>
+        <div class="small-feature-desc">Grab the sidebar or the top of the window — even on a webpage — to move it around. No title bar required.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">18</span><span class="small-feature-name">History</span></div>
+        <div class="small-feature-desc">⌘Y. Search everywhere you've been by title, narrow it to a time range, delete what you'd rather forget.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">19</span><span class="small-feature-name">Recent Tabs</span></div>
+        <div class="small-feature-desc">⌃Tab flips between the tabs you used last, with a preview. ⌘⌥↑/↓ walks the sidebar in order.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">20</span><span class="small-feature-name">Quick Detour</span></div>
+        <div class="small-feature-desc">⌥⌘N from any app opens a one-page window for a quick lookup. Worth keeping? Open in moves it into a Space.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">21</span><span class="small-feature-name">Link Routes</span></div>
+        <div class="small-feature-desc">Links from Slack go to Work, GitHub goes to Side. Route by site, address or the app the link came from.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">22</span><span class="small-feature-name">Quarantine</span></div>
+        <div class="small-feature-desc">Open untrusted links in a throwaway window with none of your cookies, no history, and tracking parameters stripped.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">23</span><span class="small-feature-name">Site Search</span></div>
+        <div class="small-feature-desc">Type a site's keyword and Tab to search it. Sites that advertise their search add themselves.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">24</span><span class="small-feature-name">Dev Mode</span></div>
+        <div class="small-feature-desc">localhost tabs get hazard stripes and a toolbar: Console, Network, element picker, full-page screenshots.</div>
+      </div>
+      <div class="small-feature">
+        <div class="small-feature-head"><span class="small-feature-num">25</span><span class="small-feature-name">Hover Cards</span></div>
+        <div class="small-feature-desc">Hover a tab for its full title, address and a picture of the page. Media you left playing gets a now-playing bar.</div>
+      </div>
+    </div>
+  </section>
+
+</Base>

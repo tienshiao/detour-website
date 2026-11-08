@@ -1,0 +1,29 @@
+---
+import AppIcon from "./AppIcon.astro";
+import Arrow from "./Arrow.astro";
+import { dmgName, dmgSize, dmgUrl } from "../lib/release";
+---
+<footer class="footer" id="download">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <h2 class="footer-headline">One download.<br />No account.<br />No cloud.</h2>
+      <div class="footer-cta">
+        <a class="btn-footer" href={dmgUrl}>
+          <Arrow class="btn-footer-arrow" />
+          Download {dmgName}
+        </a>
+        <div class="footer-meta">{dmgSize} · macOS 15.4+ · Apple Silicon &amp; Intel · auto-updates via Sparkle</div>
+      </div>
+    </div>
+    <div class="footer-foot">
+      <AppIcon class="footer-app-icon" />
+      <span class="footer-name">Detour</span>
+      <!-- <span class="footer-dot">·</span>
+      <span class="footer-by">Made by one person, in Brooklyn</span> -->
+      <div class="footer-links">
+        <a href="https://github.com/tienshiao/detour">Detour on GitHub</a>
+        <span id="footer-year"></span>
+      </div>
+    </div>
+  </div>
+</footer>

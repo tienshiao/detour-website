@@ -2,8 +2,8 @@
   const screenshot = document.getElementById("hero-screenshot");
   const buttons = document.querySelectorAll(".mode-btn");
   const sources = {
-    light: "assets/detour-screenshot.png",
-    dark: "assets/detour-screenshot-dark.png",
+    light: "/assets/detour-screenshot.png",
+    dark: "/assets/detour-screenshot-dark.png",
   };
 
   // Preload the off-mode image so the first toggle doesn't flash.

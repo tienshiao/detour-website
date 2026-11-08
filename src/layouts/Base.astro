@@ -1,0 +1,90 @@
+---
+// Every page: head metadata (canonical, Open Graph and Twitter URLs are
+// absolute https URLs built from `site` in astro.config.mjs), the nav inside
+// <main class="page">, the footer, and the shared script. Page-specific head
+// content (preloads, structured data) goes in the "head" slot.
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  /** Defaults to `description`. */
+  ogDescription?: string;
+  /** Defaults to `ogDescription`. */
+  twitterDescription?: string;
+  /** Root-absolute path of the share image. */
+  image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageAlt: string;
+  /** Defaults to `imageAlt`. */
+  twitterImageAlt?: string;
+}
+
+const {
+  title,
+  description,
+  ogDescription = description,
+  twitterDescription = ogDescription,
+  image = "/assets/detour-screenshot.png",
+  imageWidth = 1342,
+  imageHeight = 959,
+  imageAlt,
+  twitterImageAlt = imageAlt,
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const imageUrl = new URL(image, Astro.site).href;
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>{title}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content={description} />
+<meta name="theme-color" content="#FF7600" />
+<link rel="canonical" href={canonical} />
+
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Detour" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={ogDescription} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:image:width" content={String(imageWidth)} />
+<meta property="og:image:height" content={String(imageHeight)} />
+<meta property="og:image:alt" content={imageAlt} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={twitterDescription} />
+<meta name="twitter:image" content={imageUrl} />
+<meta name="twitter:image:alt" content={twitterImageAlt} />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<slot name="head" />
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<main class="page">
+
+  <!-- NAV -->
+  <Nav />
+
+<slot />
+
+</main>
+
+<!-- FOOTER -->
+<Footer />
+
+<script is:inline src="/script.js"></script>
+</body>
+</html>
