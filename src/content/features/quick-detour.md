@@ -19,7 +19,6 @@ arc:
     - A ⌥⌘-clicked sidebar tab opens as a copy; the tab stays in the sidebar.
     - The profile name at the top left switches the window to another Profile.
   notInDetour:
-    - "**Open Link in Little Arc** in a link's right-click menu. For now, ⌥⌘-click the link."
     - Showing or hiding all Little Arc windows from the Dock icon's menu.
 faq:
   - q: How do I open a quick browser window without switching to my browser?
