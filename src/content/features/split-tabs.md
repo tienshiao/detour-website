@@ -21,13 +21,13 @@ arc:
   arcName: Split View
   same:
     - Two pages side by side in one window, shown as a single entry in the sidebar.
-    - Drag a tab from the sidebar onto the side of the page to split it.
+    - Drag a tab from the sidebar onto the page to split it.
     - Drag the gap between the panes to resize them.
   different:
     - A split holds two tabs. Arc's Split View holds up to four.
     - Panes sit side by side only. Arc can also stack them top and bottom.
   notInDetour:
-    - Swapping the panes in place. Drag one half out of the row and back onto the other side instead.
+    - A keyboard shortcut that adds a split. Option-click a link, or choose **Split with Next Tab** in a tab's menu.
 faq:
   - q: Can I split more than two tabs?
     a: No. A split is two tabs side by side, and a tab can be in one split at a time. Two panes keep each page wide enough to use on a laptop screen.

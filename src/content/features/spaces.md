@@ -23,7 +23,8 @@ arc:
     - You create Spaces in **Settings › Spaces**. The **+** at the bottom of the sidebar takes you there.
     - A Space's icon is an emoji.
   notInDetour:
-    - Gradient themes. A Space has one color, which tints the sidebar.
+    - Themes. A Space has one color, which tints the sidebar.
+    - Sharing a Space with someone as a link.
     - Shortcuts that jump to a Space by its number. Use [[⌥⌘←]] and [[⌥⌘→]] or the **Spaces** menu instead.
 faq:
   - q: How do I keep work and personal browsing separate on a Mac?

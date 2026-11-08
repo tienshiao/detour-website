@@ -61,7 +61,8 @@ Two or three short paragraphs: what the feature is, then why you'd want it, star
 Include `arc` only when Arc had the feature in comparable form (Spaces, Split View, Little Arc, Air Traffic Control, the Command Bar, Peek, auto-archive, pinned tabs, favorites, profiles). Features Arc never had (Quarantine, Dev Mode, Site Search) leave it out and don't mention Arc at all: Detour is not pitched as an Arc clone.
 
 - `arcName` is Arc's name for the feature.
-- `same`, `different`, `notInDetour`: short, factual items. State what Arc does only when more than one reliable source agrees (Arc's own help center when it can be read, plus reputable coverage); leave out details sources disagree on, such as Arc's exact shortcuts.
+- `same`, `different`, `notInDetour`: short, factual items, sourced from Arc's own help center where it covers the point, else from more than one reputable source; leave out details sources disagree on.
+- Arc's help center (resources.arc.net) refuses scripted fetches, but the Wayback Machine has it: `https://archive.org/wayback/available?url=resources.arc.net/hc/en-us/articles/<id>` finds the latest capture, and `https://web.archive.org/web/<timestamp>id_/<url>` returns the original (gzip-compressed) page. About 220 article URLs are captured. Third-party guides often disagree with it, e.g. on Arc's shortcuts (Split View is ⌘⇧+, Spaces are ⌃1, ⌃2…).
 - No Arc logos, screenshots or styling.
 - The box links to the Switching from Arc hub (`/arc/`) automatically once that page exists.
 
