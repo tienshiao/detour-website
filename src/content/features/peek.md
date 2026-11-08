@@ -20,21 +20,22 @@ arc:
     - Shift-click opens any link in a Peek.
     - Buttons next to the Peek open it as a new tab or put it in a split.
     - The close button, Escape, [[⌘W]] or a click outside the Peek closes it.
+    - "[[⌘O]] opens the Peek as a new tab."
+    - "[[⌘Z]] and [[⇧⌘T]] bring back a Peek you closed."
+    - A setting turns off Peek for links in pinned tabs and favorites.
   different:
     - A meeting link in a pinned calendar opens in a Peek like any other link to another site. Arc opened meeting links in a new tab.
-  notInDetour:
-    - A shortcut that opens the Peek as a tab ([[⌘O]] in Arc). Click **Open in New Tab** next to the Peek.
-    - Settings that turn Peek off. To skip the Peek, [[⌘]]-click a link to open it in a background tab.
-    - Reopening a closed Peek with [[⇧⌘T]] or [[⌘Z]].
 faq:
   - q: How do I preview a link without leaving the page?
     a: Shift-click it. The link opens in a Peek, a panel over the page you're reading. Press Escape when you're done and you're back where you were.
   - q: How do I turn a Peek into a normal tab?
-    a: Click **Open in New Tab**, the second button to the right of the Peek. The page moves into a new tab with its back history, and the Peek closes. **Open in Split View** puts it next to the page instead.
+    a: Press [[⌘O]] or click **Open in New Tab**, the second button to the right of the Peek. The page moves into a new tab with its back history, and the Peek closes. **Open in Split View** puts it next to the page instead.
   - q: Why do links in my pinned tabs open in a Peek?
-    a: So the pinned page stays on its own site. A link to another site, or one that opens a new window, opens in a Peek over the pinned tab. Links within the same site load in the tab as usual. [[⌘]]-click a link to open it in a background tab instead.
+    a: So the pinned page stays on its own site. A link to another site, or one that opens a new window, opens in a Peek over the pinned tab. Links within the same site load in the tab as usual. To open them in new tabs instead, turn off **Open links from pinned tabs and favorites in a Peek** in **Settings › General**.
   - q: Where did my Peek go when I switched tabs?
     a: It stays with its tab. Switch back to the tab and the Peek is there again, where you left it, even after you quit and reopen Detour. Close it with Escape or [[⌘W]].
+  - q: I closed a Peek by accident. How do I get it back?
+    a: Press [[⌘Z]] or [[⇧⌘T]]. The Peek comes back on its tab, on the page and at the scroll position it had. If you've closed that tab too, the page comes back as a tab.
   - q: Do pages I open in a Peek show up in my history?
     a: Yes. Pages you open in a Peek, and links you follow inside it, are added to History under the Space of the tab the Peek opened from. Peeks in Private windows aren't recorded, like everything else there.
 related:
@@ -65,7 +66,7 @@ Links you click inside a Peek open in the same Peek.
 Three buttons sit to the right of the Peek, from the top:
 
 - **Close** closes it. So do Escape, <kbd>⌘W</kbd> and a click on the dimmed page around it.
-- **Open in New Tab** moves the page into a new tab, with its back and forward history.
+- **Open in New Tab** moves the page into a new tab, with its back and forward history. **File › Open Peek in New Tab** (<kbd>⌘O</kbd>) does the same.
 - **Open in Split View** puts the page next to the one you were on, in a [split](/features/split-tabs/). The button doesn't show when the tab is already in a split.
 
 ### Come back to a Peek
@@ -74,11 +75,26 @@ A Peek belongs to its tab. Switch to another tab and it goes away with the tab; 
 
 <kbd>⌘L</kbd> with a Peek open shows the Peek's address, and anything you type opens in a new tab.
 
-### Other ways to open a link
+### Bring back a closed Peek
+
+Closed a Peek with its close button, Escape, <kbd>⌘W</kbd> or a click outside it? Choose **Edit › Undo Close Peek** (<kbd>⌘Z</kbd>) or **File › Reopen Closed Tab** (<kbd>⇧⌘T</kbd>). The Peek comes back on its tab, on the page and at the scroll position it had. If that tab has been closed since, the page comes back as a tab of its own. Closed Peeks are on the Archived Tabs page too, with your closed tabs.
+
+Switching to another tab doesn't close a Peek, and neither does opening it as a tab, so there's nothing to bring back then. In a Private window, <kbd>⌘Z</kbd> works but **Reopen Closed Tab** doesn't, as for Private tabs.
+
+### Turn Peek off for pinned tabs and favorites
+
+1. Choose **Detour › Settings…** (<kbd>⌘,</kbd>) and click **General**.
+2. Under **Peek**, turn off **Open links from pinned tabs and favorites in a Peek**. It's on by default and applies to every Space and Profile.
+
+With it off, links to other sites from pinned tabs and favorites open in new tabs, and so do links and scripts there that open a new window. Shift-click still opens a Peek.
+
+### Shortcuts
 
 | Do this | Press |
 | --- | --- |
 | Open a link in a Peek | <kbd>⇧</kbd>-click |
 | Open a link in a split | <kbd>⌥</kbd>-click |
 | Open a link in a background tab | <kbd>⌘</kbd>-click |
+| Open the Peek as a new tab | <kbd>⌘O</kbd> |
 | Close the Peek | Escape or <kbd>⌘W</kbd> |
+| Bring back a closed Peek | <kbd>⌘Z</kbd> or <kbd>⇧⌘T</kbd> |
