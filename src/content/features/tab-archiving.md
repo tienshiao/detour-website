@@ -26,7 +26,7 @@ arc:
     - Clear it with **Navigate › Clear Archived Tabs…**, or **Clear Archive…** in the page's filter menu.
 faq:
   - q: How do I stop Detour from closing my tabs?
-    a: Choose **Detour › Settings…**, click **Profiles**, select the Profile and set **Archive tabs after** to **Never**. Or pin the tabs you want to keep with [[⌘D]]. Pinned tabs and favorites are never archived.
+    a: Choose **Detour › Settings…**, click **Profiles**, select the Profile and set **Archive tabs after** to **Never**. Or pin the tabs you want to keep with [[⌘D]]. Pinned tabs and favorites are never archived, and neither is a tab playing sound you can hear.
   - q: Where did my tab go?
     a: If you haven't looked at it in a while, it was archived. Choose **Navigate › Show Archived Tabs**, find it by title or address and click it. It goes back where it was, in its own Space.
   - q: How do I reopen a tab I closed by accident?
@@ -57,7 +57,7 @@ Nothing is lost. The Archived Tabs page lists every tab that was archived or tha
 1. Choose **Detour › Settings…** (<kbd>⌘,</kbd>) and click **Profiles**, then select the Profile.
 2. Set **Archive tabs after** to **12 hours** (the default), **24 hours**, **7 days**, **30 days** or **Never**.
 
-The time counts from when you last left the tab, so a tab you keep coming back to is never archived. Each Profile has its own setting, so a Work Profile can keep tabs for a week while Personal clears out every evening.
+The time counts from when you last left the tab, so a tab you keep coming back to is never archived. For a tab that was playing sound, it counts from when the sound stopped. Each Profile has its own setting, so a Work Profile can keep tabs for a week while Personal clears out every evening.
 
 ### What is never archived
 
@@ -65,6 +65,7 @@ The time counts from when you last left the tab, so a tab you keep coming back t
 - Tabs in Private windows.
 - The last tab in a Space.
 - One half of a [split](/features/split-tabs/). A split is archived only when you've left both tabs alone.
+- A tab playing sound you can hear, such as music or a podcast, or one whose [Peek](/features/peek/) is playing sound. Once the sound stops (paused, ended or muted), the countdown starts again from that moment. A muted or paused tab is archived like any other.
 
 ### Archive tabs yourself
 
