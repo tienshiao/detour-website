@@ -30,7 +30,7 @@ faq:
   - q: Is my history shared between Profiles?
     a: No. Each Profile has its own history, and the History page shows only the Profile of the Space you're in. Spaces that share a Profile share its history.
   - q: How long does Detour keep my history?
-    a: 90 days. Older visits are removed when Detour starts. Pages you open in a Private window or a Peek are never recorded.
+    a: 90 days. Older visits are removed when Detour starts. Pages you open in a Private window are never recorded.
 related:
   - profiles
   - command-palette
@@ -44,7 +44,7 @@ History is the list of pages you've visited, newest first and grouped by day: To
 
 It's how you find the article you read on Tuesday and didn't keep open, or the docs page whose name you only half remember. Search by any word of the title, or by part of the address, and narrow it to today, yesterday, the last week or a single day.
 
-History belongs to a **Profile**. The History page shows the pages you visited in every Space on the Profile you're in, plus its Quick Detour windows, and nothing from your other Profiles. The [Command Palette](/features/command-palette/) suggests pages from the same history as you type.
+History belongs to a **Profile**. The History page shows the pages you visited in every Space on the Profile you're in, including in Peeks, plus its Quick Detour windows, and nothing from your other Profiles. The [Command Palette](/features/command-palette/) suggests pages from the same history as you type.
 
 ## How to use it
 
@@ -77,8 +77,9 @@ Deleting a row from a search removes every visit to that page in the time range 
 ### What isn't recorded
 
 - Pages in a [Private window](/features/private-browsing/) or in [Quarantine](/features/quarantine/). A Private window's History page says "Private browsing keeps no history".
-- Pages you visit inside a [Peek](/features/peek/). Open the Peek in a new tab and later visits are recorded as usual.
 - Pages that failed to load.
+
+Pages you open in a [Peek](/features/peek/) are recorded like pages in a tab, under the Space of the tab the Peek opened from, and so are links you follow inside it. Opening the Peek as a tab doesn't add a second visit.
 
 Detour keeps 90 days of history and removes older visits when it starts.
 

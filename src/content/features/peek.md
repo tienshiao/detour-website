@@ -36,7 +36,7 @@ faq:
   - q: Where did my Peek go when I switched tabs?
     a: It stays with its tab. Switch back to the tab and the Peek is there again, where you left it, even after you quit and reopen Detour. Close it with Escape or [[⌘W]].
   - q: Do pages I open in a Peek show up in my history?
-    a: No. Pages you visit in a Peek aren't added to History. Open the Peek in a new tab if you want the page there.
+    a: Yes. Pages you open in a Peek, and links you follow inside it, are added to History under the Space of the tab the Peek opened from. Peeks in Private windows aren't recorded, like everything else there.
 related:
   - pinned-tabs
   - favorites
