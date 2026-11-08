@@ -67,6 +67,8 @@ Pop-ups and new windows the page opens, such as a sign-in window or a link that 
 
 A route to Quarantine with a URL condition also catches matching links you click on a page that lead to another site, except in Private windows. A Default of Quarantine takes only links from other apps, so the links you click while browsing stay where they are.
 
+When a link starts Detour and Detour can't tell which app it came from, it opens in Quarantine if any of your routes sends links there.
+
 ### Look first, then keep it or throw it away
 
 1. The link opens in a window of its own, in front of your other windows. An orange **Quarantine** badge sits where a Quick Detour shows its Profile. Click it to see what Quarantine does and which site the link came from.
