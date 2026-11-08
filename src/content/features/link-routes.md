@@ -5,6 +5,14 @@ title: Open links in a specific Space on Mac · Link Routes | Detour
 description: Detour's Link Routes send links to the right Space by their site, address or the app they came from, so Slack links open in Work and GitHub opens in Side.
 accent: "#0B84D6"
 label: LINK ROUTES
+media:
+  type: image
+  src: /assets/features/link-routes.webp
+  width: 880
+  height: 831
+  displayWidth: 680
+  alt: "Detour's Settings, Links pane with three routes: Domain is github.com opens in the Work Space, Domain is wikipedia.org opens in the Reading Space, and links from TextEdit open in Quarantine, above the Default setting Most Recent Space"
+  caption: "Three routes: GitHub to Work, Wikipedia to Reading, and anything from TextEdit to Quarantine."
 arc:
   arcName: Air Traffic Control
   same:

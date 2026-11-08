@@ -5,6 +5,14 @@ title: Search any website from the address bar · Site Search | Detour
 description: Detour's Site Search searches one site from the Command Palette. Type its keyword or the start of its name, press Tab, then your search. Add your own sites.
 accent: "#0090B8"
 label: SITE SEARCH
+media:
+  type: video
+  src: /assets/features/site-search.mp4
+  poster: /assets/features/site-search-poster.webp
+  width: 1140
+  height: 820
+  label: "In Detour's Command Palette, typing w and a space turns into a Wikipedia chip, then typing \"early hypertext systems\" and pressing Return opens Wikipedia's search results for it"
+  caption: "Type w and a space for Wikipedia, then your search."
 arc:
   arcName: Site Search
   same:

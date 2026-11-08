@@ -64,7 +64,7 @@ const share = data.shareImage;
     {media && (
       <figure class="guide-media">
         {media.type === "video" ? (
-          <video class="feature-media" src={media.src} poster={media.poster} width={media.width} height={media.height} muted loop playsinline preload="none" aria-label={media.label}></video>
+          <video class:list={["feature-media", media.width > media.height && "is-landscape"]} src={media.src} poster={media.poster} width={media.width} height={media.height} muted loop playsinline preload="none" aria-label={media.label}></video>
         ) : (
           <img class:list={["feature-media", media.width > media.height && "is-landscape"]} src={media.src} width={media.width} height={media.height} alt={media.alt} style={media.displayWidth ? `max-width:${media.displayWidth}px` : undefined} fetchpriority="high" />
         )}

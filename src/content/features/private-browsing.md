@@ -5,6 +5,13 @@ title: Open a private browsing window on Mac · Private Browsing | Detour
 description: Detour's Private windows keep no history and hold cookies and logins in memory until you quit. Extensions stay off unless you allow them. Open one with ⇧⌘N.
 accent: "#5E5CE6"
 label: PRIVATE BROWSING
+media:
+  type: image
+  src: /assets/features/private-browsing.webp
+  width: 1140
+  height: 820
+  alt: "A dark Detour Private window showing Wikipedia's Private browsing article, with a single Private Space marked by a lock in the sidebar"
+  caption: "A Private window is dark, so you can tell it apart at a glance."
 arc:
   arcName: Incognito windows
   same:

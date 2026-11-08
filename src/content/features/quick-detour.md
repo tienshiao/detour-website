@@ -5,6 +5,14 @@ title: Open a browser window from any app on Mac · Quick Detour | Detour
 description: Detour's Quick Detour opens a small one-page browser window from any app with ⌥⌘N. Look something up, then move the page into a Space or close it.
 accent: "#D6409F"
 label: QUICK DETOUR
+media:
+  type: video
+  src: /assets/features/quick-detour.mp4
+  poster: /assets/features/quick-detour-poster.webp
+  width: 1220
+  height: 850
+  label: "Over a TextEdit document, Detour's Quick Detour palette appears; typing \"ted nelson xanadu\" and pressing Return opens the search results in a small Quick Detour window in front of TextEdit"
+  caption: "Look something up from another app without switching to your browser windows."
 arc:
   arcName: Little Arc
   same:

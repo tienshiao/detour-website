@@ -5,6 +5,13 @@ title: Automatically close unused tabs on Mac · Tab Archiving | Detour
 description: Detour archives tabs you haven't looked at in 12 hours, or a time you choose per Profile. Closed and archived tabs wait on the Archived Tabs page to be restored.
 accent: "#64748B"
 label: TAB ARCHIVING
+media:
+  type: image
+  src: /assets/features/tab-archiving.webp
+  width: 1140
+  height: 820
+  alt: "Detour's Archived Tabs page in the sidebar, with a Search Archive field and archived tabs such as Hypertext, MacBook Air and Xcode grouped under Yesterday, 2 days ago and 3 days ago, each with its Space's icon"
+  caption: "Archived tabs wait on the Archived Tabs page, grouped by day."
 arc:
   arcName: Auto Archive
   same:

@@ -5,6 +5,14 @@ title: Open untrusted links safely on Mac · Quarantine | Detour
 description: Detour's Quarantine opens links from mail, chat and unknown senders in a throwaway window with none of your cookies and no history. Keep only what's worth it.
 accent: "#F2542D"
 label: QUARANTINE
+media:
+  type: video
+  src: /assets/features/quarantine.mp4
+  poster: /assets/features/quarantine-poster.webp
+  width: 1320
+  height: 880
+  label: "A link to MDN's Using HTTP cookies page in a TextEdit document opens in a Detour Quarantine window marked with an orange Quarantine badge; clicking Open in Reading moves the page into a tab in the Reading Space"
+  caption: "A link from TextEdit lands in a Quarantine window. Open in moves it into a Space."
 faq:
   - q: How do I open a link without the site knowing who I am?
     a: Send it to Quarantine with a Link Route. The page opens in a window with an empty set of cookies of its own, so the site sees a first-time visitor instead of your account, and tracking tags are removed from the address. Your IP address is still yours, so the site can tell where you connect from.
