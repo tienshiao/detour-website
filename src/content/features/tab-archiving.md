@@ -70,7 +70,7 @@ Right-click a tab in the sidebar and choose:
 
 ### Find and restore a tab
 
-1. Choose **Navigate › Show Archived Tabs**, or swipe right with two fingers over the sidebar while you're on your first Space. The Archived Tabs page sits to the left of it.
+1. Choose **Navigate › Show Archived Tabs**, or swipe right with two fingers over the sidebar while you're on your first Space: the Archived Tabs page slides in from the left.
 2. Tabs are grouped by when they were closed: Today, Yesterday, then days, weeks and months ago. Each one shows its title, its address and its Space's emoji.
 3. Type in **Search Archive…** to find a tab by its title or address. To see one Space only, click the filter button and pick the Space.
 4. Click a tab to restore it, or select it and press Return. It goes back into its own Space at the place it was, and Detour switches to that Space.

@@ -73,7 +73,7 @@ Each Space uses a **Profile**, which holds its logins and cookies, history and e
 - Click a Space's emoji at the bottom of the sidebar. Hold the pointer over one to see its name.
 - Press <kbd>⌥⌘→</kbd> or <kbd>⌥⌘←</kbd> for the next or previous Space, or pick one by name from the **Spaces** menu.
 
-Swiping left from your first Space shows Archived Tabs, the tabs you closed or that archived themselves, from every Space.
+On your first Space, swipe right with two fingers and Archived Tabs slides in from the left: the tabs you closed or that archived themselves, from every Space.
 
 ### Move a tab to another Space
 
