@@ -15,7 +15,9 @@ const LINK = /\[((?:\[\[[^\]]+\]\]|[^[\]])+)\]\(([^)\s]+)\)/g;
 /** Keys, bold and emphasis in text that is neither code nor an href. */
 function format(text: string): string {
   return escape(text)
-    .replace(/\[\[([^\]]+)\]\]/g, "<kbd>$1</kbd>")
+    // A key may itself be a bracket ([[⌘[]] and [[⌘]]]): the shortest text
+    // up to a "]]" that isn't followed by another "]".
+    .replace(/\[\[(.+?)\]\](?!\])/g, "<kbd>$1</kbd>")
     .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
     .replace(/\*([^*]+)\*/g, "<em>$1</em>");
 }

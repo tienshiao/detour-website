@@ -1,0 +1,288 @@
+---
+// Keyboard Shortcuts (TASK-292.9): every shortcut in the released app, menu
+// by menu in menu-bar order, then the keys that work outside the menus.
+// Checked line by line against the release's code: the menus built in
+// Detour/App/AppDelegate.swift (setupMainMenu, with the titles
+// validateMenuItem shows), and the key handlers in RecentTabSwitcher,
+// CommandPaletteView, FindBarView, ArchivePageView, the History page's script,
+// QuickDetourWindowController and BrowserWindowController+Navigation (link
+// clicks). Menu items without a shortcut are left out. Rows allow inline
+// Markdown: keys as [[⌘T]], **bold** for control names.
+import Arrow from "../components/Arrow.astro";
+import Base from "../layouts/Base.astro";
+import { inline } from "../lib/inline";
+
+type Row = [string, string];
+type Table = { title: string; id: string; note?: string; head: [string, string]; rows: Row[] };
+
+const menuHead: [string, string] = ["Menu item", "Keys"];
+const menus: Table[] = [
+  {
+    title: "Detour",
+    id: "detour-menu",
+    head: menuHead,
+    rows: [
+      ["Settings…", "[[⌘,]]"],
+      ["Hide Detour", "[[⌘H]]"],
+      ["Hide Others", "[[⌥⌘H]]"],
+      ["Quit Detour", "[[⌘Q]]"],
+    ],
+  },
+  {
+    title: "File",
+    id: "file-menu",
+    head: menuHead,
+    rows: [
+      ["New Tab", "[[⌘T]]"],
+      ["Open Location…", "[[⌘L]]"],
+      ["Close Tab (with a Peek open, closes the Peek)", "[[⌘W]]"],
+      ["Reopen Closed Tab", "[[⇧⌘T]]"],
+      ["Pin Tab / Unpin Tab", "[[⌘D]]"],
+      ["New Window", "[[⌘N]]"],
+      ["New Private Window", "[[⇧⌘N]]"],
+      ["New Quick Detour Window (or the shortcut set in **Settings › Quick Detour**)", "[[⌥⌘N]]"],
+      ["Open in *Space* (in a Quick Detour or Quarantine window)", "[[⌘O]]"],
+    ],
+  },
+  {
+    title: "Edit",
+    id: "edit-menu",
+    head: menuHead,
+    rows: [
+      ["Undo (named for what it undoes, such as Undo Close Tab)", "[[⌘Z]]"],
+      ["Redo", "[[⇧⌘Z]]"],
+      ["Cut", "[[⌘X]]"],
+      ["Copy", "[[⌘C]]"],
+      ["Copy URL", "[[⇧⌘C]]"],
+      ["Paste", "[[⌘V]]"],
+      ["Select All", "[[⌘A]]"],
+      ["Find...", "[[⌘F]]"],
+      ["Find Next", "[[⌘G]]"],
+      ["Find Previous", "[[⇧⌘G]]"],
+    ],
+  },
+  {
+    title: "View",
+    id: "view-menu",
+    head: menuHead,
+    rows: [
+      ["Toggle Sidebar", "[[⌘S]]"],
+      ["Reload Page", "[[⌘R]]"],
+      ["Actual Size", "[[⌘0]]"],
+      ["Zoom In", "[[⌘+]]"],
+      ["Zoom Out", "[[⌘-]]"],
+    ],
+  },
+  {
+    title: "Navigate",
+    id: "navigate-menu",
+    head: menuHead,
+    rows: [
+      ["Back", "[[⌘[]]"],
+      ["Forward", "[[⌘]]]"],
+      ["Previous Tab (up the sidebar)", "[[⌥⌘↑]]"],
+      ["Next Tab (down the sidebar)", "[[⌥⌘↓]]"],
+      ["Show All History", "[[⌘Y]]"],
+    ],
+  },
+  {
+    title: "Spaces",
+    id: "spaces-menu",
+    head: menuHead,
+    rows: [
+      ["Next Space", "[[⌥⌘→]]"],
+      ["Previous Space", "[[⌥⌘←]]"],
+    ],
+  },
+  {
+    title: "Develop",
+    id: "develop-menu",
+    head: menuHead,
+    rows: [["Web Inspector", "[[⌥⌘I]]"]],
+  },
+  {
+    title: "Window",
+    id: "window-menu",
+    head: menuHead,
+    rows: [["Minimize", "[[⌘M]]"]],
+  },
+];
+
+const doHead: [string, string] = ["Do this", "Press"];
+const elsewhere: Table[] = [
+  {
+    title: "From any app",
+    id: "any-app",
+    note: "Works while another app is in front. Change the keys or turn them off in **Settings › Quick Detour**.",
+    head: doHead,
+    rows: [["Open a [Quick Detour](/features/quick-detour/) window", "[[⌥⌘N]]"]],
+  },
+  {
+    title: "Switching tabs with Control-Tab",
+    id: "recent-tabs",
+    note: "The [Recent Tabs](/features/recent-tabs/) switcher goes by when you last used each tab in the Space.",
+    head: doHead,
+    rows: [
+      ["Switch to the last tab you used", "[[⌃Tab]]"],
+      ["Go further back in the switcher", "Hold [[⌃]], press Tab again"],
+      ["Go the other way", "[[⌃⇧Tab]]"],
+      ["Move the highlight", "[[←]] [[→]]"],
+      ["Switch to the highlighted tab", "Let go of [[⌃]], or Return"],
+      ["Close the switcher without switching", "Escape"],
+    ],
+  },
+  {
+    title: "Clicking with keys held",
+    id: "clicks",
+    head: doHead,
+    rows: [
+      ["Open a link in a background tab", "[[⌘]]-click"],
+      ["Open a link in a [Peek](/features/peek/)", "[[⇧]]-click"],
+      ["Open a link in a [split](/features/split-tabs/)", "[[⌥]]-click"],
+      ["Open a link, a sidebar tab or a favorite in a Quick Detour (can be turned off in **Settings › Quick Detour**)", "[[⌥⌘]]-click"],
+      ["Save a [Dev Mode](/features/dev-mode/) capture to Downloads instead of copying it", "[[⌥]]-click the capture button"],
+    ],
+  },
+  {
+    title: "Command palette",
+    id: "command-palette",
+    note: "In the [command palette](/features/command-palette/) that [[⌘T]] and [[⌘L]] open.",
+    head: doHead,
+    rows: [
+      ["Move through the list", "[[↑]] [[↓]]"],
+      ["Open the selected row", "Return"],
+      ["Accept the completion, or start a site search", "Tab"],
+      ["Leave a site search", "Delete, at the start of the field"],
+      ["Clear the field, then close the palette (opened with [[⌘L]], it closes at once)", "Escape"],
+    ],
+  },
+  {
+    title: "Find bar",
+    id: "find-bar",
+    head: doHead,
+    rows: [
+      ["Go to the next match", "Return or [[⌘G]]"],
+      ["Go to the previous match", "[[⇧⌘G]]"],
+      ["Close the find bar", "Escape"],
+    ],
+  },
+  {
+    title: "Peek",
+    id: "peek",
+    head: doHead,
+    rows: [["Close the Peek", "Escape or [[⌘W]]"]],
+  },
+  {
+    title: "Quick Detour and Quarantine windows",
+    id: "quick-detour",
+    head: doHead,
+    rows: [
+      ["Move the page into the Space named in the bar", "[[⌘O]]"],
+      ["Go somewhere else in the same window", "[[⌘L]]"],
+      ["Close the window", "[[⌘W]]"],
+    ],
+  },
+  {
+    title: "Archived Tabs page",
+    id: "archived-tabs",
+    note: "On the sidebar page that **Navigate › Show Archived Tabs** opens ([Tab Archiving](/features/tab-archiving/)).",
+    head: doHead,
+    rows: [
+      ["Restore the first match of a search", "Return, in the search field"],
+      ["Move from the search field to the list", "[[↓]]"],
+      ["Clear the search", "Escape"],
+      ["Restore the selected tab", "Return"],
+      ["Delete the selected tab", "Delete"],
+    ],
+  },
+  {
+    title: "History page",
+    id: "history",
+    note: "On the [History](/features/history/) page that [[⌘Y]] opens, while the search field isn't being typed in.",
+    head: doHead,
+    rows: [
+      ["Tick every loaded entry", "[[⌘A]]"],
+      ["Delete the ticked entries", "Delete"],
+      ["Untick everything", "Escape"],
+    ],
+  },
+  {
+    title: "Renaming in the sidebar",
+    id: "renaming",
+    note: "When you rename a pinned tab or a folder.",
+    head: doHead,
+    rows: [
+      ["Save the name", "Return or Tab"],
+      ["Keep the old name", "Escape"],
+    ],
+  },
+];
+
+const url = (path: string) => new URL(path, Astro.site).href;
+const breadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Detour", item: url("/") },
+    { "@type": "ListItem", position: 2, name: "Keyboard Shortcuts", item: url(Astro.url.pathname) },
+  ],
+};
+---
+<Base
+  title="Keyboard shortcuts for the Detour browser on Mac | Detour"
+  description="Every keyboard shortcut in Detour for Mac, menu by menu: tabs, Spaces, the command palette, ⌃Tab, Peek, split tabs, find in page and Quick Detour's ⌥⌘N."
+  imageAlt="Detour browser window showing the Spaces sidebar"
+>
+<Fragment slot="head">
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbs, null, 2)} />
+</Fragment>
+
+  <article class="guide" style="--accent:#3E63DD">
+    <Arrow class="bg-arrow bg-arrow-guide" />
+
+    <header class="guide-head">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Detour</a><span aria-hidden="true">/</span><span aria-current="page">Keyboard Shortcuts</span>
+      </nav>
+      <span class="feature-label">KEYBOARD SHORTCUTS</span>
+      <h1 class="guide-title">Keyboard Shortcuts</h1>
+      <p class="guide-lede">Every key Detour knows: the menus first, in menu-bar order, then the keys that work outside them.</p>
+    </header>
+
+    <div class="guide-body shortcuts">
+      <h2 id="menus">In the menus</h2>
+      <p>The same keys are shown next to each item when you open the menu. Menu items without a shortcut, and the Extensions menu, which has none, aren't listed.</p>
+      {menus.map((table) => (
+        <section aria-labelledby={table.id}>
+          <h3 id={table.id}>{table.title}</h3>
+          <table>
+            <thead><tr><th>{table.head[0]}</th><th>{table.head[1]}</th></tr></thead>
+            <tbody>
+              {table.rows.map(([what, keys]) => (
+                <tr><td set:html={inline(what)} /><td set:html={inline(keys)} /></tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      ))}
+
+      <h2 id="elsewhere">Outside the menus</h2>
+      <p>Keys that work in one place: the switcher, the command palette, a Peek, and the pages and windows below.</p>
+      {elsewhere.map((table) => (
+        <section aria-labelledby={table.id}>
+          <h3 id={table.id}>{table.title}</h3>
+          {table.note && <p set:html={inline(table.note)} />}
+          <table>
+            <thead><tr><th>{table.head[0]}</th><th>{table.head[1]}</th></tr></thead>
+            <tbody>
+              {table.rows.map(([what, keys]) => (
+                <tr><td set:html={inline(what)} /><td set:html={inline(keys)} /></tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      ))}
+    </div>
+  </article>
+
+</Base>

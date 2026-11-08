@@ -1,0 +1,153 @@
+---
+// The features index (TASK-292.9): every feature, in groups, with one line
+// each. A feature with a guide page takes its name, lede and color from the
+// content collection and links to the page; the rest are written here from
+// the release's code. Every guide page must appear in a group: the build
+// fails otherwise, so a new page can't go missing from the index.
+import { getCollection } from "astro:content";
+import Arrow from "../../components/Arrow.astro";
+import Base from "../../layouts/Base.astro";
+import { inline } from "../../lib/inline";
+
+type Plain = { name: string; text: string; href?: string };
+type Entry = string | Plain;
+
+const groups: { title: string; entries: Entry[] }[] = [
+  {
+    title: "Organize your tabs",
+    entries: [
+      "spaces",
+      "profiles",
+      "pinned-tabs",
+      "favorites",
+      "split-tabs",
+      "tab-archiving",
+      { name: "Sleeping Tabs", text: "A tab you haven't looked at for a while (an hour, unless you change it) gives back its memory and reloads when you click it. The time is set per Profile." },
+      { name: "Undo", text: "**Edit › Undo** ([[⌘Z]]) takes back closing, moving, pinning or splitting a tab, and changes to folders and Spaces." },
+    ],
+  },
+  {
+    title: "Find your way around",
+    entries: [
+      "command-palette",
+      "site-search",
+      "recent-tabs",
+      "peek",
+      "history",
+      { name: "Find in Page", text: "[[⌘F]] finds text on the page and counts the matches. Return or [[⌘G]] goes to the next one, [[⇧⌘G]] to the one before." },
+      { name: "Hover Cards", text: "Hover over a tab in the sidebar to see its full title, its address and a picture of the page." },
+    ],
+  },
+  {
+    title: "Links and privacy",
+    entries: ["link-routes", "quick-detour", "quarantine", "private-browsing", "content-blocker"],
+  },
+  {
+    title: "Windows, media and downloads",
+    entries: [
+      { name: "Multi-Window", text: "Open as many windows as you like, each showing its own Space. A tab open in two windows stays live in the one you're using." },
+      { name: "Session Restore", text: "Quit and reopen, and your Spaces and tabs are back where you left them, each tab with its back and forward history." },
+      { name: "Downloads", text: "The Downloads button at the bottom of the sidebar shows each download's progress. Cancel one, show it in Finder, or remove it from the list." },
+      { name: "Audio Controls", text: "A tab playing sound shows a speaker in the sidebar; click it to mute the tab. Sound you left playing in another tab gets a now-playing bar with play, pause, skip and mute." },
+      { name: "Picture in Picture", text: "Switch away from a tab playing a video and the video keeps playing in a floating window. Turn it off for a site in **Site Settings**." },
+    ],
+  },
+  {
+    title: "A native Mac app",
+    entries: [
+      { name: "Liquid Glass", text: "A Mac app built with AppKit. On macOS 26 the sidebar, the command palette, the find bar and Peek are Liquid Glass." },
+      { name: "Dark Mode", text: "Detour follows your Mac's Light or Dark appearance, sidebar and panels included." },
+      { name: "Sidebar Auto-Hide", text: "[[⌘S]] hides the sidebar so the page gets the whole window. Move the pointer to the window's left edge and it slides back." },
+      { name: "Drag Handles", text: "Move the window by dragging the top of the page or an empty part of the sidebar. There's no title bar to aim for." },
+      { name: "Keyboard Shortcuts", text: "Every key Detour knows, menu by menu, plus the ones that work outside the menus.", href: "/shortcuts/" },
+      { name: "Auto-Updates", text: "Detour updates itself with Sparkle, the standard Mac updater. **Detour › Check for Updates…** checks right away." },
+      { name: "Default Browser", text: "Make Detour the browser your links open in with **Set as Default Browser** in **Settings › General**." },
+    ],
+  },
+  {
+    title: "Extensions and developer tools",
+    entries: [
+      "web-extensions",
+      "dev-mode",
+      { name: "Web Inspector", text: "**Develop › Web Inspector** ([[⌥⌘I]]) opens WebKit's full Web Inspector for the page you're on." },
+    ],
+  },
+  {
+    title: "Moving to Detour",
+    entries: [
+      { name: "Switching from Arc", text: "Arc stops working on December 22, 2026. How Arc's features carry over to Detour, and what's different.", href: "/arc/" },
+    ],
+  },
+];
+
+const pages = await getCollection("features");
+const byId = new Map(pages.map((page) => [page.id, page]));
+
+const listed = new Set(groups.flatMap((group) => group.entries.filter((e): e is string => typeof e === "string")));
+const unlisted = pages.filter((page) => !listed.has(page.id)).map((page) => page.id);
+if (unlisted.length > 0) {
+  throw new Error(`Guide pages missing from the features index (src/pages/features/index.astro): ${unlisted.join(", ")}`);
+}
+
+type Row = { name: string; html: string; href?: string; accent?: string };
+const rows = (entries: Entry[]): Row[] =>
+  entries.map((entry) => {
+    if (typeof entry !== "string") return { name: entry.name, html: inline(entry.text), href: entry.href };
+    const page = byId.get(entry);
+    if (!page) throw new Error(`The features index lists "${entry}", which has no page in src/content/features`);
+    return { name: page.data.name, html: inline(page.data.lede), href: `/features/${page.id}/`, accent: page.data.accent };
+  });
+
+const url = (path: string) => new URL(path, Astro.site).href;
+const breadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Detour", item: url("/") },
+    { "@type": "ListItem", position: 2, name: "Features", item: url(Astro.url.pathname) },
+  ],
+};
+---
+<Base
+  title="Mac browser features: Spaces, Profiles, Split Tabs and more | Detour"
+  description="Every feature in Detour, the free native Mac browser: Spaces, Profiles, pinned tabs, split tabs, Peek, Quick Detour, a built-in content blocker and more."
+  imageAlt="Detour browser window showing the Spaces sidebar"
+>
+<Fragment slot="head">
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbs, null, 2)} />
+</Fragment>
+
+  <article class="guide" style="--accent:#FF7600">
+    <Arrow class="bg-arrow bg-arrow-guide" />
+
+    <header class="guide-head">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Detour</a><span aria-hidden="true">/</span><span aria-current="page">Features</span>
+      </nav>
+      <span class="feature-label">ALL FEATURES</span>
+      <h1 class="guide-title">Features</h1>
+      <p class="guide-lede">Everything Detour does, one line each. Features with a guide link to it; the keys are on <a href="/shortcuts/">Keyboard Shortcuts</a>.</p>
+    </header>
+
+    <div class="guide-body feature-index">
+      {groups.map((group) => (
+        <section>
+          <h2>{group.title}</h2>
+          <ul>
+            {rows(group.entries).map((row) => (
+              <li style={row.accent ? `--accent:${row.accent}` : undefined}>
+                {row.href ? (
+                  <a class="feature-index-name" href={row.href}>{row.name}<span aria-hidden="true"> →</span></a>
+                ) : (
+                  <span class="feature-index-name">{row.name}</span>
+                )}
+                <span class="feature-index-text" set:html={row.html} />
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </article>
+
+</Base>

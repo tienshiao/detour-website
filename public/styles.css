@@ -866,6 +866,7 @@ img.feature-media { background: none; }
 }
 .crumbs {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 8px 0 28px;
   font-family: var(--mono);
@@ -1194,3 +1195,49 @@ a.small-feature-name {
   text-underline-offset: 4px;
 }
 a.small-feature-name:hover { text-decoration-color: currentColor; }
+
+/* Features index and Keyboard Shortcuts (TASK-292.9). */
+.guide-lede a {
+  text-decoration: underline;
+  text-decoration-color: var(--ink-20);
+  text-underline-offset: 3px;
+}
+.guide-lede a:hover { text-decoration-color: var(--accent); }
+.feature-index ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 6px 32px;
+}
+.feature-index ul li {
+  margin: 0;
+  padding: 14px 0;
+  border-top: 0.5px solid var(--ink-12);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.guide-body.feature-index .feature-index-name {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+}
+.guide-body.feature-index a.feature-index-name { color: var(--accent); }
+.guide-body.feature-index a.feature-index-name:hover { text-decoration: underline; text-underline-offset: 3px; }
+.feature-index-text {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-72);
+}
+.shortcuts h3 { margin-top: 36px; }
+.shortcuts h3 + table { margin-top: 4px; }
+.guide-body.shortcuts td:first-child { white-space: normal; }
+/* The keys column lines up from table to table. */
+.guide-body.shortcuts th:last-child,
+.guide-body.shortcuts td:last-child { width: 36%; padding-right: 0; }
+@media (max-width: 720px) {
+  .feature-index ul { grid-template-columns: 1fr; }
+}

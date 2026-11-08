@@ -4,13 +4,18 @@ Each feature worth a guide gets a page at `/features/<id>/`, written as one Mark
 
 A feature gets a page when there is a real guide to write (steps or settings) or people search for it. Features with only a sentence or two to say go on the features index instead.
 
+## The features index and the shortcuts page
+
+- `/features/` (`src/pages/features/index.astro`) lists every feature in groups, one line each. A feature with a page is listed by its id and takes its name, lede and accent from the page's frontmatter; the others are written in the index from the release's code. **Add every new page to a group**: the build fails while a page is missing from the index.
+- `/shortcuts/` (`src/pages/shortcuts.astro`) lists every keyboard shortcut, one table per menu in menu-bar order, then the keys that work outside the menus. When a release adds, removes or changes a menu item's key or a key handler, update it in the same change as the guide pages. The app's Help menu opens both URLs, so keep them as they are.
+
 ## What the page is for
 
 The page is a user manual first. Someone who just installed Detour should be able to follow it without guessing. Search phrasing goes in the slots search engines read (title, description, slug, lede, FAQ headings), never at the cost of a clear heading or step.
 
 ## Page order (fixed by the template)
 
-1. **Breadcrumb and label pill:** from `name` and `label`.
+1. **Breadcrumb and label pill:** Detour › Features › `name`, and `label`.
 2. **H1:** the feature's name, exactly as the app and the home page call it ("Spaces", "Split Tabs"). Never a question, never a slogan.
 3. **Lede:** one plain sentence saying what you get, in the words a person would use ("Two web pages side by side in one window…").
 4. **Media:** one loop or still, with a caption.
@@ -36,7 +41,7 @@ The page is a user manual first. Someone who just installed Detour should be abl
 | `faq` | Questions | 3 to 6 entries of `q` and `a`. |
 | `related` | Ids of related pages | Ids without a page yet are skipped, so list the right ones now. |
 
-Frontmatter strings that render as HTML (FAQ answers, Arc items) allow a small inline Markdown: `**bold**`, `*emphasis*`, `` `code` ``, `[links](/path/)` and keys as `[[⌘T]]`. Quote any YAML value that starts with `[[` (a key) or `[` (a link), as in `- "[[⌥⌘N]] from any app…"`: unquoted, YAML reads it as a list and the build fails.
+Frontmatter strings that render as HTML (FAQ answers, Arc items) allow a small inline Markdown: `**bold**`, `*emphasis*`, `` `code` ``, `[links](/path/)` and keys as `[[⌘T]]` (a bracket key works too: `[[⌘[]]`, `[[⌘]]]`). Quote any YAML value that starts with `[[` (a key) or `[` (a link), as in `- "[[⌥⌘N]] from any app…"`: unquoted, YAML reads it as a list and the build fails.
 
 ## The body
 
@@ -96,11 +101,11 @@ Every page's media is a real capture of Detour, never a mockup or a made-up anim
 
 ## Structured data
 
-The template adds `BreadcrumbList` (Detour › feature). No `HowTo` markup: Google no longer shows it. When the features index lands, the breadcrumb gains a Features level.
+The template adds `BreadcrumbList` (Detour › Features › feature), matching the visible breadcrumb. No `HowTo` markup: Google no longer shows it.
 
 ## Checklist before shipping a page
 
 - `npm run build` passes and the page is in `dist/sitemap.xml`.
-- The home page section or grid entry links to the page.
+- The home page section or grid entry links to the page, and the page is in a group on the features index.
 - Checked in a browser at desktop width and at 390 px (no horizontal scroll).
 - Steps and shortcuts checked against the release.
