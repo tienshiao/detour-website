@@ -72,7 +72,27 @@ Include `arc` only when Arc had the feature in comparable form (Spaces, Split Vi
 
 ## Media
 
-Captures come from the staged demo profile and kit in the app repo's `docs/task-110` (public pages only, no personal data). Loops are muted MP4s with a poster, under about 1.5 MB, and play only when on screen and never with reduced motion (`public/script.js` handles every `video.feature-media`). Every image has `width` and `height`.
+Every page's media is a real capture of Detour, never a mockup or a made-up animation.
+
+### Loop or still
+
+- **A loop** when the feature is something happening: something appears, moves or switches, and a still would need a paragraph to explain it. Peek opening, ⌃Tab cycling, a link landing in Quarantine and being moved into a Space, Quick Detour over another app, typing a site-search keyword.
+- **A still** when the feature is a state or a setting: what something looks like, or where to find a control. A Private window, the content blocker's site popover, Settings › Profiles. Stills load faster and work in search results and link previews.
+- When in doubt, a still. Search engines read the text, the poster frame and its `aria-label` / `alt`, not the video, so a loop is for the reader, not for ranking.
+
+### Loops
+
+- 4 to 8 seconds, showing one action from start to finish, then a pause on the result before it repeats.
+- Muted MP4 with a poster frame (the poster is the result, not a blank start), under about 1.5 MB, encoded at a constant frame rate.
+- They play only when on screen and never with reduced motion (`public/script.js` handles every `video.feature-media`); the poster stands in.
+- The `label` describes the whole action ("Shift-clicking a link opens it in a Peek over the page, then the Peek expands into a tab").
+
+### Staging and capturing
+
+- Captures come from the staged demo profile and kit in the app repo's `docs/task-110` (2× virtual display, isolated `DETOUR_DATA_DIR`): public pages only, no personal data.
+- When another app has to be on screen (a link clicked elsewhere for Quarantine, Quick Detour or Link Routes), use TextEdit or Notes with a document of public links, not Mail, Messages or Slack.
+- Make captures in one session, not alongside other app runs: the kit runs a virtual display and swaps the wallpaper (it snapshots and restores it).
+- Every image and poster has `width` and `height`; stills are WebP.
 
 ## Structured data
 
