@@ -36,7 +36,7 @@ The page is a user manual first. Someone who just installed Detour should be abl
 | `faq` | Questions | 3 to 6 entries of `q` and `a`. |
 | `related` | Ids of related pages | Ids without a page yet are skipped, so list the right ones now. |
 
-Frontmatter strings that render as HTML (FAQ answers, Arc items) allow a small inline Markdown: `**bold**`, `*emphasis*`, `` `code` ``, `[links](/path/)` and keys as `[[⌘T]]`.
+Frontmatter strings that render as HTML (FAQ answers, Arc items) allow a small inline Markdown: `**bold**`, `*emphasis*`, `` `code` ``, `[links](/path/)` and keys as `[[⌘T]]`. Quote any YAML value that starts with `[[` (a key) or `[` (a link), as in `- "[[⌥⌘N]] from any app…"`: unquoted, YAML reads it as a list and the build fails.
 
 ## The body
 

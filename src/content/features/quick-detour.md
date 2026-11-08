@@ -15,7 +15,7 @@ arc:
   different:
     - Links from other apps open in your Space in front unless a [Link Route](/features/link-routes/) or the Default sends them to Quick Detour. In Arc, Little Arc was the default for them.
     - The arrow next to **Open in** lists every Space. Arc used [[⌥⌘O]] for another Space.
-    - [[⌥⌘]]-click on a link in a page opens it in a Quick Detour too.
+    - "[[⌥⌘]]-click on a link in a page opens it in a Quick Detour too."
     - An [[⌥⌘]]-clicked sidebar tab opens as a copy; the tab stays in the sidebar.
     - The profile name at the top left switches the window to another Profile.
   notInDetour:
