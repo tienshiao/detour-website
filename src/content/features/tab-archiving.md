@@ -13,9 +13,9 @@ arc:
     - Pinned tabs and favorites are never archived.
     - Closed and archived tabs from every Space are listed together, and you can search them. A restored tab goes back to the Space it came from.
     - A tab's menu has **Archive Tabs Below**.
+    - Archived tabs have their own page in the sidebar, to the left of your first Space.
   different:
     - You can turn it off. Choose **Never** under **Archive tabs after**.
-    - The Archived Tabs page is in the sidebar, to the left of your first Space. Open it with **Navigate › Show Archived Tabs**.
     - Clear it with **Navigate › Clear Archived Tabs…**, or **Clear Archive…** in the page's filter menu.
 faq:
   - q: How do I stop Detour from closing my tabs?
