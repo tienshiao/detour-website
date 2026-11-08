@@ -73,7 +73,7 @@ The route is saved as soon as it is complete. Until then, the row shows an orang
 
 To route every link from one app, choose the app in **From app** and leave the URL field empty. The field then reads "Any URL from this app, or a domain such as example.com". Type a domain as well to route only that site's links from the app. A route with neither a URL nor an app isn't saved, and its warning says so: "Enter a domain, such as example.com, or choose an app."
 
-A **From app** route also applies to a link that starts Detour when it isn't running. If Detour can't tell which app that link came from and any of your routes sends links to Quarantine, the link opens in Quarantine, to be safe.
+A **From app** route also applies to a link that starts Detour when it isn't running. If Detour can't tell which app that link came from, it opens in Quarantine whenever a **From app** route to Quarantine could have matched it, to be safe: one whose URL condition (if it has one) matches the link, with no route above it that matches.
 
 ### Where links can go
 
