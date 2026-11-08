@@ -40,7 +40,8 @@ const features = defineCollection({
     accent: z.string(),
     /** The label pill text; defaults to the name in capitals. */
     label: z.string().optional(),
-    media: z.discriminatedUnion("type", [video, image]),
+    /** Optional only until a capture exists: a page ships without media rather than with a placeholder. */
+    media: z.discriminatedUnion("type", [video, image]).optional(),
     /** Share image (root-absolute path) and its size; defaults to the site screenshot. */
     shareImage: z.object({ src: z.string(), width: z.number(), height: z.number(), alt: z.string() }).optional(),
     /** Only for features Arc had in comparable form. Inline Markdown allowed. */

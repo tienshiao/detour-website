@@ -61,14 +61,16 @@ const share = data.shareImage;
       <p class="guide-lede">{data.lede}</p>
     </header>
 
-    <figure class="guide-media">
-      {media.type === "video" ? (
-        <video class="feature-media" src={media.src} poster={media.poster} width={media.width} height={media.height} muted loop playsinline preload="none" aria-label={media.label}></video>
-      ) : (
-        <img class:list={["feature-media", media.width > media.height && "is-landscape"]} src={media.src} width={media.width} height={media.height} alt={media.alt} fetchpriority="high" />
-      )}
-      {media.caption && <figcaption>{media.caption}</figcaption>}
-    </figure>
+    {media && (
+      <figure class="guide-media">
+        {media.type === "video" ? (
+          <video class="feature-media" src={media.src} poster={media.poster} width={media.width} height={media.height} muted loop playsinline preload="none" aria-label={media.label}></video>
+        ) : (
+          <img class:list={["feature-media", media.width > media.height && "is-landscape"]} src={media.src} width={media.width} height={media.height} alt={media.alt} fetchpriority="high" />
+        )}
+        {media.caption && <figcaption>{media.caption}</figcaption>}
+      </figure>
+    )}
 
     <div class="guide-body">
       <Content />

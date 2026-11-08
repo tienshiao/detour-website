@@ -30,7 +30,7 @@ The page is a user manual first. Someone who just installed Detour should be abl
 | `description` | Meta description and share text | About 150–160 characters. Names the feature and says what you can do with it. |
 | `accent` | Color for the pill, steps and the Arc headings | The color of the feature's home page section. |
 | `label` | Pill text | Defaults to the name in capitals. |
-| `media` | The page's main loop or still | `type: video` with `src`, `poster`, `width`, `height`, `label` (what the loop shows, for screen readers), optional `caption`; or `type: image` with `src`, `width`, `height`, `alt`, optional `caption`. |
+| `media` | The page's main loop or still (optional only while the capture is still to be made; never a placeholder) | `type: video` with `src`, `poster`, `width`, `height`, `label` (what the loop shows, for screen readers), optional `caption`; or `type: image` with `src`, `width`, `height`, `alt`, optional `caption`. |
 | `shareImage` | Social share image | Optional. A landscape image works best; omit it to use the site screenshot. |
 | `arc` | Coming from Arc box | Only for features Arc had in comparable form (see below). |
 | `faq` | Questions | 3 to 6 entries of `q` and `a`. |
