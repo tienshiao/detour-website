@@ -84,7 +84,7 @@ Every browser tells each site its name and version in its user agent. Detour's d
 
 With **Safari**, sites get exactly what Safari on your Mac sends: Safari's version, and macOS reported as `10_15_7`, the version every Safari reports whatever macOS you run. Nothing in it names Detour. **Custom** sends a string you type.
 
-Quarantine always sends Safari's user agent, whatever the Profile is set to. So do Detour's own requests, such as fetching site icons, search suggestions and filter lists.
+Quarantine always sends Safari's user agent, whatever the Profile is set to. So do Detour's own requests, such as fetching site icons, search suggestions and filter lists, and extensions' background work. An extension's page that opens in a tab follows the Profile, like any tab.
 
 ### 6. Check the tracker lists
 
