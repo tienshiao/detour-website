@@ -18,10 +18,9 @@ arc:
   same:
     - "[[⌃Tab]] switches between the tabs you used most recently."
     - "[[⌥⌘↑]] and [[⌥⌘↓]] go through your tabs in the order the sidebar lists them."
+    - Holding [[⌃]] and pressing W in the switcher closes the highlighted tab.
   different:
     - The switcher lists every tab you've used in the Space since Detour opened, not only the last five.
-  notInDetour:
-    - Closing a tab from the switcher (holding [[⌃]] and pressing W in Arc).
 faq:
   - q: How do I switch to the last tab I used on a Mac?
     a: Press [[⌃Tab]] (Control-Tab). Detour switches to the tab you were on before this one. Press it again to go back, so two tabs you're comparing are always one keystroke apart.
@@ -61,6 +60,13 @@ Press <kbd>⌃Tab</kbd> and let go. Detour switches to the tab you used before t
 
 Press Escape to close the switcher and stay where you are.
 
+### Close tabs from the switcher
+
+1. With the switcher open, keep holding <kbd>⌃</kbd> and press W. The highlighted tab closes, its card disappears and the next card is highlighted.
+2. Press W again to close more. Let go of <kbd>⌃</kbd> to switch to the highlighted tab, as usual.
+
+A split card closes both of its tabs. A pinned tab or a favorite is unloaded, as <kbd>⌘W</kbd> does, and leaves the switcher. When nothing is left to switch to, the switcher closes. **Edit › Undo** (<kbd>⌘Z</kbd>) or **File › Reopen Closed Tab** (<kbd>⇧⌘T</kbd>) brings a closed tab back, and Undo brings a split back as a split.
+
 ### What the switcher lists
 
 - The tabs of the Space you're in, pinned tabs and favorites included, that you've used since Detour opened, most recent first. It never switches you to another Space.
@@ -83,6 +89,7 @@ Each card's preview is taken as you leave the tab, so it shows the page as you l
 | Switch to the last tab you used | <kbd>⌃Tab</kbd> |
 | Go further back in the switcher | Hold <kbd>⌃</kbd>, press Tab again |
 | Go the other way in the switcher | <kbd>⌃⇧Tab</kbd> |
+| Close the highlighted tab in the switcher | Hold <kbd>⌃</kbd>, press W |
 | Close the switcher without switching | Escape |
 | Next tab in the sidebar | <kbd>⌥⌘↓</kbd> |
 | Previous tab in the sidebar | <kbd>⌥⌘↑</kbd> |
