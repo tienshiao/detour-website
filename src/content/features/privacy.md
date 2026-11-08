@@ -5,6 +5,13 @@ title: Set up Detour for privacy on Mac · Privacy Setup | Detour
 description: "Step-by-step privacy setup for Detour on Mac: separate Profiles, Link Routes for your bank, Quarantine for mail links, Safari's user agent, tracker lists."
 accent: "#4F46E5"
 label: PRIVACY SETUP
+media:
+  type: image
+  src: /assets/features/privacy.webp
+  width: 880
+  height: 734
+  alt: "Detour's Settings, Profiles pane with Private, Work, Personal and Banking in the list and Banking selected. Its settings show Content Blocking with Block content on and EasyList (ads), EasyPrivacy (trackers), Cookie notices and Malicious URLs switched on; Extensions with Dark Reader switched off; User Agent with Identify as set to Safari and, below it, the Safari user agent string sites will see; and External Apps with no saved permissions"
+  caption: "The Banking Profile: trackers blocked, Dark Reader off, and Safari's user agent."
 faq:
   - q: How do I make Detour look like Safari to websites?
     a: In **Settings › Profiles**, select the Profile and set **Identify as** to **Safari**. Websites then see exactly the user agent Safari sends on your Mac, with nothing that names Detour. Do it for each Profile you use, and for **Private** if you want Private windows to match.

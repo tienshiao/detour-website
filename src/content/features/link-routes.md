@@ -11,8 +11,8 @@ media:
   width: 880
   height: 831
   displayWidth: 680
-  alt: "Detour's Settings, Links pane with three routes: Domain is github.com opens in the Work Space, Domain is wikipedia.org opens in the Reading Space, and links from TextEdit open in Quarantine, above the Default setting Most Recent Space"
-  caption: "Three routes: GitHub to Work, Wikipedia to Reading, and anything from TextEdit to Quarantine."
+  alt: "Detour's Settings, Links pane with three routes: Domain is github.com opens in the Work Space, Domain is wikipedia.org opens in the Reading Space, and links from Mail open in Quarantine, its URL field left empty so it reads Any URL from this app, or a domain such as example.com. Below them, the Default setting Open other links in is Most Recent Space"
+  caption: "Three routes: GitHub to Work, Wikipedia to Reading, and every link from Mail to Quarantine."
 arc:
   arcName: Air Traffic Control
   same:
