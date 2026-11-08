@@ -35,7 +35,7 @@ related:
 
 ## What it does
 
-A Private window is for browsing you don't want remembered: a present you're shopping for, a search you don't want suggested later, someone else's account on your Mac. Nothing you visit goes into History, the window's tabs aren't saved, and when you close it they're gone for good. It doesn't come back when you reopen Detour.
+A Private window is for browsing you don't want remembered: a present you're shopping for, or a search you don't want suggested later. Nothing you visit goes into History, nothing is written to disk, and when you close the window its tabs are gone for good. It doesn't come back when you reopen Detour.
 
 Each Private window gets a Space of its own, **🔒 Private**, on the built-in Private Profile. That Profile keeps cookies, logins and site data in memory only, never on disk. While Detour is running, every Private window shares them: sign in to a site in one and you're still signed in in the next, even after closing the first. Quitting Detour clears them.
 
