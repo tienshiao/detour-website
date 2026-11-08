@@ -75,7 +75,7 @@ Detour also has its own [Content Blocker](/features/content-blocker/) for ads an
 2. Find the extension and click **Add to Chrome**.
 3. Detour downloads it and asks **Install "…"?**, saying where it comes from ("From the Chrome Web Store."), the permissions it asks for and its **Site access**, such as "All websites". Click **Install**.
 
-The extension is on in every Profile, but not in Private windows. A file that isn't signed as the store's own is named as such in the question, and one whose signature doesn't check out isn't installed.
+The extension is on only in the Profile of the tab you installed it from. To use it in your other Profiles, choose **Extensions › Manage Extensions…**, select it and click **Turn On in All Profiles**, or turn it on for one Profile at a time under **Extensions** in **Settings › Profiles**. It stays off in Private windows until you allow it there. A file that isn't signed as the store's own is named as such in the question, and one whose signature doesn't check out isn't installed.
 
 A website can also offer an extension as a `.crx` file. Clicking its link shows the same question instead of downloading the file, and names the site it came from.
 

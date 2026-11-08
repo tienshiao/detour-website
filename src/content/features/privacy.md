@@ -9,7 +9,7 @@ faq:
   - q: How do I make Detour look like Safari to websites?
     a: In **Settings › Profiles**, select the Profile and set **Identify as** to **Safari**. Websites then see exactly the user agent Safari sends on your Mac, with nothing that names Detour. Do it for each Profile you use, and for **Private** if you want Private windows to match.
   - q: Should I use extensions in my banking Profile?
-    a: Keep it to none, or only the password manager you trust. An extension that can read pages can read your bank's pages too. A new Profile starts with every installed extension on, so turn them off under **Extensions** in that Profile's settings, and check again after you install another one.
+    a: Keep it to none, or only the password manager you trust. An extension that can read pages can read your bank's pages too. A new Profile starts with no extensions, and one you install is on only in the Profile you installed it from, so Banking stays empty unless you turn something on there, under **Extensions** in that Profile's settings.
   - q: Does Detour send what I type in the address bar to the search engine?
     a: Only while **Search suggestions** is on for the Profile, which it is by default. Turn it off in **Settings › Profiles** and nothing leaves your Mac until you press Return; the command palette still suggests your open tabs and history.
   - q: Does Detour hide my IP address?
@@ -47,12 +47,12 @@ A new Profile starts empty: no logins, no history. Sign in to each account in it
 
 ### 2. Keep extensions out of Banking
 
-An extension that can read pages can read every page in the Profiles it runs in. A new Profile starts with every installed extension on, and an extension you install later is on in every Profile except Private.
+An extension that can read pages can read every page in the Profiles it runs in. A new Profile starts with no extensions, and an extension you install is on only in the Profile you installed it from, so Banking stays empty unless you turn one on there.
 
-1. In **Settings › Profiles**, select **Banking**.
-2. Under **Extensions**, turn off the switch for each extension. Leave on only one you trust with your bank, such as your password manager, if you use one.
+1. Install extensions from a window in Work or Personal, not from Banking.
+2. If you want your password manager in Banking, choose **Settings › Profiles**, select **Banking** and turn it on under **Extensions**. Leave the rest off.
 
-Check Banking again whenever you install an extension.
+**Turn On in All Profiles** in **Extensions › Manage Extensions…** includes Banking. If you use it for an extension, turn that extension off again in Banking.
 
 ### 3. Send your bank and work sites to their Space
 
