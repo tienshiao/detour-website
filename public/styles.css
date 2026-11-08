@@ -1144,3 +1144,44 @@ img.feature-media { background: none; }
   .guide-arc { padding: 4px 20px 22px; }
   .guide-body td:first-child { white-space: normal; }
 }
+
+/* Switching from Arc (src/pages/arc/index.astro). */
+.eyebrow-link { display: inline-block; }
+.eyebrow-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.guide-callout {
+  max-width: 760px;
+  margin: 40px auto 0;
+  padding: 18px 22px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--accent) 9%, transparent);
+  border: 0.5px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.guide-callout p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-72);
+}
+.guide-callout strong { color: var(--ink); }
+.guide-callout a {
+  text-decoration: underline;
+  text-decoration-color: var(--ink-20);
+  text-underline-offset: 3px;
+}
+.guide-body table.arc-map td:first-child,
+.guide-body table.arc-map td:nth-child(2) { white-space: nowrap; color: var(--ink); }
+.guide-body table.arc-map td:nth-child(2) { font-weight: 600; }
+@media (max-width: 720px) {
+  .guide-body table.arc-map,
+  .guide-body table.arc-map tbody,
+  .guide-body table.arc-map tr,
+  .guide-body table.arc-map td { display: block; }
+  .guide-body table.arc-map thead { display: none; }
+  .guide-body table.arc-map tr { padding: 12px 0; border-bottom: 0.5px solid var(--ink-12); }
+  .guide-body table.arc-map td,
+  .guide-body table.arc-map td:first-child,
+  .guide-body table.arc-map td:nth-child(2) { border: 0; padding: 0; white-space: normal; }
+  .guide-body table.arc-map td:first-child { font-size: 13px; color: var(--ink-50); }
+  .guide-body table.arc-map td:first-child::after { content: " in Arc"; }
+  .guide-body table.arc-map td:nth-child(3) { margin-top: 4px; }
+}

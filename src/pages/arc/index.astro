@@ -1,0 +1,134 @@
+---
+// Switching from Arc: the one page written for Arc users (TASK-292.3).
+// Arc facts come from Arc's own help center, read through the Wayback
+// Machine (resources.arc.net refuses scripted fetches); see
+// docs/feature-pages.md. Detour's names link to their guide pages as soon as
+// those pages exist. The manual migration guide (_move.md) is held back until
+// Detour can import from Arc (TASK-293): without an importer it reads weak.
+import { getCollection } from "astro:content";
+import Arrow from "../../components/Arrow.astro";
+import Base from "../../layouts/Base.astro";
+import { inline } from "../../lib/inline";
+
+const pages = new Set((await getCollection("features")).map((f) => f.id));
+const featureLink = (id: string | null) => (id && pages.has(id) ? `/features/${id}/` : null);
+
+// Arc's name, Detour's name, the guide page id Detour's will live at, and a note.
+const mapping: { arc: string; detour: string; id: string | null; note: string }[] = [
+  { arc: "Spaces", detour: "Spaces", id: "spaces", note: "Each Space has its own tabs, pinned tabs, emoji and color. Swipe over the sidebar to switch. You create Spaces in **Settings › Spaces**." },
+  { arc: "Profiles", detour: "Profiles", id: "profiles", note: "Each Space uses a Profile for its logins, cookies, history and extensions. Favorites belong to the Profile, so every Space on it shows the same ones." },
+  { arc: "Pinned tabs and folders", detour: "Pinned Tabs & Folders", id: "pinned-tabs", note: "Pin with [[⌘D]]. Closing a pinned tab keeps it in place, and clicking it again loads the address you pinned." },
+  { arc: "Favorites", detour: "Favorites", id: "favorites", note: "Icon tiles at the top of the sidebar, shared by every Space on a Profile. Drag a tab onto them to add one." },
+  { arc: "Split View", detour: "Split Tabs", id: "split-tabs", note: "Two tabs side by side as one sidebar row. Arc also allowed more panes and stacked splits." },
+  { arc: "Little Arc", detour: "Quick Detour", id: "quick-detour", note: "[[⌥⌘N]] from any app opens a one-page window, the same keys as Little Arc. **Open in** moves the page into a Space; unused windows close after 6 hours by default." },
+  { arc: "Air Traffic Control", detour: "Link Routes", id: "link-routes", note: "Send links to a Space by their address and, unlike Arc, by the app they came from. Set up in **Settings › Links**." },
+  { arc: "Command Bar", detour: "Command Palette", id: "command-palette", note: "[[⌘T]] for a new tab, [[⌘L]] to go somewhere in this tab. It finds open tabs, history and searches, but doesn't run commands the way Arc's did." },
+  { arc: "Site Search", detour: "Site Search", id: "site-search", note: "Type a site's keyword and press Tab. Sites that offer their own search add themselves." },
+  { arc: "Peek", detour: "Peek", id: "peek", note: "Links to other sites from pinned tabs and favorites open in a Peek, and Shift-click peeks any link." },
+  { arc: "Auto Archive", detour: "Tab Archiving", id: "tab-archiving", note: "Idle tabs archive after 12 hours by default, set per Profile. Closed and archived tabs wait on the Archived Tabs page (**Navigate › Show Archived Tabs**)." },
+  { arc: "Tab Switcher", detour: "Recent Tabs", id: "recent-tabs", note: "[[⌃Tab]] flips to the tabs you used last, and [[⌥⌘↑]] / [[⌥⌘↓]] walk the sidebar in order, as in Arc." },
+  { arc: "Developer Mode", detour: "Dev Mode", id: "dev-mode", note: "Turns on by itself for localhost, with a toolbar for the console, network, an element picker and screenshots." },
+  { arc: "Extensions", detour: "Web Extensions", id: "web-extensions", note: "Install from the Chrome Web Store with **Extensions › Add Extensions…**. Detour runs on WebKit, so some Chrome extensions work and some don't yet. 1Password works." },
+  { arc: "Mini Player", detour: "Now-playing bar", id: null, note: "Audio and video you left playing in another tab get controls at the bottom of the sidebar." },
+];
+
+const notInDetour = [
+  "**Sync** between computers, and the Arc Search app on iPhone.",
+  "**Boosts**, **Easels**, **Notes** and **Arc Max**'s AI features.",
+  "**Live Folders** and **Previews** of mail, calendars and other apps when you hover a tab. Detour's hover cards show the title, address and a picture of the page.",
+  "**Sharing** a Space, folder or split as a link.",
+  "**Themes** with gradients. A Space has one color.",
+  "Shortcuts that jump to a Space by number ([[⌃1]], [[⌃2]]…). Use [[⌥⌘→]] and [[⌥⌘←]] or the **Spaces** menu.",
+  "Splits of more than two tabs, and stacked splits.",
+  "A built-in password manager, and **importing** from another browser.",
+  "Versions for Windows or iPhone. Detour is a Mac app.",
+];
+
+const notInArc = [
+  "**Quarantine**: open links you don't trust in a throwaway window that has none of your cookies and keeps no history, then move the page into a Space if it turns out to be worth keeping.",
+  "**Link Routes by app**: send links from Slack to Work and from Messages to Personal, or straight to a Private window, Quarantine or Quick Detour.",
+  "**No account.** Arc needed one to sign in; Detour has nothing to sign up for, and your tabs and settings stay on your Mac.",
+];
+
+const faq = [
+  { q: "When does Arc stop working?", a: "The Browser Company is sunsetting Arc on December 22, 2026. After that, Arc for Mac stops opening, so you can't get to your Spaces and tabs in it." },
+  { q: "Is Detour built on Chromium like Arc?", a: "No. Detour is a native Mac app built on WebKit, the engine Safari uses. You can still install extensions from the Chrome Web Store; many work, and some don't yet." },
+  { q: "Do I need an account?", a: "No. There's nothing to sign up for. Your tabs, Spaces and settings stay on your Mac." },
+  { q: "Does Detour sync between Macs?", a: "Not yet." },
+];
+
+const url = (path: string) => new URL(path, Astro.site).href;
+const breadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Detour", item: url("/") },
+    { "@type": "ListItem", position: 2, name: "Switching from Arc", item: url(Astro.url.pathname) },
+  ],
+};
+---
+<Base
+  title="Switching from Arc: an Arc browser alternative for Mac | Detour"
+  description="Arc stops working on December 22, 2026. See how Arc's Spaces, pinned tabs, Little Arc and Air Traffic Control carry over to Detour, a free native Mac browser."
+  imageAlt="Detour browser window showing the Spaces sidebar"
+>
+<Fragment slot="head">
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbs, null, 2)} />
+</Fragment>
+
+  <article class="guide" style="--accent:#FF7600">
+    <Arrow class="bg-arrow bg-arrow-guide" />
+
+    <header class="guide-head">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Detour</a><span aria-hidden="true">/</span><span aria-current="page">Switching from Arc</span>
+      </nav>
+      <span class="feature-label">FOR ARC USERS</span>
+      <h1 class="guide-title">Switching from Arc</h1>
+      <p class="guide-lede">Arc stops working on December 22, 2026. Here's how Arc's features carry over to Detour, and what's different.</p>
+    </header>
+
+    <aside class="guide-callout" aria-label="Arc's shutdown date">
+      <p><strong>Arc stops on December 22, 2026.</strong> The Browser Company announced on October 22 that Arc for Mac stops working that day and Arc accounts are closed. After that you can't open Arc to get to your Spaces and tabs. (<a href="https://web.archive.org/web/20261022235823/https://resources.arc.net/hc/en-us/articles/44412972248471-Arc-Sunset-Key-Dates-and-What-to-Expect">Arc's announcement</a>)</p>
+    </aside>
+
+    <div class="guide-body">
+      <h2 id="what-carries-over">What carries over</h2>
+      <p>Most of what made Arc Arc has a counterpart in Detour, often working the same way and sometimes under a different name.</p>
+      <table class="arc-map">
+        <thead><tr><th>In Arc</th><th>In Detour</th><th>How it works in Detour</th></tr></thead>
+        <tbody>
+          {mapping.map((row) => {
+            const href = featureLink(row.id);
+            return (
+              <tr>
+                <td>{row.arc}</td>
+                <td>{href ? <a href={href}>{row.detour}</a> : row.detour}</td>
+                <td set:html={inline(row.note)} />
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+
+      <h2 id="not-in-detour">What Arc had that Detour doesn't</h2>
+      <ul>{notInDetour.map((item) => <li set:html={inline(item)} />)}</ul>
+
+      <h2 id="not-in-arc">What Detour has that Arc didn't</h2>
+      <ul>{notInArc.map((item) => <li set:html={inline(item)} />)}</ul>
+      <p>A content blocker is built in too (EasyList, EasyPrivacy, cookie notices and malicious sites), with no extension to install.</p>
+
+    </div>
+
+    <section class="guide-faq" aria-labelledby="questions">
+      <h2 id="questions">Questions</h2>
+      {faq.map(({ q, a }) => (
+        <div class="guide-faq-item">
+          <h3>{q}</h3>
+          <p set:html={inline(a)} />
+        </div>
+      ))}
+    </section>
+  </article>
+
+</Base>
