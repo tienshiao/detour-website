@@ -1185,3 +1185,12 @@ img.feature-media { background: none; }
   .guide-body table.arc-map td:first-child::after { content: " in Arc"; }
   .guide-body table.arc-map td:nth-child(3) { margin-top: 4px; }
 }
+
+/* Home grid links (TASK-292.7) */
+a.small-feature-name {
+  text-decoration: underline;
+  text-decoration-color: var(--ink-20);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+a.small-feature-name:hover { text-decoration-color: currentColor; }
