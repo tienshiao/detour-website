@@ -19,6 +19,7 @@ arc:
     - "[[⌥⌘N]] from any app opens a small window for a quick search or address."
     - The **Open in** button at the top moves the page into a Space, and [[⌘O]] does the same.
     - Holding [[⌥⌘]] while clicking a sidebar tab opens it in the small window.
+    - A link's right-click menu opens it in the small window too (**Open Link in Quick Detour**).
     - Windows you leave alone close into the archive after 6 hours by default, and you can change that in Settings.
   different:
     - Links from other apps open in your Space in front unless a [Link Route](/features/link-routes/) or the Default sends them to Quick Detour. In Arc, Little Arc was the default for them.
@@ -60,8 +61,8 @@ Quick Detours you forget about close by themselves after a few hours and wait in
 
 - **From any app:** press <kbd>⌥⌘N</kbd>. The field opens over the app in front. Type an address or a search and press Return, or pick a suggestion from your history. Escape, or a click outside the field, closes it without opening anything.
 - **In Detour:** choose **File › New Quick Detour Window** or press <kbd>⌥⌘N</kbd>.
-- **From a link:** hold <kbd>⌥⌘</kbd> and click a link on a page.
-- **From the sidebar:** hold <kbd>⌥⌘</kbd> and click a tab. The Quick Detour gets a copy of its address; the tab itself stays where it is.
+- **From a link:** right-click a link on a page, or in a Peek, and choose **Open Link in Quick Detour**. Or hold <kbd>⌥⌘</kbd> and click the link.
+- **From the sidebar:** right-click a tab and choose **Open in Quick Detour**, or hold <kbd>⌥⌘</kbd> and click it. The Quick Detour gets a copy of its address; the tab itself stays where it is. On a split, it's the half you clicked.
 - **From other apps' links:** with a [Link Route](/features/link-routes/) whose **Open in** is **Quick Detour**, or that as the Default. Without one, links from other apps open in a Space.
 
 You can have several open at once. A link you <kbd>⌘</kbd>-click inside one opens in another.
@@ -91,7 +92,7 @@ A Quick Detour uses the Profile of the Detour window you used last, so a lookup 
 Choose **Detour › Settings…** (<kbd>⌘,</kbd>) and click **Quick Detour**:
 
 - **Open Quick Detour from any app with** turns the shortcut for other apps on or off. Click the field to record a different shortcut. <kbd>⌥⌘N</kbd> still works in Detour's **File** menu when this is off.
-- **Open links and sidebar tabs in Quick Detour with ⌥⌘-click** turns the ⌥⌘-click on or off.
+- **Open links and sidebar tabs in Quick Detour with ⌥⌘-click** turns the ⌥⌘-click on or off. **Open Link in Quick Detour** and **Open in Quick Detour** stay in the right-click menus either way.
 - **Close Quick Detour windows not used for** sets the auto-close time: **Never**, **1 hour**, **6 hours** (the default), **12 hours** or **1 day**. Auto-closed windows are marked "auto-closed" on the Archived Tabs page. The window in front, one playing sound and Private ones stay open. Time your Mac spends asleep counts.
 
 Quick Detours aren't reopened when you start Detour again. Those open when you quit go to the Archived Tabs page.
