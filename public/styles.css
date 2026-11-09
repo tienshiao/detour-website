@@ -219,6 +219,9 @@ button { font-family: inherit; cursor: pointer; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  /* Never shrink or wrap the label; the size line beside it wraps instead. */
+  flex: none;
+  white-space: nowrap;
   box-shadow: 0 8px 20px -8px rgba(255, 118, 0, 0.6);
   transition: transform 120ms ease, box-shadow 120ms ease;
 }
