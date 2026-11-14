@@ -11,7 +11,7 @@ media:
   poster: /assets/features/quick-detour-poster.webp
   width: 1220
   height: 850
-  label: "Over a TextEdit document, Detour's Quick Detour palette appears; typing \"ted nelson xanadu\" and pressing Return opens the search results in a small Quick Detour window in front of TextEdit"
+  label: "Over a TextEdit document, Detour's Quick Detour palette appears; typing \"ted nelson xanadu\" and pressing Return opens a small Quick Detour window in front of TextEdit. Its title bar has a Back button and the address google.com, which fills with a blue bar while the search results load"
   caption: "Look something up from another app without switching to your browser windows."
 arc:
   arcName: Little Arc

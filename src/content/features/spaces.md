@@ -65,6 +65,11 @@ Each Space uses a **Profile**, which holds its logins and cookies, history and e
 5. Choose its **Profile**, which holds the Space's logins, history and extensions.
 6. Click **Create Space** or press Return. The window switches to the new Space. **Cancel** or Escape leaves everything as it was.
 
+<figure>
+  <img src="/assets/features/spaces-editor.webp" width="1400" height="1760" loading="lazy" style="max-width:420px" alt="A Detour window whose sidebar has turned into the editor for a new Space: the name Recipes with a frying-pan emoji suggested from it, a grid of eleven colors plus a custom color with green selected, a grid of eighteen emoji with All Emoji…, the Profile menu set to Personal with the note Logins, history and extensions come from the profile, and Cancel and Create Space buttons. The whole sidebar is tinted green as a preview, and the Wikipedia article Hypertext is open beside it.">
+  <figcaption>Making a Space: the sidebar previews its color while you choose.</figcaption>
+</figure>
+
 ### Switch Spaces
 
 - Swipe left or right with two fingers over the sidebar.
