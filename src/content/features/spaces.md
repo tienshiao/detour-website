@@ -20,7 +20,7 @@ arc:
     - A two-finger swipe over the sidebar switches Spaces, and their icons sit along the bottom of the sidebar.
     - Each Space uses a Profile for its logins and cookies, and several Spaces can share one.
   different:
-    - You create Spaces in **Settings › Spaces**. The **+** at the bottom of the sidebar takes you there.
+    - You make and edit a Space right in the sidebar. The **+** at the bottom opens an editor where the tab list was, and the sidebar previews the color as you choose it.
     - A Space's icon is an emoji.
   notInDetour:
     - Themes. A Space has one color, which tints the sidebar.
@@ -58,14 +58,12 @@ Each Space uses a **Profile**, which holds its logins and cookies, history and e
 
 ### Create a Space
 
-1. Click **+** at the bottom right of the sidebar, or choose **Spaces › Manage Spaces…**. Settings opens on the Spaces pane.
-2. Click **+** under the list of Spaces. A new Space appears, named "Space".
-3. Give it a name, an emoji and a color, and choose its Profile. Changes save as you make them.
-
-<figure>
-  <img src="/assets/features/profiles-spaces.webp" width="448" height="230" loading="lazy" style="max-width:360px" alt="Detour's Spaces settings: Work uses the Work profile, Personal and Reading share the Personal profile, Side uses Client X">
-  <figcaption>Settings › Spaces lists each Space with the Profile it uses.</figcaption>
-</figure>
+1. Click **+** at the bottom right of the sidebar. The sidebar turns into the new Space's editor, tinted with its color.
+2. Type a name. Detour suggests an emoji to go with it until you pick one yourself.
+3. Choose a **Color**, or **Custom Color…** at the end of the grid for any other.
+4. Choose an **Icon** from the grid, or click **All Emoji…** (or the emoji tile next to the name) for any emoji.
+5. Choose its **Profile**, which holds the Space's logins, history and extensions.
+6. Click **Create Space** or press Return. The window switches to the new Space. **Cancel** or Escape leaves everything as it was.
 
 ### Switch Spaces
 
@@ -81,9 +79,14 @@ Right-click the tab in the sidebar and choose **Move to**, then the Space. The t
 
 ### Edit, reorder or delete a Space
 
-- **Edit:** right-click the Space's emoji at the bottom of the sidebar, or an empty part of the tab list, and choose **Edit Space…**. Changing a Space's Profile asks first, then reloads its tabs with the new Profile's logins.
-- **Reorder:** drag Spaces up or down in **Settings › Spaces**.
+- **Edit:** right-click the Space's emoji at the bottom of the sidebar, or an empty part of the tab list, and choose **Edit Space…**. The same editor opens with the Space's name, color, icon and Profile; click **Done** to keep your changes. Changing the Profile reloads the Space's tabs with the new Profile's logins and history. **Edit › Undo Edit Space** takes it all back.
+- **Reorder:** drag Spaces up or down in **Settings › Spaces**, which lists every Space with the Profile it uses.
 - **Delete:** right-click the Space's emoji and choose **Delete Space** once its tabs are closed or moved, or select it in **Settings › Spaces** and click **−**, which closes its tabs too. Choose **Edit › Undo Delete Space** in a browser window to bring it back with its tabs. You can't delete your last Space, or one that a Link Route opens links in.
+
+<figure>
+  <img src="/assets/features/profiles-spaces.webp" width="448" height="230" loading="lazy" style="max-width:360px" alt="Detour's Spaces settings: Work uses the Work profile, Personal and Reading share the Personal profile, Side uses Client X">
+  <figcaption>Settings › Spaces lists each Space with the Profile it uses.</figcaption>
+</figure>
 
 ### Shortcuts
 

@@ -21,7 +21,7 @@ arc:
     - A new Profile starts empty, with no logins and no history.
     - You can't delete a Profile while a Space still uses it.
   different:
-    - You create Profiles in **Settings › Profiles** and choose a Space's Profile in **Settings › Spaces**. Arc did both from the Space's menu.
+    - You create Profiles in **Settings › Profiles**. You choose a Space's Profile in the Space's editor (**Edit Space…** on its emoji) or in **Settings › Spaces**. Arc did both from the Space's menu.
   notInDetour:
     - Saved passwords and autofill. Detour has no password manager of its own; a password manager extension, such as 1Password, can be turned on for each Profile.
 faq:
@@ -64,9 +64,11 @@ A new Profile starts empty: no logins, no history, no favorites. It fills up as 
 
 ### Give a Space a Profile
 
-1. In **Settings › Spaces**, select the Space. You can also right-click the Space's emoji at the bottom of the sidebar and choose **Edit Space…**.
-2. Choose a Profile from the **Profile** menu.
-3. Detour asks **Change Profile?** first. Click **Change**, and the Space's tabs reload with the new Profile's logins.
+1. Right-click the Space's emoji at the bottom of the sidebar and choose **Edit Space…**. The Space's editor opens in the sidebar.
+2. Choose a Profile from the **Profile** menu. The editor notes that the Space's tabs will reload with the new Profile's logins and history.
+3. Click **Done**. **Edit › Undo Edit Space** puts the old Profile back.
+
+A new Space gets its Profile the same way: choose it in the editor before you click **Create Space**. You can also change it in **Settings › Spaces**: select the Space, choose a Profile, and click **Change** when Detour asks **Change Profile?**.
 
 <figure>
   <img src="/assets/features/profiles-spaces.webp" width="448" height="230" loading="lazy" style="max-width:360px" alt="Detour's Spaces settings: Work uses the Work profile, Personal and Reading share the Personal profile, Side uses Client X">
