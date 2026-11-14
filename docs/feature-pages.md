@@ -68,7 +68,7 @@ Include `arc` only when Arc had the feature in comparable form (Spaces, Split Vi
 - `arcName` is Arc's name for the feature.
 - `same`, `different`, `notInDetour`: short, factual items, sourced from Arc's own help center where it covers the point, else from more than one reputable source; leave out details sources disagree on.
 - Arc's help center (resources.arc.net) refuses scripted fetches, but the Wayback Machine has it: `https://archive.org/wayback/available?url=resources.arc.net/hc/en-us/articles/<id>` finds the latest capture, and `https://web.archive.org/web/<timestamp>id_/<url>` returns the original (gzip-compressed) page. About 220 article URLs are captured. Third-party guides often disagree with it, e.g. on Arc's shortcuts (Split View is ⌘⇧+, Spaces are ⌃1, ⌃2…).
-- No Arc logos, screenshots or styling.
+- No Arc logos, screenshots or styling. Exception (user, Nov 14 2026): captures of Detour's own Import from Arc sheet, which shows the installed Arc app's icon, may appear on the Arc hub.
 - The box links to the Switching from Arc hub (`/arc/`) automatically once that page exists.
 
 ## Questions
