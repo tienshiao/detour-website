@@ -16,7 +16,7 @@ const featureLink = (id: string | null) => (id && pages.has(id) ? `/features/${i
 
 // Arc's name, Detour's name, the guide page id Detour's will live at, and a note.
 const mapping: { arc: string; detour: string; id: string | null; note: string }[] = [
-  { arc: "Spaces", detour: "Spaces", id: "spaces", note: "Each Space has its own tabs, pinned tabs, emoji and color. Swipe over the sidebar to switch. You create Spaces in **Settings › Spaces**." },
+  { arc: "Spaces", detour: "Spaces", id: "spaces", note: "Each Space has its own tabs, pinned tabs, emoji and color. Swipe over the sidebar to switch. Click **+** at the bottom of the sidebar to make one, choosing its name, emoji, color and Profile right there in the sidebar." },
   { arc: "Profiles", detour: "Profiles", id: "profiles", note: "Each Space uses a Profile for its logins, cookies, history and extensions. Favorites belong to the Profile, so every Space on it shows the same ones." },
   { arc: "Pinned tabs and folders", detour: "Pinned Tabs & Folders", id: "pinned-tabs", note: "Pin with [[⌘D]]. Closing a pinned tab keeps it in place, and clicking it again loads the address you pinned." },
   { arc: "Favorites", detour: "Favorites", id: "favorites", note: "Icon tiles at the top of the sidebar, shared by every Space on a Profile. Drag a tab onto them to add one." },
