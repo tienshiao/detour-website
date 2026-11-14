@@ -3,8 +3,9 @@
 // Arc facts come from Arc's own help center, read through the Wayback
 // Machine (resources.arc.net refuses scripted fetches); see
 // docs/feature-pages.md. Detour's names link to their guide pages as soon as
-// those pages exist. The manual migration guide (_move.md) is held back until
-// Detour can import from Arc (TASK-293): without an importer it reads weak.
+// those pages exist. The migration section follows the importer's own words
+// (File › Import from Arc…, TASK-293; strings in the app's
+// Detour/Import/Arc/ArcImportText.swift and ArcImportWindowController.swift).
 import { getCollection } from "astro:content";
 import Arrow from "../../components/Arrow.astro";
 import Base from "../../layouts/Base.astro";
@@ -40,7 +41,7 @@ const notInDetour = [
   "**Themes** with gradients. A Space has one color.",
   "Shortcuts that jump to a Space by number ([[⌃1]], [[⌃2]]…). Use [[⌥⌘→]] and [[⌥⌘←]] or the **Spaces** menu.",
   "Splits of more than two tabs, and stacked splits.",
-  "A built-in password manager, and **importing** from another browser.",
+  "A built-in password manager, and importing from browsers other than Arc.",
   "Versions for Windows or iPhone. Detour is a Mac app.",
 ];
 
@@ -52,6 +53,8 @@ const notInArc = [
 
 const faq = [
   { q: "When does Arc stop working?", a: "The Browser Company is sunsetting Arc on December 22, 2026. After that, Arc for Mac stops opening, so you can't get to your Spaces and tabs in it." },
+  { q: "Can I import my Arc Spaces and pinned tabs?", a: "Yes. Choose **File › Import from Arc…** in Detour. It brings over your Spaces, pinned tabs and folders, Favorites, unpinned tabs and the last 90 days of history, from Arc on your Mac or from Arc's export file. Logins, passwords and extensions don't come across." },
+  { q: "What if I don't import before Arc shuts down?", a: "Save Arc's export file now (**Arc › Settings › Advanced › Export Data**) and keep it. Detour can import it any time, even after Arc stops working, though it carries only links: no profiles, emoji, colors or history." },
   { q: "Is Detour built on Chromium like Arc?", a: "No. Detour is a native Mac app built on WebKit, the engine Safari uses. You can still install extensions from the Chrome Web Store; many work, and some don't yet." },
   { q: "Do I need an account?", a: "No. There's nothing to sign up for. Your tabs, Spaces and settings stay on your Mac." },
   { q: "Does Detour sync between Macs?", a: "Not yet." },
@@ -69,7 +72,7 @@ const breadcrumbs = {
 ---
 <Base
   title="Switching from Arc: an Arc browser alternative for Mac | Detour"
-  description="Arc stops working on December 22, 2026. See how Arc's Spaces, pinned tabs, Little Arc and Air Traffic Control carry over to Detour, a free native Mac browser."
+  description="Arc stops working on December 22, 2026. Import your Arc Spaces, pinned tabs and Favorites into Detour, a free native Mac browser, and see how Arc's features carry over."
   imageAlt="Detour browser window showing the Spaces sidebar"
 >
 <Fragment slot="head">
@@ -85,7 +88,7 @@ const breadcrumbs = {
       </nav>
       <span class="feature-label">FOR ARC USERS</span>
       <h1 class="guide-title">Switching from Arc</h1>
-      <p class="guide-lede">Arc stops working on December 22, 2026. Here's how Arc's features carry over to Detour, and what's different.</p>
+      <p class="guide-lede">Arc stops working on December 22, 2026. Here's how to bring your Arc setup into Detour, how Arc's features carry over, and what's different.</p>
     </header>
 
     <aside class="guide-callout" aria-label="Arc's shutdown date">
@@ -93,6 +96,41 @@ const breadcrumbs = {
     </aside>
 
     <div class="guide-body">
+      <h2 id="import">Bring your Arc setup over</h2>
+      <p>Detour imports your Spaces, pinned tabs and folders, Favorites, unpinned tabs and history from Arc. It reads them straight from Arc on your Mac, or from the file Arc's <strong>Export Data</strong> saves.</p>
+
+      <h3>Before December 22, in Arc</h3>
+      <p>Importing from Arc on your Mac needs Arc's data to still be there, so do it before you remove Arc. Save an export file as well: Detour can import it any time, even after Arc stops working.</p>
+      <ol>
+        <li>Choose <strong>Arc › Settings</strong>, select <strong>Advanced</strong>, then <strong>Export Data</strong>. Arc saves a file called <strong>Arc Data Export.md</strong>. Keep it somewhere safe.</li>
+        <li>If you saved passwords in Arc rather than in a password manager, export them too. Arc keeps them per Profile in its Chromium password settings (<strong>Arc › Settings › Profiles</strong>, then <strong>Password</strong>); import the file into Apple's Passwords app or the password manager you'll use with Detour.</li>
+        <li>Note your Air Traffic Control routes (<strong>Arc › Settings › Links</strong>) so you can set them up again as Link Routes.</li>
+      </ol>
+
+      <h3>Import into Detour</h3>
+      <p>When Detour finds Arc on your Mac, it offers once to bring your Arc setup along and shows your Spaces. <strong>Import Everything</strong> brings every Arc profile with everything in it. <strong>Choose…</strong> opens the import window so you can pick. You can also open that window yourself at any time:</p>
+      <ol>
+        <li>Choose <strong>File › Import from Arc…</strong>.</li>
+        <li>Under <strong>Import from</strong>, choose <strong>Arc on this Mac</strong>, or choose <strong>An Arc export file</strong>, click <strong>Choose…</strong> and pick <strong>Arc Data Export.md</strong>.</li>
+        <li>Each Arc profile is listed with its Spaces. Untick anything you don't want. Next to each profile, <strong>into</strong> says where it goes: a new Detour profile, or one you already have.</li>
+        <li>Under <strong>Bring</strong>, choose any of <strong>Pinned tabs and folders</strong>, <strong>Favorites</strong>, <strong>Unpinned tabs</strong> and <strong>History (last 90 days)</strong>.</li>
+        <li>Click <strong>Import</strong>. The window lists what was added.</li>
+      </ol>
+      <p>Spaces keep their names, emoji and colors, and pinned tabs stay in their folders, in Arc's order. A split of two tabs stays a split. Unpinned tabs come in asleep, so nothing loads until you click it.</p>
+      <p>Importing again is safe. Tabs, folders and Favorites Detour already has are left as they are, so you can import from Arc on your Mac today and from a later export file after that.</p>
+
+      <h3>Importing an export file</h3>
+      <p>An export file carries only links. Its Spaces are listed under one profile, Arc, and come in with their names but no emoji or colors. There is no history. It also doesn't say which links are Favorites: links at the top of two or more Spaces' Favorites lists become Favorites, and the rest, along with pinned tabs that aren't in a folder, come in as that Space's unpinned tabs.</p>
+
+      <h3>What doesn't come across</h3>
+      <p>Logins and cookies, saved passwords, extensions, Easels, Notes, Boosts and Little Arc windows stay in Arc. So do links that aren't web pages, such as <code>arc://</code> pages. The import window says what it left out. Then:</p>
+      <ol>
+        <li><strong>Sign in again.</strong> Sign in to your sites once in each Profile. If you use 1Password, install its extension (next step) and approve Detour in the 1Password app.</li>
+        <li><strong>Add your extensions.</strong> Choose <strong>Extensions › Add Extensions…</strong> to open the Chrome Web Store, then click <strong>Add to Chrome</strong> on each extension.</li>
+        <li><strong>Route your links.</strong> Recreate your Air Traffic Control routes in <strong>Settings › Links</strong>. Little Arc's <kbd>⌥⌘N</kbd> already opens Quick Detour.</li>
+        <li><strong>Make Detour your browser.</strong> In <strong>Detour › Settings › General</strong>, click <strong>Set as Default Browser</strong>.</li>
+      </ol>
+
       <h2 id="what-carries-over">What carries over</h2>
       <p>Most of what made Arc Arc has a counterpart in Detour, often working the same way and sometimes under a different name.</p>
       <table class="arc-map">
