@@ -9,8 +9,8 @@ media:
   type: image
   src: /assets/features/privacy.webp
   width: 880
-  height: 734
-  alt: "Detour's Settings, Profiles pane with Private, Work, Personal and Banking in the list and Banking selected. Its settings show Content Blocking with Block content on and EasyList (ads), EasyPrivacy (trackers), Cookie notices and Malicious URLs switched on; Extensions with Dark Reader switched off; User Agent with Identify as set to Safari and, below it, the Safari user agent string sites will see; and External Apps with no saved permissions"
+  height: 1258
+  alt: "Detour's Settings, Profiles pane with Private, Work, Personal and Banking in the list and Banking selected. Its settings show its name; Search with Google and search suggestions on; Tabs, archived after 12 hours and put to sleep after 1 hour, with per-tab isolation off; Content Blocking with Block content on and EasyList (ads), EasyPrivacy (trackers), Cookie notices and Malicious URLs switched on; Extensions with Dark Reader switched off; User Agent with Identify as set to Safari and, below it, the Safari user agent string sites will see; and External Apps with no saved permissions"
   caption: "The Banking Profile: trackers blocked, Dark Reader off, and Safari's user agent."
 faq:
   - q: How do I make Detour look like Safari to websites?

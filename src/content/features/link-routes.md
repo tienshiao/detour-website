@@ -9,8 +9,8 @@ media:
   type: image
   src: /assets/features/link-routes.webp
   width: 880
-  height: 831
-  alt: "Detour's Settings, Links pane with three routes: Domain is github.com opens in the Work Space, Domain is wikipedia.org opens in the Reading Space, and links from Mail open in Quarantine, its URL field left empty so it reads Any URL from this app, or a domain such as example.com. Below them, the Default setting Open other links in is Most Recent Space"
+  height: 904
+  alt: "Detour's Settings, Links pane with three routes: Domain is github.com opens in the Work Space, Domain is wikipedia.org opens in the Reading Space, and Any URL from Mail opens in Quarantine. Below them, the Default setting Open other links in is Most Recent Space, with a note on how links that match no route open"
   caption: "Three routes: GitHub to Work, Wikipedia to Reading, and every link from Mail to Quarantine."
 arc:
   arcName: Air Traffic Control

@@ -5,6 +5,14 @@ title: Let Claude Code control your browser on Mac · Automation (MCP) | Detour
 description: "Detour has a built-in MCP server. Connect Claude Code, Claude Desktop or Cursor and let them read pages, click, type and take screenshots in your real browser, with your approval."
 accent: "#FF7600"
 label: AUTOMATION
+media:
+  type: video
+  src: /assets/features/automation.mp4
+  poster: /assets/features/automation-poster.webp
+  width: 1140
+  height: 900
+  label: "A Detour window on the GitHub repository page, with an orange Claude Code label at its bottom right. An orange pointer marked Agent clicks the GitHub Docs tab in the sidebar, then the page's Search for anything field, and types \"pull request\" while the search lists matching articles. It closes the search and clicks back to the GitHub tab"
+  caption: "Claude Code at work in Detour: the label names the agent, and the orange pointer shows each click and keystroke."
 faq:
   - q: How do I connect Claude Code to my browser?
     a: In Detour, choose **Detour › Settings…**, click **General** and turn on **Let AI agents and scripts control Detour (MCP)**. Click **Copy Claude Code Command**, paste it into Terminal and press Return. The first time Claude Code uses Detour, Detour asks you to allow it; click **Allow**.
