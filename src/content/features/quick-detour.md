@@ -39,6 +39,8 @@ faq:
     a: Windows you haven't used for 6 hours close by themselves, and so does every open one when you quit Detour. They go to the sidebar's Archived Tabs page, labelled "Quick Detour", and clicking one there opens it again. You can change the time in **Settings › Quick Detour**, or choose **Never**.
   - q: Can links from Slack or Mail open in a Quick Detour?
     a: Yes, with a [Link Route](/features/link-routes/). In **Settings › Links**, click **New Route**, choose the app in **From app**, leave the URL field empty and set **Open in** to **Quick Detour**. To send every link from other apps there, set the Default to **Quick Detour** instead.
+  - q: Does the Quick Detour field search the history of all my Profiles?
+    a: Yes. The field [[⌥⌘N]] opens suggests pages from every Profile's history. With more than one Profile, each row names the Profile it comes from and ends with the Space you last visited it in, and picking it opens the Quick Detour in that Profile. Searches and addresses you type use the Profile of the Detour window you used last. Private history is never listed.
 related:
   - link-routes
   - spaces
@@ -58,7 +60,7 @@ Quick Detours you forget about close by themselves after a few hours and wait in
 
 ### Open a Quick Detour
 
-- **From any app:** press <kbd>⌥⌘N</kbd>. The field opens over the app in front. Type an address or a search and press Return, or pick a suggestion from your history. Escape, or a click outside the field, closes it without opening anything.
+- **From any app:** press <kbd>⌥⌘N</kbd>. The field opens over the app in front. Type an address or a search and press Return, or pick a suggestion from your history, which comes from all your Profiles (see [Which Profile it uses](#which-profile-it-uses)). Typing `localhost` or a port number lists the web servers running on your Mac, as in the [Command Palette](/features/command-palette/#open-a-local-web-server). Escape, or a click outside the field, closes it without opening anything.
 - **In Detour:** choose **File › New Quick Detour Window** or press <kbd>⌥⌘N</kbd>.
 - **From a link:** right-click a link on a page, or in a Peek, and choose **Open Link in Quick Detour**. Or hold <kbd>⌥⌘</kbd> and click the link.
 - **From the sidebar:** right-click a tab and choose **Open in Quick Detour**, or hold <kbd>⌥⌘</kbd> and click it. The Quick Detour gets a copy of its address; the tab itself stays where it is. On a split, it's the half you clicked.
@@ -85,7 +87,9 @@ The usual browser keys work: <kbd>⌘F</kbd> to find, <kbd>⌘[</kbd> and <kbd>�
 
 ### Which Profile it uses
 
-A Quick Detour uses the Profile of the Detour window you used last, so a lookup from your work Space signs in as you do at work. Opened while a Private window is in front, it is Private: nothing goes into History, the window is dark, and **Open in Private Window** moves the page into a Private window. A link from another app never opens in a Private Quick Detour.
+A Quick Detour uses the Profile of the Detour window you used last, so a lookup from your work Space signs in as you do at work.
+
+A page you pick from the history suggestions is the exception. The field suggests pages from every Profile's history, and with more than one Profile each row names its Profile and ends with the Space you last visited it in. Picking one opens the Quick Detour in that Profile, signed in as you were when you visited it. A page several Profiles visited is listed once, for the Profile that visited it last. Opened while a Private window is in front, it is Private: nothing goes into History, the window is dark, and **Open in Private Window** moves the page into a Private window. A link from another app never opens in a Private Quick Detour.
 
 ### Hide them all at once
 

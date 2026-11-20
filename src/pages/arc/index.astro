@@ -16,14 +16,14 @@ const featureLink = (id: string | null) => (id && pages.has(id) ? `/features/${i
 
 // Arc's name, Detour's name, the guide page id Detour's will live at, and a note.
 const mapping: { arc: string; detour: string; id: string | null; note: string }[] = [
-  { arc: "Spaces", detour: "Spaces", id: "spaces", note: "Each Space has its own tabs, pinned tabs, emoji and color. Swipe over the sidebar to switch. Click **+** at the bottom of the sidebar to make one, choosing its name, emoji, color and Profile right there in the sidebar." },
+  { arc: "Spaces", detour: "Spaces", id: "spaces", note: "Each Space has its own tabs, pinned tabs, emoji and color. Swipe over the sidebar to switch. Click **+** at the bottom of the sidebar to make one, choosing its name, emoji, color and Profile right there in the sidebar. [[⌃1]] to [[⌃9]] jump to the first nine, as in Arc." },
   { arc: "Profiles", detour: "Profiles", id: "profiles", note: "Each Space uses a Profile for its logins, cookies, history and extensions. Favorites belong to the Profile, so every Space on it shows the same ones." },
   { arc: "Pinned tabs and folders", detour: "Pinned Tabs & Folders", id: "pinned-tabs", note: "Pin with [[⌘D]]. Closing a pinned tab keeps it in place, and clicking it again loads the address you pinned." },
   { arc: "Favorites", detour: "Favorites", id: "favorites", note: "Icon tiles at the top of the sidebar, shared by every Space on a Profile. Drag a tab onto them to add one." },
   { arc: "Split View", detour: "Split Tabs", id: "split-tabs", note: "Two tabs side by side as one sidebar row. Arc also allowed more panes and stacked splits." },
   { arc: "Little Arc", detour: "Quick Detour", id: "quick-detour", note: "[[⌥⌘N]] from any app opens a one-page window, the same keys as Little Arc. **Open in** moves the page into a Space; unused windows close after 6 hours by default." },
   { arc: "Air Traffic Control", detour: "Link Routes", id: "link-routes", note: "Send links to a Space by their address and, unlike Arc, by the app they came from. Set up in **Settings › Links**." },
-  { arc: "Command Bar", detour: "Command Palette", id: "command-palette", note: "[[⌘T]] for a new tab, [[⌘L]] to go somewhere in this tab. It finds open tabs, history and searches, but doesn't run commands the way Arc's did." },
+  { arc: "Command Bar", detour: "Command Palette", id: "command-palette", note: "[[⌘T]] for a new tab, [[⌘L]] to go somewhere in this tab. It finds open tabs, history and searches, and runs menu commands: type a command's name, or `>` to list only commands." },
   { arc: "Site Search", detour: "Site Search", id: "site-search", note: "Type a site's keyword and press Tab. Sites that offer their own search add themselves." },
   { arc: "Peek", detour: "Peek", id: "peek", note: "Links to other sites from pinned tabs and favorites open in a Peek, and Shift-click peeks any link." },
   { arc: "Auto Archive", detour: "Tab Archiving", id: "tab-archiving", note: "Idle tabs archive after 12 hours by default, set per Profile. Closed and archived tabs wait on the Archived Tabs page (**Navigate › Show Archived Tabs**)." },
@@ -39,7 +39,6 @@ const notInDetour = [
   "**Live Folders** and **Previews** of mail, calendars and other apps when you hover a tab. Detour's hover cards show the title, address and a picture of the page.",
   "**Sharing** a Space, folder or split as a link.",
   "**Themes** with gradients. A Space has one color.",
-  "Shortcuts that jump to a Space by number ([[⌃1]], [[⌃2]]…). Use [[⌥⌘→]] and [[⌥⌘←]] or the **Spaces** menu.",
   "Splits of more than two tabs, and stacked splits.",
   "A built-in password manager, and importing from browsers other than Arc.",
   "Versions for Windows or iPhone. Detour is a Mac app.",

@@ -6,7 +6,8 @@
 // validateMenuItem shows), and the key handlers in RecentTabSwitcher,
 // CommandPaletteView, FindBarView, ArchivePageView, the History page's script,
 // QuickDetourWindowController and BrowserWindowController+Navigation (link
-// clicks). Menu items without a shortcut are left out. Rows allow inline
+// clicks), and Detour/Commands/BrowserCommands.swift (the command registry,
+// default keys) since 0.5.0. Menu items without a shortcut are left out. Rows allow inline
 // Markdown: keys as [[⌘T]], **bold** for control names.
 import Arrow from "../components/Arrow.astro";
 import Base from "../layouts/Base.astro";
@@ -79,7 +80,7 @@ const menus: Table[] = [
     id: "navigate-menu",
     head: menuHead,
     rows: [
-      ["Back", "[[⌘[]]"],
+      ["Back (on a tab opened from another tab with no page to go back to, closes it and returns to that tab)", "[[⌘[]]"],
       ["Forward", "[[⌘]]]"],
       ["Previous Tab (up the sidebar)", "[[⌥⌘↑]]"],
       ["Next Tab (down the sidebar)", "[[⌥⌘↓]]"],
@@ -89,10 +90,12 @@ const menus: Table[] = [
   {
     title: "Spaces",
     id: "spaces-menu",
+    note: "The menu lists your first nine Spaces by name, in the order **Settings › Spaces** shows them. If Mission Control's shortcuts for switching desktops are turned on, macOS takes [[⌃1]]… first.",
     head: menuHead,
     rows: [
       ["Next Space", "[[⌥⌘→]]"],
       ["Previous Space", "[[⌥⌘←]]"],
+      ["Your first through ninth Space", "[[⌃1]] … [[⌃9]]"],
     ],
   },
   {
@@ -152,9 +155,10 @@ const elsewhere: Table[] = [
     head: doHead,
     rows: [
       ["Move through the list", "[[↑]] [[↓]]"],
-      ["Open the selected row", "Return"],
+      ["Open the selected row, or run the selected command", "Return"],
+      ["List only commands", "[[>]]"],
       ["Accept the completion, or start a site search", "Tab"],
-      ["Leave a site search", "Delete, at the start of the field"],
+      ["Leave a site search, or a command that asks for a Space, tab or extension", "Delete, at the start of the field"],
       ["Clear the field, then close the palette (opened with [[⌘L]], it closes at once)", "Escape"],
     ],
   },
@@ -258,9 +262,11 @@ const breadcrumbs = {
     <div class="guide-body shortcuts">
       <h2 id="menus">In the menus</h2>
       <p>The same keys are shown next to each item when you open the menu. Menu items without a shortcut, and the Extensions menu, which has none, aren't listed.</p>
+      <p>These are the keys Detour starts with. To change a menu item's shortcut, or give one to an item that has none, choose <strong>Detour › Settings…</strong> and click <strong>Shortcuts</strong>. Click a shortcut and press the new keys. Keys another item already uses are refused, with that item named; Undo, Redo, Cut, Copy, Paste and Select All keep their keys. <strong>Restore Defaults</strong> puts every shortcut back.</p>
       {menus.map((table) => (
         <section aria-labelledby={table.id}>
           <h3 id={table.id}>{table.title}</h3>
+          {table.note && <p set:html={inline(table.note)} />}
           <table>
             <thead><tr><th>{table.head[0]}</th><th>{table.head[1]}</th></tr></thead>
             <tbody>

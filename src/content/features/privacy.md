@@ -102,6 +102,8 @@ The [Content Blocker](/features/content-blocker/) is on for every Profile from t
 
 The **Private** Profile's switches cover Private windows and Quarantine. If a site breaks, turn blocking off for that one site in its **Site Settings** instead of turning a list off.
 
+Links you pass on are cleaned too. **Edit › Copy URL** (<kbd>⇧⌘C</kbd>), the **Copy Link** button next to the address, and **Copy URL** and **Share…** in a tab's right-click menu leave out tracking parameters such as `utm_source` and `fbclid`, as Quarantine does. AdGuard's URL Tracking filter adds the parameters particular sites use; it's on unless you turn off **Remove tracking parameters with the AdGuard URL Tracking filter** under **Tracking Parameters** in **Settings › Content Blocking**. The tab itself keeps the address as it loaded.
+
 ### 7. Use Private windows for what shouldn't be remembered
 
 A [Private window](/features/private-browsing/) (<kbd>⇧⌘N</kbd>) keeps no history and holds cookies and logins in memory only. Private windows open at the same time share them, and they're cleared when the last Private window closes.

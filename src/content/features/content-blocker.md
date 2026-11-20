@@ -23,7 +23,7 @@ faq:
   - q: Does the Content Blocker work in Private windows?
     a: Yes. Private windows and Quarantine use the **Private** Profile's content blocking settings. A site you switch blocking off for there is remembered only until the last Private and Quarantine windows close.
   - q: Can I add my own filter lists or rules?
-    a: Not yet. Detour uses the four lists shown in **Settings › Content Blocking**, and you can turn each one off per Profile. You can also install a content-blocking extension from the Chrome Web Store; Detour runs on WebKit, so some Chrome extensions work and some don't yet.
+    a: Not yet. Detour blocks with the four lists shown in **Settings › Content Blocking**, and you can turn each one off per Profile. You can also install a content-blocking extension from the Chrome Web Store; Detour runs on WebKit, so some Chrome extensions work and some don't yet.
 related:
   - profiles
   - private-browsing
@@ -64,7 +64,11 @@ All four lists are on for a new Profile. The **Private** Profile has its own swi
 
 ### Update the lists
 
-**Settings › Content Blocking** lists each filter list with how many rules it has (**In List**), how many are in use (**Active**), its status and when it was last updated. Lists update on their own every 24 hours.
+**Settings › Content Blocking** lists each filter list with its status on the right and, under its name, how many rules it has, how many are active and when it was last updated. Lists update on their own every 24 hours.
 
 - **Update All Now** checks every list for a newer version right away.
 - **Clear Cache & Redownload** throws the lists away and downloads them again, for when one looks wrong or won't load.
+
+### Remove tracking parameters from links
+
+**Edit › Copy URL** (<kbd>⇧⌘C</kbd>), the **Copy Link** button, **Share…** in a tab's right-click menu and [Quarantine](/features/quarantine/) leave out common tracking parameters such as `utm_source` and `fbclid`. Under **Tracking Parameters** in **Settings › Content Blocking**, **Remove tracking parameters with the AdGuard URL Tracking filter** adds the ones particular sites use. It's on by default and updates with the other lists. It blocks nothing; turn it off and Detour stops downloading it, and only the common parameters are removed.

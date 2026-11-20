@@ -19,13 +19,13 @@ arc:
     - Each Space has its own tabs, pinned tabs and folders, an icon and a color.
     - A two-finger swipe over the sidebar switches Spaces, and their icons sit along the bottom of the sidebar.
     - Each Space uses a Profile for its logins and cookies, and several Spaces can share one.
+    - "[[⌃1]] through [[⌃9]] jump to the first nine Spaces."
   different:
     - You make and edit a Space right in the sidebar. The **+** at the bottom opens an editor where the tab list was, and the sidebar previews the color as you choose it.
     - A Space's icon is an emoji.
   notInDetour:
     - Themes. A Space has one color, which tints the sidebar.
     - Sharing a Space with someone as a link.
-    - Shortcuts that jump to a Space by its number. Use [[⌥⌘←]] and [[⌥⌘→]] or the **Spaces** menu instead.
 faq:
   - q: How do I keep work and personal browsing separate on a Mac?
     a: Make a Space for each and give each Space its own Profile. The two then have separate logins, cookies, history and extensions, so you can be signed in to a work and a personal Google account at the same time, in one window.
@@ -36,7 +36,7 @@ faq:
   - q: Can two windows show different Spaces?
     a: Yes. Each window has its own Space, and two windows can also show the same one. A new window ([[⌘N]]) opens on the Space you're in.
   - q: Is there a shortcut to jump to a specific Space?
-    a: Not by number. [[⌥⌘→]] and [[⌥⌘←]] move to the next and previous Space, the **Spaces** menu lists every Space by name, and you can click a Space's emoji at the bottom of the sidebar.
+    a: Yes. [[⌃1]] through [[⌃9]] jump to the first nine Spaces, in the order **Settings › Spaces** lists them. [[⌥⌘→]] and [[⌥⌘←]] move to the next and previous Space, the **Spaces** menu lists every Space by name, and you can click a Space's emoji at the bottom of the sidebar. If Mission Control's own [[⌃1]]… shortcuts for switching desktops are turned on, macOS takes those keys first; pick other keys in **Settings › Shortcuts**.
   - q: How many Spaces can I have?
     a: As many as you like. When the bar at the bottom of the sidebar fills up, the icons at its ends shrink to dots.
 related:
@@ -74,6 +74,7 @@ Each Space uses a **Profile**, which holds its logins and cookies, history and e
 
 - Swipe left or right with two fingers over the sidebar.
 - Click a Space's emoji at the bottom of the sidebar. Hold the pointer over one to see its name.
+- Press <kbd>⌃1</kbd> through <kbd>⌃9</kbd> to jump to the first nine Spaces, in the order **Settings › Spaces** lists them.
 - Press <kbd>⌥⌘→</kbd> or <kbd>⌥⌘←</kbd> for the next or previous Space, or pick one by name from the **Spaces** menu.
 
 On your first Space, swipe right with two fingers and Archived Tabs slides in from the left: the tabs you closed or that archived themselves, from every Space.
@@ -97,6 +98,7 @@ Right-click the tab in the sidebar and choose **Move to**, then the Space. The t
 
 | Do this | Press |
 | --- | --- |
+| Jump to the first through ninth Space | <kbd>⌃1</kbd> … <kbd>⌃9</kbd> |
 | Next Space | <kbd>⌥⌘→</kbd> |
 | Previous Space | <kbd>⌥⌘←</kbd> |
 | New window on this Space | <kbd>⌘N</kbd> |

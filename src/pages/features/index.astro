@@ -22,8 +22,8 @@ const groups: { title: string; entries: Entry[] }[] = [
       "favorites",
       "split-tabs",
       "tab-archiving",
-      { name: "Sleeping Tabs", text: "A tab you haven't looked at for a while (an hour, unless you change it) gives back its memory and reloads when you click it. The time is set per Profile." },
-      { name: "Undo", text: "**Edit › Undo** ([[⌘Z]]) takes back closing, moving, pinning or splitting a tab, and changes to folders and Spaces." },
+      { name: "Sleeping Tabs", text: "A tab you haven't looked at for a while (an hour, unless you change it) gives back its memory and reloads when you click it. The time is set per Profile, and when your Mac runs low on memory, hidden tabs sleep sooner." },
+      { name: "Undo", text: "**Edit › Undo** ([[⌘Z]]) takes back closing, moving, pinning or splitting a tab, and changes to folders and Spaces. While you type in a page, it undoes your typing." },
     ],
   },
   {
@@ -40,7 +40,15 @@ const groups: { title: string; entries: Entry[] }[] = [
   },
   {
     title: "Links and privacy",
-    entries: ["link-routes", "quick-detour", "quarantine", "private-browsing", "content-blocker", "privacy"],
+    entries: [
+      "link-routes",
+      "quick-detour",
+      "quarantine",
+      "private-browsing",
+      "content-blocker",
+      "privacy",
+      { name: "Clean Links", text: "**Edit › Copy URL** ([[⇧⌘C]]), **Copy Link** and **Share…** leave out tracking parameters such as `utm_source` and `fbclid`, so the link you pass on doesn't say where you found it." },
+    ],
   },
   {
     title: "Windows, media and downloads",
@@ -60,7 +68,7 @@ const groups: { title: string; entries: Entry[] }[] = [
       { name: "Dark Mode", text: "Detour follows your Mac's Light or Dark appearance, sidebar and panels included." },
       { name: "Sidebar Auto-Hide", text: "[[⌘S]] hides the sidebar so the page gets the whole window. Move the pointer to the window's left edge and it slides back." },
       { name: "Drag Handles", text: "Move the window by dragging the top of the page or an empty part of the sidebar. There's no title bar to aim for." },
-      { name: "Keyboard Shortcuts", text: "Every key Detour knows, menu by menu, plus the ones that work outside the menus.", href: "/shortcuts/" },
+      { name: "Keyboard Shortcuts", text: "Every key Detour knows, menu by menu, plus the ones that work outside the menus. Change menu shortcuts in **Settings › Shortcuts**.", href: "/shortcuts/" },
       { name: "Auto-Updates", text: "Detour updates itself with Sparkle, the standard Mac updater. **Detour › Check for Updates…** checks right away." },
       { name: "Default Browser", text: "Make Detour the browser your links open in with **Set as Default Browser** in **Settings › General**." },
     ],
@@ -71,6 +79,7 @@ const groups: { title: string; entries: Entry[] }[] = [
       "web-extensions",
       "dev-mode",
       { name: "Web Inspector", text: "**Develop › Web Inspector** ([[⌥⌘I]]) opens WebKit's full Web Inspector for the page you're on." },
+      { name: "Local Servers", text: "Type `localhost` or a port number in the command palette to see the development servers running on your Mac, each with the folder it serves.", href: "/features/command-palette/#open-a-local-web-server" },
     ],
   },
   {
